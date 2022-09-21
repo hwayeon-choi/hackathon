@@ -61,7 +61,9 @@ import Greeting from './components/Greeting.js';
 const App = () => {
   return(
     <SafeAreaView>
-      <Greeting name="Props" color="steelblue"/>
+      {/* <Greeting name ="Props"/> */}
+      <Greeting />
+
     </SafeAreaView>
   )
 };
