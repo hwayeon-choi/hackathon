@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "Article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "comments": {
+      "private": true,
+      "via": "article",
+      "collection": "comment"
+    }
+  }
+}

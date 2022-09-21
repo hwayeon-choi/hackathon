@@ -1,0 +1,36 @@
+{
+  "routes": [
+    {
+      "method" : "POST",
+      "path" : "/articles/:postId/comments",
+      "handler" : "comment.create",
+      "config" : {
+        "policies" : []
+      }
+    },
+    {
+      "method" : "GET",
+      "path" : "/articles/:postId/comments",
+      "handler" : "article.find",
+      "config" : {
+        "policies" : []
+      }
+    },
+    {
+      "method" : "PUT",
+      "path" : "/articles/:postId/comments/:id",
+      "handler" : "comment.update",
+      "config" : {
+        "policies" : []
+      }
+    },
+    {
+      "method" : "DELETE",
+      "path" : "/articles/:postId/comments/:id",
+      "handler" : "comment.delete",
+      "config" : {
+        "policies" : []
+      }
+    }
+  ]
+}
