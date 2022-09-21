@@ -22,9 +22,9 @@
     "body": {
       "type": "text"
     },
-    "comments": {
-      "private": true,
+    "conmments": {
       "via": "article",
+      "private": true,
       "collection": "conmment"
     }
   }

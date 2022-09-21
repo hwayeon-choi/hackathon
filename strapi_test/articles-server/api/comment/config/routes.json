@@ -1,0 +1,36 @@
+{
+  "routes": [
+    {
+      "method" : "POST",
+      "path" : "/articles/:postId/conmments",
+      "handler" : "conmment.create",
+      "config" : {
+        "policies" : []
+      }
+    },
+    {
+      "method" : "GET",
+      "path" : "/articles/:postId/conmments",
+      "handler" : "article.find",
+      "config" : {
+        "policies" : []
+      }
+    },
+    {
+      "method" : "PUT",
+      "path" : "/articles/:postId/conmments/:id",
+      "handler" : "conmment.update",
+      "config" : {
+        "policies" : []
+      }
+    },
+    {
+      "method" : "DELETE",
+      "path" : "/articles/:postId/conmments/:id",
+      "handler" : "conmment.delete",
+      "config" : {
+        "policies" : []
+      }
+    }
+  ]
+}
