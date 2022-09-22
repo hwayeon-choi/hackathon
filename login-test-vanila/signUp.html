@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+    <div class="container_form">
+      <form method="post">
+        <ul>
+          <li>
+            <label>아이디</label>
+            <input type="text" name="id" required>
+          </li>
+          <li>
+            <label>비밀번호</label>
+            <input type="password" name="pw" required>
+          </li>
+          <li>
+            <label>닉네임</label>
+            <input type="text" name="nickname" required>
+          </li>
+          <li>
+            <label>지역</label>
+            <input type="text" name="region" required>
+          </li>
+        </ul>
+        <input type="submit" name="회원가입">
+        <input type="button" value="뒤로가기" onclick="location.href='/login.html'">
+      </form>
+    </div>
+  </section>
+</body>
+</html>

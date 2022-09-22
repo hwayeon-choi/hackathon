@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/hwayeon-choi/hackathon/issues"
   },
-  "homepage": "https://github.com/hwayeon-choi/hackathon#readme"
+  "homepage": "https://github.com/hwayeon-choi/hackathon#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-promise": "^0.6.0"
+  }
 }
