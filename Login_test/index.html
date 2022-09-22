@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <script src="./main.js" type="module" defer></script> -->
+</head>
+<body>
+  <div id="root">
+
+    <h1>로그인</h1>
+
+    <form id="idform">
+      <input type="text" name = "logininput" placeholder="email" id="logininput"> <br>
+    </form>
+
+    <form id="pwform">
+      <input type="password" name = "passwordinput" placeholder="password" id="passwordinput"> <br>
+    </form>
+
+    <button id="submit" >login</button>
+
+  </div>
+
+  <script>
+
+    let user = {
+        account : 'yongjun@gmail.com',
+        password : "1234",
+      };
+
+    const loginbutton = document.getElementById("submit");
+
+    loginbutton.addEventListener("click", () => {
+      
+      let id = document.getElementById("logininput").value;
+      let pw = document.getElementById("passwordinput").value;
+
+      // console.log(typeof yongjun.account);
+      // console.log(typeof id);
+
+      // console.log(typeof yongjun.password);
+      // console.log(typeof pw);
+
+      if(id === user.account && pw === user.password){
+        alert("로그인 성공")
+      } else {
+        alert("이메일 혹은 비밀번호가 틀렸습니다")
+      }
+    })
+
+    
+    // document.getElementById("idform").onsubmit = () => {
+    //   let email = document.getElementById("logininput")
+    //   return email.value;
+    // }
+
+    // const accountValue = document.getElementById("login"); 
+    // const passwordValue = document.getElementById("password");
+
+    // const loginbutton = document.getElementById("loginbutton")
+    
+    // loginbutton.addEventListener("click", ()=> {
+      
+    //   console.log(accountValue);
+    //   console.log(passwordValue);
+
+
+    //   let accountArray = Object.values(user["yongjun"].account);
+    //   let passwordArray = Object.values(user["yongjun"].password);
+
+    //   console.log(user["yongjun"].account);
+    //   console.log(accountArray);
+
+    //   // console.log(Object.values(user)) 
+
+    //   if(accountArray.includes(accountValue) && passwordArray.includes(passwordValue)) {
+    //     alert("로그인 성공")
+    //   } else {
+    //     alert("계정 혹은 비밀번호가 일치하지 않습니다")
+    //   }
+    // })
+    
+  </script>
+</body>
+</html>
