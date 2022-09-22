@@ -21,3 +21,4 @@ connetion.query('SELECT * FROM topic', function(error, results){
 });
 
 connetion.end();
+//객체 확인
