@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1>로그인</h1>
+    <div>아이디</div>
+    <input id="account" type="text">
+    <div>비밀번호</div>
+    <input id="password" type="password">
+    <input id="button" type="button" value="로그인" onclick="login()">
+  </div>
+  <script>
+    /* 아이디 */
+    let account = ['hwayomm', 'choyoung', 'youngjun', 'seunghyun']
+    
+    /* 비밀번호 */
+    let password = {
+      hwayomm : 1234,
+      choyoung : 2345, 
+      youngjun : 3456,
+      seunghyun : 4567,
+    }
+
+    /* 아이디 검사 */
+    let login = function(){
+      let accountValue = document.getElementById('account').value; // id가 account인 input 태그가 입력받은 값을 호출
+      if (account.includes(accountValue)) {
+        alert('존재하는 아이디입니다');
+      } else {
+        alert('존재하지 않는 아이디입니다');
+      };
+    }
+
+    // 버튼을 누르면 아이디 인풋에 들어온 값을 받아와야 됨
+    // account 배열이랑 대조해서 있으면 true, 없으면 false
+    // true면 '로그인 되었습니다' 출력
+    // false면 '존재하지 않는 아이디입니다' 출력
+
+
+    /* 비밀번호 검사 */
+    
+  </script>
+</body>
+</html>

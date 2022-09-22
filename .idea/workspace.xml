@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bae46812-feb2-4caa-af36-0f820d773011" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/.buckconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/.bundle/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/.flowconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/.node-version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/.prettierrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/.ruby-version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/.watchmanconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/Gemfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/__tests__/App-test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/_BUCK" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/build_defs.bzl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/debug.keystore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/debug/java/com/reactnativeproject/ReactNativeFlipper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/java/com/reactnativeproject/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/java/com/reactnativeproject/MainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/java/com/reactnativeproject/newarchitecture/MainApplicationReactNativeHost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/java/com/reactnativeproject/newarchitecture/components/MainComponentsRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/java/com/reactnativeproject/newarchitecture/modules/MainApplicationTurboModuleManagerDelegate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/jni/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/jni/MainApplicationModuleProvider.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/jni/MainApplicationModuleProvider.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/jni/MainApplicationTurboModuleManagerDelegate.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/jni/MainApplicationTurboModuleManagerDelegate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/jni/MainComponentsRegistry.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/jni/MainComponentsRegistry.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/jni/OnLoad.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/drawable/rn_edit_text_material.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/android/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/.xcode.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/Podfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/ReactNativeProject.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/ReactNativeProject.xcodeproj/xcshareddata/xcschemes/ReactNativeProject.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/ReactNativeProject/AppDelegate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/ReactNativeProject/AppDelegate.mm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/ReactNativeProject/Images.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/ReactNativeProject/Images.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/ReactNativeProject/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/ReactNativeProject/LaunchScreen.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/ReactNativeProject/main.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/ReactNativeProjectTests/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/ios/ReactNativeProjectTests/ReactNativeProjectTests.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/metro.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReactNativeProject/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2F6al98HlBRVbZbUtTg8VBgmppT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ReactNativeProject/android" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bae46812-feb2-4caa-af36-0f820d773011" name="Changes" comment="" />
+      <created>1663815136543</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663815136543</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
