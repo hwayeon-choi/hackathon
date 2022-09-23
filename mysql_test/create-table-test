@@ -1,0 +1,13 @@
+CREATE TABLE `userInfo` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_id` VARCHAR(20) NOT NULL,
+  `name` VARCHAR(20) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(12) NOT NULL,
+  PRIMAY KEY (`id`)
+);
+
+INSERT INTO `userInfo` VALUES ('a', '김김김', 'abc@email.com', '123456');
+INSERT INTO `userInfo` VALUES ('b', '박박박', 'abc@email.com', '78987');
+INSERT INTO `userInfo` VALUES ('c', '정정정', 'abc@email.com', '123456');
+
