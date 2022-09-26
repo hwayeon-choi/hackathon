@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    //mysql 모듈 불러오기
+    let mysql = require('mysql');
+    let fs = require('fs');
+
+    //데이터베이스 설정
+    let databaseName = 'gyonggi_db';
+
+    //테이블 설정
+    let tableName = 'gyeonggi2';
+
+    //연결 설정
+    let connetion = mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: 'fullstack305',
+      database: `${databaseName}` 
+    });
+    connetion.connect(); //디버깅: _connectCalled: true
+
+
+    //테이블에서 전체 데이터 가져오기
+    connetion.query(`SELECT * FROM ${tableName}`, function(error, results){
+      if(error) {
+        console.log(error);
+      } else {
+        console.log(results);
+        root.textContent = results;
+      }
+    });
+  </script>
+</body>
+</html>

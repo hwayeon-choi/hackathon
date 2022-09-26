@@ -1,16 +1,14 @@
 {
-  "name": "mysql_test",
+  "name": "public_data_test",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "test1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mysql": "^2.18.1",
-    "nodemon": "^2.0.20"
-  },
-  "devDependencies": {},
-  "description": ""
+    "mysql": "^2.18.1"
+  }
 }
