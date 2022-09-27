@@ -1,0 +1,31 @@
+CREATE DATABASE place_category;
+
+-- 장소별 카테고리
+CREATE TABLE place_type (
+  id INT NOT NULL AUTO_INCREMENT,
+  cate_tier INT(1) NOT NULL COMMENT '상위 카테고리',
+  restaurant VARCHAR(100) NOT NULL COMMENT '맛집',
+  cafe VARCHAR(100) NOT NULL COMMENT '카페',
+  accommondation VARCHAR(100) NOT NULL COMMENT '숙소',
+  park VARCHAR(100) NOT NULL COMMENT '공원',
+  pet_ground VARCHAR(100) NOT NULL COMMENT '애견운동장',
+  grooming_shop VARCHAR(255) NOT NULL COMMENT '미용',
+  pet_hospital VARCHAR(255) NOT NULL COMMENT '동물병원',
+  photo_spot VARCHAR(255) NOT NULL COMMENT '포토스팟',
+  pet_rest VARCHAR(255) NOT NULL COMMENT '애견휴식',
+  PRIMARY KEY (id)
+);
+
+--상세
+CREATE TABLE place_detail (
+  id INT NOT NULL AUTO_INCREMENT,
+  cate_tier INT(2) NOT NULL COMMENT '하위 카테고리',
+  region VARCHAR(100) NOT NULL COMMENT '지역명',
+  place_type VARCHAR(100) NOT NULL COMMENT '업체유형',
+  company_name VARCHAR(100) NOT NULL COMMENT '업체명',
+  call_num VARCHAR(100) NOT NULL COMMENT '연락처',
+  _address VARCHAR(100) NOT NULL COMMENT '주소',
+  open_time VARCHAR(255) NOT NULL COMMENT '이용시간',
+  PRIMARY KEY (id)
+);
+
