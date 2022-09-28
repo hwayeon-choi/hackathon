@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "drawer.app"
-               BlueprintName = "drawer"
-               ReferencedContainer = "container:drawer.xcodeproj">
+               BuildableName = "asdfasdf.app"
+               BlueprintName = "asdfasdf"
+               ReferencedContainer = "container:asdfasdf.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "drawerTests.xctest"
-               BlueprintName = "drawerTests"
-               ReferencedContainer = "container:drawer.xcodeproj">
+               BuildableName = "asdfasdfTests.xctest"
+               BlueprintName = "asdfasdfTests"
+               ReferencedContainer = "container:asdfasdf.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "drawer.app"
-            BlueprintName = "drawer"
-            ReferencedContainer = "container:drawer.xcodeproj">
+            BuildableName = "asdfasdf.app"
+            BlueprintName = "asdfasdf"
+            ReferencedContainer = "container:asdfasdf.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "drawer.app"
-            BlueprintName = "drawer"
-            ReferencedContainer = "container:drawer.xcodeproj">
+            BuildableName = "asdfasdf.app"
+            BlueprintName = "asdfasdf"
+            ReferencedContainer = "container:asdfasdf.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

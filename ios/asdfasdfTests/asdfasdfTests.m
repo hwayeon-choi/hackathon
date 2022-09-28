@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface drawerTests : XCTestCase
+@interface asdfasdfTests : XCTestCase
 
 @end
 
-@implementation drawerTests
+@implementation asdfasdfTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {
