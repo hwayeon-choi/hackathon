@@ -10,8 +10,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-navigation/drawer": "^6.5.0",
     "react": "18.1.0",
-    "react-native": "0.70.1"
+    "react-native": "0.70.1",
+    "react-native-gesture-handler": "^2.6.2",
+    "react-native-reanimated": "^2.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
