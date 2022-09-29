@@ -4,10 +4,10 @@ let mysql = require('mysql');
 // let fs = require('fs');
 
 //데이터베이스 설정
-let databaseName = 'gyonggi_db';
+let databaseName = 'place_category';
 
 //테이블 설정
-let tableName = 'gyeonggi2';
+let tableName = 'place_detail';
 
 //연결 설정
 let connetion = mysql.createConnection({

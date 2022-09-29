@@ -1,0 +1,9 @@
+region,city,place_type,company_name,call_num,_address,open_time,homepage,parking,wifi,reservation
+서울특별시,영등포구,식당,예가원,,,매일 10:00~22:00,http://www.yegawon.co.kr/,N,N,
+서울특별시,종로구,식당,종가집,,,매일 11:30~22:30 / 휴무 일,https://www.instagram.com/insajonggajib/,N,N,"전화예약, 온라인예약"
+서울특별시,종로구,식당,종로돈가,,,,,N,N,
+서울특별시,종로구,식당,창신육회(4호점),,,휴무 목,http://instagram.com/changsin4,N,Y,전화예약
+서울특별시,중구,식당,덕화장,,,매일 11:00~21:00,,Y,N,전화예약
+서울특별시,중구,카페,카페 구할구,,,,http://instagram.com/cafe_guhalgu,N,Y,전화예약
+서울특별시,서대문구,카페,카페가가,,,평일 08:00~17:00 / 휴무 공휴일,,N,Y,전화예약
+서울특별시,서초구,카페,카페디로마,,,,,N,Y,전화예약

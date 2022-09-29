@@ -1,5 +1,5 @@
-LOAD DATA LOCAL INFILE 'D:/2022_CHOY/github-team-project/hackathon/public_data_test/test.csv'
-INTO TABLE gyeonggi
+LOAD DATA LOCAL INFILE 'D:/2022_CHOY/github-team-project/hackathon/database/public-datas/place_category_detail_input.csv'
+INTO TABLE place_detail
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'

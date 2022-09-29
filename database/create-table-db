@@ -3,7 +3,7 @@ CREATE DATABASE place_category;
 -- 장소별 카테고리
 CREATE TABLE place_type (
   id INT NOT NULL AUTO_INCREMENT,
-  cate_tier INT(1) NOT NULL COMMENT '상위 카테고리',
+  place_type_id INT NOT NULL COMMENT '고유 id 설정',
   restaurant VARCHAR(100) NOT NULL COMMENT '맛집',
   cafe VARCHAR(100) NOT NULL COMMENT '카페',
   accommondation VARCHAR(100) NOT NULL COMMENT '숙소',
@@ -16,16 +16,20 @@ CREATE TABLE place_type (
   PRIMARY KEY (id)
 );
 
---상세
+-- 상세(place_detail)
 CREATE TABLE place_detail (
-  id INT NOT NULL AUTO_INCREMENT,
-  cate_tier INT(2) NOT NULL COMMENT '하위 카테고리',
+  place_detail_id INT NOT NULL AUTO_INCREMENT,
   region VARCHAR(100) NOT NULL COMMENT '지역명',
+  city VARCHAR(100) NOT NULL COMMENT '시,군명',
   place_type VARCHAR(100) NOT NULL COMMENT '업체유형',
   company_name VARCHAR(100) NOT NULL COMMENT '업체명',
-  call_num VARCHAR(100) NOT NULL COMMENT '연락처',
-  _address VARCHAR(100) NOT NULL COMMENT '주소',
-  open_time VARCHAR(255) NOT NULL COMMENT '이용시간',
-  PRIMARY KEY (id)
+  call_num VARCHAR(100) NULL COMMENT '연락처',
+  _address VARCHAR(100) NULL COMMENT '주소',
+  open_time VARCHAR(255) NULL COMMENT '이용시간',
+  homepage VARCHAR(255) NULL COMMENT '홈페이지',
+  parking VARCHAR(10) NOT NULL COMMENT '주차',
+  wifi VARCHAR(10) NOT NULL COMMENT 'wifi',
+  reservation VARCHAR(100) NULL COMMENT '예약방법',
+  PRIMARY KEY (place_detail_id)
 );
 
