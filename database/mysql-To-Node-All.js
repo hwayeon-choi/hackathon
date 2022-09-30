@@ -1,7 +1,7 @@
 //mysql 모듈 불러오기
 let mysql = require('mysql');
+let fs = require('fs');
 // let http = require('http');
-// let fs = require('fs');
 
 //데이터베이스 설정
 let databaseName = 'place_category';
@@ -20,16 +20,16 @@ connetion.connect(); //디버깅: _connectCalled: true
 
 
 //테이블에서 전체 데이터 가져오기
-connetion.query(`SELECT * FROM ${tableName}`, function(error, results){
-  if(error) {
-    console.log(error);
-  } else {
-    console.log(results);
-  }
-});
+// connetion.query(`SELECT * FROM ${tableName}`, function(error, results){
+//   if(error) {
+//     console.log(error);
+//   } else {
+//     console.log(results);
+//   }
+// });
 
 
-//전체 데이터에서 특정 데이터만 콘솔로 출력하기 
+//전체 데이터에서 특정 데이터만 출력하기 
 // connetion.query(`SELECT * FROM ${tableName}`, function(error, results){
 //   if(error) {
 //     console.log(error);
@@ -40,7 +40,7 @@ connetion.query(`SELECT * FROM ${tableName}`, function(error, results){
 // });
 
 
-//테이블에서 특정 데이터 가져오기 
+//테이블에서 특정 컬럼 데이터 가져오기 
 // connetion.query(`SELECT user_id, password FROM ${tableName}`, function(error, results){
 //   if(error) {
 //     console.log(error);
@@ -48,6 +48,7 @@ connetion.query(`SELECT * FROM ${tableName}`, function(error, results){
 //     console.log(results);
 //   }
 // });
+
 
 
 //fields 객체
