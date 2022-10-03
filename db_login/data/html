@@ -1,0 +1,8 @@
+<h2>log-in</h2>
+<form action="/action_page.php">
+  <label for="fname">id:</label><br>
+  <input type="text" id="id" name="id"><br>
+  <label for="pw">password:</label><br>
+  <input type="text" id="pw" name="pw"><br><br>
+  <input type="submit" value="login">
+</form> 
