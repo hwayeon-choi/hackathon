@@ -165,7 +165,7 @@ const app = http.createServer(function(req, res) {
         </form>
       </body>
       </html>
-    `
+    `;
     res.writeHead(200);
     res.end(html);
 
@@ -178,6 +178,12 @@ const app = http.createServer(function(req, res) {
       let post = query.parse(body);
       const obj = JSON.parse(JSON.stringify(post));
       let keys = Object.keys(obj);
+      let sql = 'SELECT User_id, password FROM userinfo WHERE user_id = ?';
+      //일치하는 id값 조회
+      let params = [obj[keys[0]]];
+      connection.query(sql, params, function(err, result) {
+      //*진행중..
+
     });
 
   } else {
