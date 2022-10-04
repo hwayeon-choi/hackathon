@@ -2,6 +2,8 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Text, View, Button} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import HomeButtons from '../Components/HomeButtons';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -9,14 +11,7 @@ function HomeScreen({navigation}) {
   return (
     <View>
       <Text>Home</Text>
-      <Button
-        title="Detail 1 열기"
-        onPress={() =>
-          navigation.push('Detail', {
-            id: 1,
-          })
-        }
-      />
+      <HomeButtons />
     </View>
   );
 }
