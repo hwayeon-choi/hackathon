@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/hwayeon-choi/hackathon/issues"
   },
-  "homepage": "https://github.com/hwayeon-choi/hackathon#readme"
+  "homepage": "https://github.com/hwayeon-choi/hackathon#readme",
+  "type": "module",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
