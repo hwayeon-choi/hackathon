@@ -1,17 +1,17 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Text, View, Button} from 'react-native';
+import {Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import HomeButtons from '../Components/HomeButtons';
 
 
 const Tab = createBottomTabNavigator();
 
-function HomeScreen({navigation}) {
+function HomeScreen() {
   return (
     <View>
       <Text>Home</Text>
-      <HomeButtons />
+      <HomeButtons/>
     </View>
   );
 }
