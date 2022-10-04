@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 function HomeScreen() {
   return (
     <View>
-      <Text>Home</Text>
+      <Text>지역</Text>
       <HomeButtons/>
     </View>
   );
