@@ -4,12 +4,12 @@ import {View, Text, StyleSheet} from 'react-native';
 function DetailScreen({route, navigation}) {
   useEffect(() => {
     navigation.setOptions({
-      title: `상세 정보 - ${route.params.id}`,
+      title: `${route.params.area}`,
     });
   }, [navigation, route.params.id]);
   return (
     <View style={styles.block}>
-      <Text style={styles.text}>id: {route.params.id}</Text>
+      <Text style={styles.text}>{route.params.area}</Text>
     </View>
   );
 }
