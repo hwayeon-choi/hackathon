@@ -4,7 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MainScreen from './Screens/MainScreen';
 import DetailScreen from './Screens/DetailScreen';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator(); // create navigator 메소드는 호출하는 위치에 있어야 한다
 
 function App() {
   return (

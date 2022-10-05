@@ -4,49 +4,7 @@ import {Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import HomeButtons from '../Components/HomeButtons';
 
-
 const Tab = createBottomTabNavigator(); // create navigator 메소드는 호출하는 위치에 있어야 한다
-
-function HomeScreen() {
-  return (
-    <View>
-      <Text style={{ color: "black", fontSize: 30 }}>지역</Text>
-      <HomeButtons/>
-    </View>
-  );
-}
-
-function FavoriteScreen() {
-  return (
-    <View>
-      <Text>Favorite</Text>
-    </View>
-  );
-}
-
-function MapScreen() {
-  return (
-    <View>
-      <Text>Map</Text>
-    </View>
-  );
-}
-
-function CommunityScreen() {
-  return (
-    <View>
-      <Text>Community</Text>
-    </View>
-  );
-}
-
-function MypageScreen() {
-  return (
-    <View>
-      <Text>Mypage</Text>
-    </View>
-  );
-}
 
 function MainScreen() {
   return (
@@ -54,7 +12,7 @@ function MainScreen() {
       initialRouteName="Home"
       screenOptions={{
       tabBarActiveTintColor: '#fb8c00',
-      tabBarShowLabel: true,
+      tabBarShowLabel: false,
     }}>
     <Tab.Screen
       name="Home"
@@ -106,8 +64,48 @@ function MainScreen() {
           ),
         }}
       />    
-      
      </Tab.Navigator>
+  );
+}
+
+function HomeScreen() {
+  return (
+    <View>
+      <Text style={{ color: "black", fontSize: 30 }}>지역</Text>
+      <HomeButtons/>
+    </View>
+  );
+}
+
+function FavoriteScreen() {
+  return (
+    <View>
+      <Text>Favorite</Text>
+    </View>
+  );
+}
+
+function MapScreen() {
+  return (
+    <View>
+      <Text>Map</Text>
+    </View>
+  );
+}
+
+function CommunityScreen() {
+  return (
+    <View>
+      <Text>Community</Text>
+    </View>
+  );
+}
+
+function MypageScreen() {
+  return (
+    <View>
+      <Text>Mypage</Text>
+    </View>
   );
 }
 
