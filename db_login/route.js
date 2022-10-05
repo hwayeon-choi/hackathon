@@ -89,13 +89,14 @@ const app = http.createServer(function(req, res) {
         <meta charset="utf-8">
       </head>
       <body>
-      <form id="signup" action="/post_test" method="POST">
-        <input type="text" name="id" placeholder="id" /><br><br>
-        <input type="text" name="username" placeholder="username" /><br><br>
-        <input type="text" name="pw" placeholder="pw" /><br>
-        <input type="text" name="email" placeholder="email" /><br>
-        <button type="submit"> sign-up </button>
+        <form id="signup" action="/post_test" method="POST">
+          <input type="text" name="id" placeholder="id" /><br><br>
+          <input type="text" name="username" placeholder="username" /><br><br>
+          <input type="text" name="pw" placeholder="pw" /><br><br>
+          <input type="text" name="email" placeholder="email" /><br>
+          <button type="submit"> sign-up </button>
         </form>
+        <button type="button" onclick="location.href='/login'">Login</button>
       </body>
       </html>`);
 
@@ -174,17 +175,57 @@ const app = http.createServer(function(req, res) {
     req.on('data', function(data){
       body = body + data;
     });
+
     req.on('end', function(req){
       let post = query.parse(body);
-      const obj = JSON.parse(JSON.stringify(post));
-      let keys = Object.keys(obj);
-      let sql = 'SELECT User_id, password FROM userinfo WHERE user_id = ?';
+      const obj2 = JSON.parse(JSON.stringify(post));
+      let keys = Object.keys(obj2);
+      let sql = 'SELECT user_id, password FROM userinfo WHERE user_id = ?';
       //일치하는 id값 조회
-      let params = [obj[keys[0]]];
+      let params = [obj2[keys[0]]];
       connection.query(sql, params, function(err, result) {
-      //*진행중..
+      try{
+        let input_id = obj2[keys[0]];
+        let input_pw = obj2[keys[1]];
 
+        let valid_id = result[0].user_id;
+        let valid_pw = result[0].password;
+
+        if(input_id === valid_id){
+          if(input_pw === valid_pw){
+          console.log('로그인 성공');
+          // connection.end();
+          res.writeHead(302, {Location:'/login_after'});
+          res.end();
+          } else {
+            console.log('비밀번호를 확인');
+            // connection.end();
+            res.writeHead(302, {Location:'/login'});
+            res.end();
+            }
+          }
+        } catch(error) {
+          console.log('등록되지 않은 회원입니다 ');
+          // connection.end();
+          res.writeHead(302, {Location:'/'});
+          res.end();
+        }
+      });
     });
+
+  } else if(pathname === '/login_after'){
+    res.writeHead(200);
+    res.end(`
+    <!doctype html>
+      <html>
+      <head>
+        <title>Welcome</title>
+        <meta charset="utf-8">
+      </head>
+      <body>
+        <h2>환영합니다!</h2>
+      </body>
+      </html>`);
 
   } else {
     res.writeHead(404);
