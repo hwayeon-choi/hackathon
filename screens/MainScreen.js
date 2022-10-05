@@ -3,6 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import HomeButtons from '../Components/HomeButtons';
+import Login from '../Components/Login';
 
 const Tab = createBottomTabNavigator(); // create navigator 메소드는 호출하는 위치에 있어야 한다
 
@@ -63,8 +64,8 @@ function MainScreen() {
             <Icon name="person" color={color} size={size} />
           ),
         }}
-      />    
-     </Tab.Navigator>
+      />
+    </Tab.Navigator>
   );
 }
 
@@ -105,6 +106,7 @@ function MypageScreen() {
   return (
     <View>
       <Text>Mypage</Text>
+      {<Login />}
     </View>
   );
 }
