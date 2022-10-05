@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   margin: {
-    marginBottom: 8,
+    marginBottom: 70,
   },
 });
 
