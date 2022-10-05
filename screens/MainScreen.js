@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 function HomeScreen() {
   return (
     <View>
-      <Text>지역</Text>
+      <Text style={{ color: "black", fontSize: 30 }}>지역</Text>
       <HomeButtons/>
     </View>
   );
