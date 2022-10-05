@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import HomeButtons from '../Components/HomeButtons';
 
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator(); // create navigator 메소드는 호출하는 위치에 있어야 한다
 
 function HomeScreen() {
   return (
