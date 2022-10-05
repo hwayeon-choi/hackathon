@@ -1,11 +1,9 @@
 import http from 'http';
-import fs from 'fs';
+// import fs from 'fs';
 import query from 'querystring';
 import url from 'url';
-// import connetion from './lib/db_template_test.js';
 const port = process.env.PORT || 3000
 
-// let mysql = require('mysql');
 import mysql from 'mysql'; 
 let databaseName = 'userdata';
 //mysql연결 설정
@@ -17,67 +15,13 @@ const connection = mysql.createConnection({
 });
 // connection.connect(); 
 
-const element = {
-  header: "<header> login </header>",
-  br: "<br>",
-  body: "<body></body>",
-  form: `<form id="log-in-form" method="GET">
-    <input type="text" name="username" placeholder="username" /><br><br>
-    <input type="text" name="password" placeholder="password" />
-    </form>
-    <button type="submit" form="log-in-form"> login </button>`,
-  signup: `<form id="sign-up-form" action="/form" method="POST">
-    <input type="text" name="id" placeholder="id" /><br><br>
-    <input type="text" name="username" placeholder="username" /><br><br>
-    <input type="text" name="password" placeholder="password" />
-    </form>
-    <input type="text" name="email" placeholder="email" /><br><br>
-    <button t
-    ype="submit" form="log-in-form"> sign-up </button>`,
-}
-const main = `
-${element.header}
-${element.form}
-${element.br}
-${element.body}
-`;
-const signUp = `
-${element.signup}
-`
 
-// const server = http.createServer((req, res) => {
-  //쿼리스트링, 옵션인 마지막 슬래시를 없애고 소문자로 바꿔서 url을 '정규화'합니다.
-//   const path = req.url.replace(/\/?(?:\?.)?$/, '').toLowerCase()
-//   switch(path){
-//     case '':
-//       res.writeHead(200, {'content-type': 'text/plain'})
-//       res.end('homepage')
-//       break
-//     case '/about':
-//       res.writeHead(200, {'content-type': 'text/plain'})
-//       res.end('about')
-//       break
-//     case '/login':
-//       res.writeHead(200, {'content-type':'text/html; charset=utf-8'});
-//       res.write(main);
-//       res.end();  
-//       break
-//     case '/signup':
-//       let body = '';
-//       res.writeHead(200, {'content-type':'text/html; charset=utf-8'});
-//       res.write(signUp);
-//       res.end();
-//       break
-//     default:
-//       res.writeHead(404, {'content-type': 'text/plain'})
-//       res.end('Not pound')
-//       break
-//   }
-// })
-
+//서버 시작
 const app = http.createServer(function(req, res) {
   let _url = req.url;
   let pathname = url.parse(_url, true).pathname;
+  //url.parse(): url문자열을 입력하면 url객체를 만든다. 
+  //url.parse(String, (boolean), (boolean)) => true일때 object, false일때 문자열
   if(pathname === '/'){
     //로컬 첫페이지일 때 보이는 화면
     res.writeHead(200);
@@ -101,12 +45,12 @@ const app = http.createServer(function(req, res) {
       </html>`);
 
   } else if(pathname === '/post_test'){
-    //폼 제출시 넘어가는 화면 
+    //회원가입 폼 제출시 넘어가는 화면 
     let body = '';
     req.on('data', function(data){
       body = body + data;
     });
-    req.on('end', function(req) {
+    req.on('end', function() {
       let post = query.parse(body);
       console.log(post);
       let id = post.id;
@@ -117,10 +61,12 @@ const app = http.createServer(function(req, res) {
       //객체 결과를 JSON파일로 파싱
       const obj = JSON.parse(JSON.stringify(post));
       let keys = Object.keys(obj);
+      //Object.Keys(obj)메서드는 객체의 '키'만 담은 배열을 반환한다. 
 
       //만들어둔 DB테이블에 insert하기 
       let sql = 'INSERT INTO userinfo(user_id, name, password, email) VALUES(?,?,?,?)';
       let params = [obj[keys[0]], obj[keys[1]], obj[keys[2]], obj[keys[3]]];
+      //userinfo테이블의 user_id, name, password, email
       connection.query(sql, params, function(err, row, fields) {
         if(err) {
           console.log(err);
@@ -131,7 +77,7 @@ const app = http.createServer(function(req, res) {
       // connection.end(); 
       
       // res.writeHead(302, {Location: '/'});
-
+      //폼 제출 후 id, username, pw, email 화면에 출력됨
       res.end(`
       <!doctype html>
       <html>
@@ -151,6 +97,7 @@ const app = http.createServer(function(req, res) {
     });
 
   } else if(pathname === '/login') {
+    //로그인 페이지
     let html = `
     <!doctype html>
       <html>
@@ -175,21 +122,22 @@ const app = http.createServer(function(req, res) {
     req.on('data', function(data){
       body = body + data;
     });
-
     req.on('end', function(req){
       let post = query.parse(body);
+
       const obj2 = JSON.parse(JSON.stringify(post));
       let keys = Object.keys(obj2);
+
       let sql = 'SELECT user_id, password FROM userinfo WHERE user_id = ?';
-      //일치하는 id값 조회
+      //userinfo테이블에서 id, pw값 일치하는 id값 조회
       let params = [obj2[keys[0]]];
       connection.query(sql, params, function(err, result) {
       try{
         let input_id = obj2[keys[0]];
         let input_pw = obj2[keys[1]];
 
-        let valid_id = result[0].user_id;
-        let valid_pw = result[0].password;
+        let valid_id = result[0].user_id; //DB의 user_id 데이터값
+        let valid_pw = result[0].password; //DB의 password 데이터값
 
         if(input_id === valid_id){
           if(input_pw === valid_pw){
