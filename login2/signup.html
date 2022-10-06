@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    function signup(){
+      var param = {};
+      param.userid = $("#userid").val();
+      param.password = $("#password").val();
+      param.name = $("#name").val();
+      var ajax = $.ajax({
+        url: "/signup",
+        data: param,
+        type: 'POST',
+        ataType: "JSON",
+        success: function (result) {
+          alert(result.msg);
+          location.href = "/login";
+        }
+      });
+    }
+  </script>
+
+  <div style="width:420px;">
+    <div id="login" style="text-align:right;"><a href="/login">로그인 하기</div>
+    <hr>
+    <div  id="loginout" style="display:none;">  
+      <span id="loginid"></span> <a href="/logout">로그아웃</a>
+    </div>
+    <div>
+      <div>
+        <div >아이디  : <input type="text" id="userid" name="userid" style="width:50%;"> </div>
+        <div>패스워드  : <input type="password" id="password"  name="password" style="width:50%;"> </div>
+        <div>이름 : <input type="text" id="name"  name="name" style="width:50%;"> </div>
+      </div>
+      <div></div>
+    </div>
+    <div  style="margin-top:8px;text-align:right;"> <input type="button" value="회원가입" onclick="signup();" /></div>
+  </div>
+</body>
+</html>
