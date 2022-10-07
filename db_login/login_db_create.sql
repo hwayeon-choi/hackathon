@@ -15,3 +15,5 @@ DEFAULT CHARSET=utf8;
 
 -- 데이터 INSERT 테스트용
 INSERT INTO userinfo (id, user_id, name, password, email) VALUES (1, 'test', 'test', 'test@test.com');
+
+
