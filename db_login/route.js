@@ -16,6 +16,7 @@ const connection = mysql.createConnection({
 // connection.connect(); 
 
 
+
 //서버 시작
 const app = http.createServer(function(req, res) {
   let _url = req.url;
