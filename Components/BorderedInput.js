@@ -2,7 +2,12 @@ import React from 'react';
 import {StyleSheet, TextInput} from 'react-native';
 
 function BorderedInput({hasMarginBottom}) {
-  return <TextInput style={[styles.input, hasMarginBottom && styles.margin]} />;
+  return (
+    <>
+      <TextInput style={[styles.input, hasMarginBottom && styles.margin]} />
+      <TextInput style={[styles.input, hasMarginBottom && styles.margin]} secureTextEntry/>
+    </>
+  )
 }
 
 const styles = StyleSheet.create({
