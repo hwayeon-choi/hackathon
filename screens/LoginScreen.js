@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import BorderedInput from '../Components/BorderedInput';
 import CustomButton from '../Components/CustomButton';
@@ -7,10 +7,8 @@ import CustomButton from '../Components/CustomButton';
 function Login() {
   return (
     <SafeAreaView style={styles.fullscreen}>
-      <Text style={styles.text}>PublicGallery</Text>
       <View style={styles.form}>
         <BorderedInput hasMarginBottom />
-        <BorderedInput />
         <View style={styles.buttons}>
           <CustomButton title="로그인" hasMarginBottom />
           <CustomButton title="회원가입" />
