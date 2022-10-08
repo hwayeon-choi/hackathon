@@ -8,9 +8,7 @@ function Login() {
   return (
     <SafeAreaView style={styles.fullscreen}>
       <View style={styles.form}>
-        {/* 입력 폼 */}
         <BorderedInput hasMarginBottom />
-        {/* 버튼 */}
         <View style={styles.buttons}>
           <CustomButton title="로그인" hasMarginBottom />
           <CustomButton title="회원가입" />

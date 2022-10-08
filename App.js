@@ -4,7 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MainScreen from './Screens/MainScreen';
 import DetailScreen from './Screens/DetailScreen';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator(); // create navigator 메소드는 호출하는 위치에 있어야 한다
 
 function App() {
   return (
@@ -12,12 +12,10 @@ function App() {
       <Stack.Navigator>
         <Stack.Screen
           name="Main"
-          /* 홈 탭의 메인 콘텐츠 */
           component={MainScreen}
           options={{headerShown: false}}
         />
-        {/* MainScreen의 버튼을 누르면 이동하게 되는 상세 화면 */}
-        <Stack.Screen name="Detail" component={DetailScreen} /> 
+        <Stack.Screen name="Detail" component={DetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

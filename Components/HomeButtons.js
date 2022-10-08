@@ -3,7 +3,7 @@ import { Button, } from "react-native";
 import { useNavigation, } from "@react-navigation/native";
 
 function HomeButtons() {
-  const navigation = useNavigation(); // 스크린으로 사용되고 있지 않은 컴포넌트에서 내비게이션 객체를 사용하기 위해 useNavigation Hooks를 적용
+  const navigation = useNavigation();
   return (
     <>
       <Button title="강원"

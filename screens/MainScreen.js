@@ -3,9 +3,9 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import HomeButtons from '../Components/HomeButtons';
-import LoginScreen from './LoginScreen';
+import Login from '../Components/Login';
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator(); // create navigator 메소드는 호출하는 위치에 있어야 한다
 
 function MainScreen() {
   return (
@@ -73,7 +73,6 @@ function HomeScreen() {
   return (
     <View>
       <Text style={{ color: "black", fontSize: 30 }}>지역</Text>
-      {/* 버튼이 많기 때문에 따로 만들어서 불러옴 */}
       <HomeButtons/>
     </View>
   );
@@ -107,7 +106,7 @@ function MypageScreen() {
   return (
     <View>
       <Text>Mypage</Text>
-      <LoginScreen />
+      {<Login />}
     </View>
   );
 }
