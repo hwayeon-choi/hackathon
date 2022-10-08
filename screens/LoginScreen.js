@@ -4,7 +4,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import BorderedInput from '../Components/BorderedInput';
 import CustomButton from '../Components/CustomButton';
 
-function Login() {
+function LoginScreen() {
   return (
     <SafeAreaView style={styles.fullscreen}>
       <View style={styles.form}>
@@ -40,4 +40,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default LoginScreen;
