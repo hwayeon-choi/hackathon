@@ -10,15 +10,22 @@ const connection = mysql.createConnection({
 });
 connection.connect(); 
 
-//필요한 기능1. 컬럼명을 문자열로 추출
-function findStr(tableName, strName){
-  connection.query(`SELECT place_type FROM ${tableName} WHERE place_type LIKE '%${strName}%'`, function(error, results){
-    if(error) {
-      console.log(error);
+//필요기능 : 테이블 전체를 조회해 
+function findStr2(tableName){
+  connection.query(`SELECT * FROM ${tableName}`, function(err, results){
+    if(err) {
+      console.log(err);
     } else {
-      console.log(results);
+      // console.log(results);
+      // console.log(typeof(results)); //obj
+      const objToStr = JSON.stringify(results);
+      // console.log(objToStr);
+      let str = objToStr.match('동물병원');
+      console.log(str);
     }
   });
 }
-console.log(findStr('place_detail', '동물병원'));
-//해결해야할 것 : 1개만 출력되게..
+// findStr2('place_detail');
+
+
+
