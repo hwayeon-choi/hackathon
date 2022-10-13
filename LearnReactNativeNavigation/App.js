@@ -13,7 +13,7 @@ function App() {
         <Stack.Screen 
         name="Main"
         component={MainScreen}
-        options={{headerShown : false}}
+        // options={{headerShown : false}}
         />
         <Stack.Screen name="Detail" component={DetailScreen}/>
       </Stack.Navigator>
