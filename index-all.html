@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>filtering test page</title>
+  <!-- <script src="./data/placeTypeNames.js" type="module" defer></script> -->
+</head>
+<body>
+  <div id="root"></div>
+<script>
+
+//객체 조회를 위해 만든 임의의 객체데이터 
+let placeTypeName = {
+  kor:{
+    0: '식당',
+    1: '카페',
+    2: '동물병원',
+    3: '숙박',
+    4: '공원',
+    5: '애견운동장',
+    6: '미용',
+    7: '위탁관리업',
+    8: '체험',
+    9: '관광지',
+    10: '반려동물 편의시설'
+  },
+  eng:{
+    0: 'restaurant',
+    1: 'cafe',
+    2: 'pet-hospital',
+    3: 'accomodation',
+    4: 'park',
+    5: 'pet_ground',
+    6: 'grooming_shop',
+    7: 'pet_hotel',
+    8: 'activity',
+    9: 'tour',
+    10: 'pet_rest'
+  }
+};
+
+//객체 조회를 위해 기존 객체에서 가져온 임의의 객체데이터 
+let textObj = [
+  {
+    "place_detail_id": 187,
+    "region": "광주광역시",
+    "city": "남구",
+    "place_type": "동물병원",
+    "company_name": "고려동물병원",
+    "call_num": "",
+    "_address": "광주광역시 남구 용대로 154-2 (방림동)",
+    "open_time": "",
+    "homepage": "",
+    "parking": "",
+    "wifi": "",
+    "reservation": "\r",
+    "wish": "false"
+  }, 
+  {
+    "place_detail_id": 20,
+    "region": "강원도",
+    "city": "화천군",
+    "place_type": "숙박",
+    "company_name": "평화의댐오토캠핑장",
+    "call_num": "033-440-4533",
+    "_address": "강원도 화천군 화천읍 비수구미길 145-145",
+    "open_time": "",
+    "homepage": "",
+    "parking": "",
+    "wifi": "",
+    "reservation": "\r",
+    "wish": "true"
+  } ]
+
+
+//조건이 여러개일때(하지만 계속 추가해야함)
+// function filtering(objName){
+//   let newArr = objName.filter(item => { 
+//     if(item.place_type === '숙박' && item.place_type === '동물병원');
+//       return true;
+//       }
+//     );
+//     console.log(newArr);
+// }
+
+
+const root = document.getElementById("root");
+
+//*체크박스 만드는 함수 -> view
+function ckboxmaker(elem) {
+  //폼 시작 태그
+  let formStart = document.createElement("div");
+  formStart.innerHTML = `<form id="filters" action="./view/ckbox_submit.html" method="POST">`;
+
+  //체크박스 만들기
+  for (let i = 0; i < 11; i++) {
+    //체크박스 이름 지정을 위한 데이터 기입
+    let boxName = placeTypeName.eng[i];
+    let boxVal = placeTypeName.eng[i];
+    let labelText = placeTypeName.kor[i];
+    //엘리먼트 만들기
+    let el = document.createElement(elem);
+    el.innerHTML = `<input type="checkbox" id="${boxName}" name="${boxName}" onclick="is_checked()" "value=" ${boxVal}">
+    <label for="${boxName}"> ${labelText} </label><br>`;
+    root.appendChild(el);
+    let elContainer = root.children[i];
+    //체크박스 체크여부 구분을 위해 id넘버 지정
+    elContainer.id = [i];
+  }
+  //폼 제출 태그
+  let submit = document.createElement("div");
+  submit.innerHTML = `<br><button type="submit" formmethod="POST" onclick="location.href='./view/ckbox_submit.html'"> submit
+    </button></form>`;
+  //항목을 체크하고 submit을 클릭하면 새 페이지로 연결된다.
+  root.appendChild(submit);
+}
+ckboxmaker("div");
+
+
+//*체크여부 확인하는 함수
+function is_checked() {
+  for (let i = 0; i < 11; i++) {
+    //체크박스 엘리먼트 지정
+    const checkbox = root.children[i].children[0];
+    // console.log(checkbox);
+    //체크박스 속성 체크
+    const is_checked = checkbox.checked; //ture or false
+    let ckmark = root.children[i].children[1];
+
+    if (is_checked === true) {
+      // console.log(ckmark.innerText); //체크한 항목의 텍스트 조회
+      ckmark.style.backgroundColor = "cadetblue";
+
+      let findStr = ckmark.innerText; //string 추출
+      console.log('select ' + findStr);
+
+      //특정 인스턴스만 생성하기 위해 생성자 함수 사용
+      class CategoryObj {
+        constructor(id, region, company_name, wish){
+          this.id = id;
+          this.reregion =region;
+          this.company_name = company_name;
+          this.wish = wish;
+        }
+      }
+
+      //*해당 객체 전체를 조회한 뒤 생성자 함수에 따라 인스턴스를 반환하는 함수 -> core
+      function placeTypeFilter(objName, typeName){
+        //기존 객체에서 키가 placae_type인 오브젝트의 
+        let newArr = objName.filter(item => 
+        item.place_type === typeName
+        );
+        // console.dir(newArr[0]);
+        let categoryobj = new CategoryObj(1, newArr[0].region, newArr[0].company_name, newArr[0].wish);
+        console.log(categoryobj);
+      }
+      placeTypeFilter(textObj, `${findStr}`);
+      //↑ 함수 호출(findStr는 text로만 출력되어서 백틱을 붙여줘야 문자열로 처리됨)
+      
+      } else {
+      ckmark.style.backgroundColor = "transparent";
+    }
+  }
+}
+is_checked();
+
+
+
+</script>
+</body>
+</html>
