@@ -25,7 +25,7 @@ const app = http.createServer(function(req, res) {
 
   if(pathname === '/'){
     //로컬 첫페이지일 때 보이는 화면
-    fs.readFile('./firstpage_test.html', function(err, data){
+    fs.readFile('./index.html', function(err, data){
       //해당 폴더의 html파일을 읽어온다.
       if(err) { console.log('file read fail');
         } else {
