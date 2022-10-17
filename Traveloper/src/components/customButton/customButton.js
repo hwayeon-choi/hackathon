@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   container_Primary :{
     backgroundColor : "#6BB8D0",
-    marginTop : 48,
+    marginTop : 32,
   },
   container_Tertiary : {
 
@@ -52,7 +52,14 @@ const styles = StyleSheet.create({
     fontSize : 10,
     color : "#848484",
     
-  }
+  },
+  container_MainButton : {
+    backgroundColor : "#6BB8D0",
+    height : 102,
+    width : "100%",
+    marginTop : 24,
+    marginBottom : 24,
+  },
 })
 
 export default CustomButton

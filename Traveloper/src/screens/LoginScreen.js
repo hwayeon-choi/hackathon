@@ -1,10 +1,19 @@
-import React,{useState} from "react";
+import React,{useLayoutEffect, useState} from "react";
 import { View, Text, Image , StyleSheet, TextInput, Button, ScrollView} from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import CustomButton from "../components/customButton/customButton";
 import Custominput from "../components/customInput/custominput"
 
 const LoginScreen = ()=> {
+
+  const navigation = useNavigation();
+
+  useLayoutEffect(()=> {
+    navigation.setOptions({
+      headerShown: false,
+    })
+  },[])
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -58,7 +67,7 @@ const LoginScreen = ()=> {
     
       <CustomButton 
       text="아이디/비밀번호 찾기" 
-      onPress={onSignInPress}
+      onPress={FindAccount}
       type="Tertiary" 
       />
 
@@ -86,15 +95,15 @@ const LoginScreen = ()=> {
       />
 
     </View>
-    // </ScrollView>
+  // {/* </ScrollView> */}
   )
 }
 
 const styles = StyleSheet.create({
   title : {
     fontSize : 30,
-    marginTop : 100,
-    fontWeight : "900",
+    marginTop : 56,
+    fontWeight : "700",
     color : 'black'
   },
   subtitle : {
@@ -109,7 +118,7 @@ const styles = StyleSheet.create({
     padding : 20,
   },
   input : {
-    marginTop : 10,
+    // marginTop : 10,
   },
   submit : {
     width: "100%",

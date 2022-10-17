@@ -17,15 +17,25 @@ import {
 } from 'react-native';
 
 import LoginScreen from './src/screens/LoginScreen';
-// import Custominput from './src/components/CustomInput/custominput';
+import HomeScreen from './src/screens/HomeScreen';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.root}>
-      <LoginScreen />
-      {/* <Custominput></Custominput> */}
-    </SafeAreaView>
-  );
+    <NavigationContainer>
+      <Stack.Navigator>
+        {/* <Stack.Screen name='Login' component={LoginScreen}/> */}
+        <Stack.Screen name='Home' component={HomeScreen}/>
+          {/* <SafeAreaView style={styles.root}>
+            <LoginScreen />
+          </SafeAreaView> */}
+      </Stack.Navigator>
+    </NavigationContainer>
+    );
 };
 
 const styles = StyleSheet.create({
