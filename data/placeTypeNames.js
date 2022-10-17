@@ -28,3 +28,6 @@ let placeTypeName = {
 };
 
 export default placeTypeName;
+
+// console.log(Object.keys(placeTypeName).length); //2
+// console.log(Object.keys(placeTypeName.kor).length); //11

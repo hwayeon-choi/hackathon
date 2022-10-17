@@ -147,20 +147,18 @@ function is_checked() {
       }
 
       //*해당 객체 전체를 조회한 뒤 생성자 함수에 따라 인스턴스를 반환하는 함수 -> core
-      function objKeyFilterInstance(objName, keyName, typeName){
-        //기존 객체에서 키가 placae_type인 오브젝트의 이름이 카테고리명과 일치할 때 
-        let set = [];
+      function placeTypeFilter(objName, typeName){
+        //기존 객체에서 키가 placae_type인 오브젝트의 
         let newArr = objName.filter(item => 
-        item[`${keyName}`] === typeName
+        item.place_type === typeName
         );
-        let temp = new CategoryObj(1, newArr[0].region, newArr[0].company_name, newArr[0].wish);
-        set.push(temp);
-        return console.log(set);
+        // console.dir(newArr[0]);
+        let categoryobj = new CategoryObj(1, newArr[0].region, newArr[0].company_name, newArr[0].wish);
+        console.log(categoryobj);
       }
-
-      objKeyFilterInstance(textObj, 'place_type', `${findStr}`);
+      placeTypeFilter(textObj, `${findStr}`);
       //↑ 함수 호출(findStr는 text로만 출력되어서 백틱을 붙여줘야 문자열로 처리됨)
-
+      
       } else {
       ckmark.style.backgroundColor = "transparent";
     }
