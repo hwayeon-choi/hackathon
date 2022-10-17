@@ -21,8 +21,8 @@ const Top10Place = () => {
         <View style={styles.ListContainer}>
 
           {/* 순위/업체사진/업체명 */}
-          <View style={[{width : 163, flexDirection : "row"}]}>
-            <Text>#1</Text>
+          <View style={[{width : 163, flexDirection : "row", alignItems : 'center'}]}>
+            <Text style={{marginRight : 16}}>#1</Text>
             <View style={styles.ListThumnail}></View>
             <Text>업체명</Text>
           </View>
@@ -33,6 +33,39 @@ const Top10Place = () => {
           </View>
 
         </View>
+        
+        <View style={styles.ListContainer}>
+
+          {/* 순위/업체사진/업체명 */}
+          <View style={[{width : 163, flexDirection : "row", alignItems : 'center'}]}>
+            <Text style={{marginRight : 16}}>#1</Text>
+            <View style={styles.ListThumnail}></View>
+            <Text>업체명</Text>
+          </View>
+
+          {/* 더보기 */}
+          <View >
+            <View View style={styles.DetailIcons}></View>
+          </View>
+
+        </View>
+
+        <View style={styles.ListContainer}>
+
+          {/* 순위/업체사진/업체명 */}
+          <View style={[{width : 163, flexDirection : "row", alignItems : 'center'}]}>
+            <Text style={{marginRight : 16}}>#1</Text>
+            <View style={styles.ListThumnail}></View>
+            <Text>업체명</Text>
+          </View>
+
+          {/* 더보기 */}
+          <View >
+            <View View style={styles.DetailIcons}></View>
+          </View>
+
+        </View>
+
       </View>
 
     </View>
@@ -68,7 +101,7 @@ const styles = StyleSheet.create({
     height : 313,
     backgroundColor : "#d9d9d9",
     borderRadius : 10,
-    justifyContent : 'center',
+    justifyContent : 'space-around',
     alignItems : 'center',
     paddingHorizontal : 10,
     paddingVertical : 16, 
@@ -88,6 +121,7 @@ const styles = StyleSheet.create({
     height :64,
     backgroundColor : "black",
     borderRadius : 10,
+    marginRight :16,
   },
   DetailIcons : {
     width : 24,
