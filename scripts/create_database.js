@@ -1,6 +1,9 @@
 import mysql from 'mysql'; 
 import dbconfig from '../config/database.js';
 
+// const mysql = require('mysql');
+// const dbconfig = require('../config/database.js');
+
 const connection = mysql.createConnection(dbconfig.connection);
 
 connection.query('CREATE DATABASE ' + dbconfig.database);

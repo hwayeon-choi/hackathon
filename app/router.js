@@ -27,7 +27,7 @@ module.exports = function(app, passport) {
     });
 
 	// signup page
-	app.post('/signup', function(req, res, next) {
+	app.get('/signup', function(req, res, next) {
 		// render the page
 		res.render('signup.ejs');
 		console.log(req.body);
