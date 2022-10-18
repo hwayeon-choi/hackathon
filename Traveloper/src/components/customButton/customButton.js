@@ -60,6 +60,12 @@ const styles = StyleSheet.create({
     marginTop : 24,
     marginBottom : 24,
   },
+  container_hashtagButton : {
+    backgroundColor : "#000",
+    height : 50,
+    color : "#FFF",
+    borderRadius : 30,
+  }
 })
 
 export default CustomButton

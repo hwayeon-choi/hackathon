@@ -23,6 +23,16 @@ const styles = StyleSheet.create({
     paddingHorizontal : 10,
   },
   input : {},
+  findRouteInput : {
+    backgroundColor : "black",
+  },
+  findRouteInput : {
+    height:50,
+    borderRadius : 30,
+    borderColor : "#e0e0e0",
+    borderWidth : 1,
+    backgroundColor : "#FFF",
+  }
 
 })
 
