@@ -1,4 +1,6 @@
-﻿import http from 'http';
+﻿// nodemon watch `파일명` 
+// mysql -uroot -p
+import http from 'http';
 import fs from 'fs';
 import mysql from 'mysql'
 import url from 'url'
@@ -28,7 +30,8 @@ http.createServer(function (req, res) {
     });
   } else if(pathname === '/dislike1'){ // 찜 취소
     let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=1;`
-    connection.query(sql1, function(err, rows, fields){
+    let sql2 = `DELETE FROM favorite WHERE userid = 1 or placeid = 1 limit 1`
+    connection.query(sql1+sql2, function(err, rows, fields){
         if(err) console.log(err);
         console.log(rows);
     });
