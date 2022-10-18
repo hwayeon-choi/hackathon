@@ -20,6 +20,7 @@ http.createServer(function (req, res) {
   if(pathname === '/'){
     res.writeHead(200, {"content-type": "text/html; charset=utf-8"});
     res.write(data);
+  /* 찜 */
   /* 1 */  
   } else if(pathname === '/like1'){ // 찜하기
     let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=1;`
@@ -38,7 +39,7 @@ http.createServer(function (req, res) {
   /* 2 */
   } else if(pathname === '/like2'){ // 찜하기
   let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=2;`
-  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(2, 2);`
+  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(1, 2);`
   connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
@@ -53,7 +54,7 @@ http.createServer(function (req, res) {
   /* 3 */
 }  else if(pathname === '/like3'){ // 찜하기
   let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=3;`
-  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(3, 3);`
+  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(1, 3);`
   connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
@@ -68,7 +69,7 @@ http.createServer(function (req, res) {
   /* 4 */
 } else if(pathname === '/like4'){ // 찜하기
   let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=4;`
-  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(4, 4);`
+  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(1, 4);`
   connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
@@ -83,7 +84,7 @@ http.createServer(function (req, res) {
   /* 5 */
 } else if(pathname === '/like5'){ // 찜하기
   let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=5;`
-  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(5, 5);`
+  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(1, 5);`
   connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
@@ -99,7 +100,7 @@ http.createServer(function (req, res) {
   /* 6 */
 } else if(pathname === '/like6'){ // 찜하기
   let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=6;`
-  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(6, 6);`
+  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(1, 6);`
   connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
@@ -114,7 +115,7 @@ http.createServer(function (req, res) {
   /* 7 */
 } else if(pathname === '/like7'){ // 찜하기
   let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=7;`
-  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(7, 7);`
+  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(1, 7);`
   connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
@@ -129,7 +130,7 @@ http.createServer(function (req, res) {
   /* 8 */
 } else if(pathname === '/like8'){ // 찜하기
   let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=8;`
-  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(8, 8);`
+  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(1, 8);`
   connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
@@ -144,7 +145,7 @@ http.createServer(function (req, res) {
   /* 9 */
 } else if(pathname === '/like9'){ // 찜하기
   let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=9;`
-  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(9, 9);`
+  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(1, 9);`
   connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
@@ -159,7 +160,7 @@ http.createServer(function (req, res) {
   /* 10 */
 } else if(pathname === '/like10'){ // 찜하기
   let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=10;`
-  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(10, 10);`
+  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(1, 10);`
   connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
@@ -174,7 +175,7 @@ http.createServer(function (req, res) {
   /* 11 */
 } else if(pathname === '/like11'){ // 찜하기
   let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=11;`
-  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(11, 11);`
+  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(1, 11);`
   connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
@@ -189,7 +190,7 @@ http.createServer(function (req, res) {
   /* 12 */
 } else if(pathname === '/like12'){ // 찜하기
   let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=12;`
-  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(12, 12);`
+  let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(1, 12);`
   connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
@@ -201,8 +202,15 @@ http.createServer(function (req, res) {
       if(err) console.log(err);
       console.log(rows);
   });
+} /* 위시리스트 */
+  else if(pathname === '/wishlist'){ // 찜 취소
+  let sql1 = `SELECT placename FROM place WHERE placeid=any(SELECT placeid FROM favorite WHERE userid=1);`
+  connection.query(sql1, function(err, rows, fields){
+      if(err) console.log(err);
+      console.log(rows)
+      console.log(JSON.stringify(rows))
+  });
 }
-  res.end()
 }).listen(3020, function(){
   console.log('서버가 작동되고 있습니다!');
 });
