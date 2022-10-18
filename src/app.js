@@ -207,8 +207,17 @@ http.createServer(function (req, res) {
   let sql1 = `SELECT placename FROM place WHERE placeid=any(SELECT placeid FROM favorite WHERE userid=1);`
   connection.query(sql1, function(err, rows, fields){
       if(err) console.log(err);
-      console.log(rows)
-      console.log(JSON.stringify(rows))
+      // console.log(rows)
+      // console.log(JSON.stringify(rows))
+      function memoMaker(directoryName, fileName, data) {
+        let combinePath ="./" + directoryName + fileName;
+        fs.writeFile(`${combinePath}.json`, JSON.stringify(data), 'utf-8',(error)=> {
+          if(error === true) {
+            console.error('this is error');
+          }
+        })
+      }
+      memoMaker("test", "example-file", rows);
   });
 }
 }).listen(3020, function(){
