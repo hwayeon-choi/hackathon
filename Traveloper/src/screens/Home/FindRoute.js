@@ -76,15 +76,6 @@ const styles = StyleSheet.create({
     borderColor : "#e0e0e0",
     borderWidth : 1,
   },
-  hashTagButton : {
-    backgroundColor : "#000",
-    width : "20%",
-    height : 50,
-    color : "#FFF",
-    borderRadius : 30,
-    justifyContent :'center',
-    alignItems : "center"
-  },
   categoryContainer : {
     flexDirection : 'row',
     width : "100%",
