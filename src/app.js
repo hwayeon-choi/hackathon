@@ -52,7 +52,7 @@ http.createServer(function (req, res) {
         console.log(rows);
     });
     /* 3 */
-  }  else if(pathname === '/like3'){ // 찜하기
+  } else if(pathname === '/like3'){ // 찜하기
     let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=3;`
     let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(1, 3);`
     connection.query(sql1+sql2, function(err, rows, fields){
@@ -213,15 +213,17 @@ http.createServer(function (req, res) {
           console.error('this is error');
         }
       })
-      /* 호출 */
-      fs.readFile('./inquiry-log/user-1.json', 'utf8', (err, data) => {
-        if (err) {
-          console.error(err)
-          return
-        }
-        console.log(data)
-      })
     });
+    /* 다시 호출 */
+    fs.readFile('./inquiry-log/user-1.json', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err)
+        return
+      }
+      console.log(data)
+      res.writeHead(200, {"content-type": "application/json; charset=utf-8"});
+      res.end(JSON.stringify(data))
+    })
   }
 }).listen(3020, function(){
   console.log('서버가 작동되고 있습니다!');
