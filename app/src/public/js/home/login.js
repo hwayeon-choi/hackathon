@@ -6,9 +6,9 @@ const id = document.querySelector("#id"),
   password = document.querySelector("#pw"),
   loginBtn = document.querySelector("button");
 
-loginBtn.addEventListener("click", register);
+loginBtn.addEventListener("click", login);
 
-function register() {
+function login() {
   // request data
   const req = {
     id : id.value,

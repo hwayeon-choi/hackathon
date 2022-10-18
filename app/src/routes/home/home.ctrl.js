@@ -16,6 +16,9 @@ const output = {
   },
   profile : (req, res) => {
     res.render("home/profile");
+  },
+  userDelete : (req, res) => {
+    res.render("home/userDelete");
   }
 };
 
@@ -30,6 +33,11 @@ const process = {
   register : async (req, res) => {
     const user = new User(req.body);
     const response = await user.register();
+    return res.json(response);
+  },
+  userDelete : async (req, res) => {
+    const user = new User(req.body);
+    const response = await user.userDelete();
     return res.json(response);
   }
 }
