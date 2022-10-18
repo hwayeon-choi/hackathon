@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hwayeon-choi/hackathon#readme",
   "type": "module",
   "dependencies": {
+    "ejs": "^3.1.8",
     "mysql": "^2.18.1"
   },
   "types": "module"

@@ -25,10 +25,10 @@ function conAndqsToJson(sqlQs, fileName){
 }
 
 //* 특정 문자열 포함된 행 가져오기 & json파일로 저장
-conAndqsToJson(`SELECT * FROM place_detail WHERE place_type LIKE '%동물병원%'`, 'pet_hospital');
+// conAndqsToJson(`SELECT * FROM place_detail WHERE place_type LIKE '%동물병원%'`, 'pet_hospital');
 
 //* 테이블 전체 데이터 json파일로 저장
-conAndqsToJson(`SELECT * FROM place_detail`, 'all_test');
+conAndqsToJson(`SELECT * FROM place_detail`, 'place_all');
 
 
 connetion.end();

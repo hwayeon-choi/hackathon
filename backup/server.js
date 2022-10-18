@@ -1,10 +1,13 @@
 import http from 'http';
-import fs from 'fs';
-// import query from 'querystring';
+// import fs from 'fs';
+import query from 'querystring';
 import url from 'url';
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3010
 import mysql from 'mysql'; 
-// import placeTypeName from './placeTypeNames.js';
+
+import checkboxMaker from './src/checkboxMaker.js';
+import is_checked from './src/is_checked.js';
+import placeTypeName from './data/placeTypeNames.js';
 
 let databaseName = 'userdata';
 //mysql연결 설정
@@ -25,14 +28,23 @@ const app = http.createServer(function(req, res) {
 
   if(pathname === '/'){
     //로컬 첫페이지일 때 보이는 화면
-    fs.readFile('./index.html', function(err, data){
-      //해당 폴더의 html파일을 읽어온다.
-      if(err) { console.log('file read fail');
-        } else {
-        res.writeHead(200, {'Content-type': 'text/html'});
-        res.end(data);
-      }
-    });
+    res.writeHead(200);
+    res.end(`
+      <!doctype html>
+        <html>
+        <head>
+          <title>filter-test</title>
+          <meta charset="utf-8">
+        </head>
+        <body>` 
+        + 
+        checkboxMaker(placeTypeName, 'is_checked()')
+        +
+        `
+        </body>
+        </html>`
+    );
+
   } else {
     res.writeHead(404);
     res.end('Not found');
