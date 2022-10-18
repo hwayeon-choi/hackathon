@@ -45,7 +45,8 @@ http.createServer(function (req, res) {
   });
 } else if(pathname === '/dislike2'){ // 찜 취소
   let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=2;`
-  connection.query(sql1, function(err, rows, fields){
+  let sql2 = `DELETE FROM favorite WHERE userid = 1 or placeid = 2 limit 1`
+  connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
   });
@@ -59,7 +60,8 @@ http.createServer(function (req, res) {
   });
 } else if(pathname === '/dislike3'){ // 찜 취소
   let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=3;`
-  connection.query(sql1, function(err, rows, fields){
+  let sql2 = `DELETE FROM favorite WHERE userid = 1 or placeid = 3 limit 1`
+  connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
   });
@@ -73,7 +75,8 @@ http.createServer(function (req, res) {
   });
 } else if(pathname === '/dislike4'){ // 찜 취소
   let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=4;`
-  connection.query(sql1, function(err, rows, fields){
+  let sql2 = `DELETE FROM favorite WHERE userid = 1 or placeid = 4 limit 1`
+  connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
   });
@@ -87,8 +90,9 @@ http.createServer(function (req, res) {
   });
 } else if(pathname === '/dislike5'){ // 찜 취소
   let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=5;`
+  let sql2 = `DELETE FROM favorite WHERE userid = 1 or placeid = 5 limit 1`
   //id 값이 1인 place의 favorite을 기존 값에서 1 더한다.
-  connection.query(sql1, function(err, rows, fields){
+  connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
   });
@@ -102,7 +106,8 @@ http.createServer(function (req, res) {
   });
 } else if(pathname === '/dislike6'){ // 찜 취소
   let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=6;`
-  connection.query(sql1, function(err, rows, fields){
+  let sql2 = `DELETE FROM favorite WHERE userid = 1 or placeid = 6 limit 1`
+  connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
   });
@@ -116,7 +121,8 @@ http.createServer(function (req, res) {
   });
 } else if(pathname === '/dislike7'){ // 찜 취소
   let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=7;`
-  connection.query(sql1, function(err, rows, fields){
+  let sql2 = `DELETE FROM favorite WHERE userid = 1 or placeid = 7 limit 1`
+  connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
   });
@@ -130,7 +136,8 @@ http.createServer(function (req, res) {
   });
 } else if(pathname === '/dislike8'){ // 찜 취소
   let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=8;`
-  connection.query(sql1, function(err, rows, fields){
+  let sql2 = `DELETE FROM favorite WHERE userid = 1 or placeid = 8 limit 1`
+  connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
   });
@@ -144,7 +151,8 @@ http.createServer(function (req, res) {
   });
 } else if(pathname === '/dislike9'){ // 찜 취소
   let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=9;`
-  connection.query(sql1, function(err, rows, fields){
+  let sql2 = `DELETE FROM favorite WHERE userid = 1 or placeid = 9 limit 1`
+  connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
   });
@@ -158,7 +166,8 @@ http.createServer(function (req, res) {
   });
 } else if(pathname === '/dislike10'){ // 찜 취소
   let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=10;`
-  connection.query(sql1, function(err, rows, fields){
+  let sql2 = `DELETE FROM favorite WHERE userid = 1 or placeid = 10 limit 1`
+  connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
   });
@@ -172,7 +181,8 @@ http.createServer(function (req, res) {
   });
 } else if(pathname === '/dislike11'){ // 찜 취소
   let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=11;`
-  connection.query(sql1, function(err, rows, fields){
+  let sql2 = `DELETE FROM favorite WHERE userid = 1 or placeid = 11 limit 1`
+  connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
   });
@@ -186,7 +196,8 @@ http.createServer(function (req, res) {
   });
 } else if(pathname === '/dislike12'){ // 찜 취소
   let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=12;`
-  connection.query(sql1, function(err, rows, fields){
+  let sql2 = `DELETE FROM favorite WHERE userid = 1 or placeid = 12 limit 1`
+  connection.query(sql1+sql2, function(err, rows, fields){
       if(err) console.log(err);
       console.log(rows);
   });
