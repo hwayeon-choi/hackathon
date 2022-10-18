@@ -14,6 +14,7 @@ import { HomeIcon,HeartIcon,MapIcon,PencilSquareIcon,Cog6ToothIcon } from 'react
 
 import HomeScreen from './src/screens/Home/HomeScreen';
 import LoginScreen from './src/screens/LoginScreen';
+import { color } from 'react-native-reanimated';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -38,7 +39,7 @@ const App = () => {
           options = {{
             tabBarIcon : ()=> {return <HomeIcon size={24} color={"#000"} />},
             tabBarShowLabel : true,
-            tabBarActiveTintColor : "#6BB8D0"
+            tabBarActiveTintColor : "#6BB8D0",
           }}
           />
           <Tab.Screen 

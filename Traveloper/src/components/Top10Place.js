@@ -1,9 +1,12 @@
 import { View, Text , StyleSheet} from 'react-native'
 import React from 'react'
+import Top10Box from './Box/Top10Box'
+import { ScrollView } from 'react-native-gesture-handler'
 
 const Top10Place = () => {
   return (
-    <View style={[{width : '100%', height : 369, borderRadius : 10, marginBottom : 80, justifyContent : 'space-between', alignItems : 'center'}]}>
+    // <ScrollView>
+    <View style={[{width : '100%', height : 480, borderRadius : 10, marginBottom : 32, justifyContent : 'space-between', alignItems : 'center'}]}>
       {/* 탑플레이스 상단 카테고리/기간 */}
       <View style={styles.Topbar}>
         {/* 카테고리 */}
@@ -15,60 +18,21 @@ const Top10Place = () => {
       {/* 탑플레이스 리스트 */}
 
       {/* 회색 bg */}
-      <View style={styles.ListBg}>
-
-        {/* 흰색 containers */}
-        <View style={styles.ListContainer}>
-
-          {/* 순위/업체사진/업체명 */}
-          <View style={[{width : 163, flexDirection : "row", alignItems : 'center'}]}>
-            <Text style={{marginRight : 16}}>#1</Text>
-            <View style={styles.ListThumnail}></View>
-            <Text>업체명</Text>
-          </View>
-
-          {/* 더보기 */}
-          <View >
-            <View View style={styles.DetailIcons}></View>
-          </View>
-
-        </View>
-        
-        <View style={styles.ListContainer}>
-
-          {/* 순위/업체사진/업체명 */}
-          <View style={[{width : 163, flexDirection : "row", alignItems : 'center'}]}>
-            <Text style={{marginRight : 16}}>#1</Text>
-            <View style={styles.ListThumnail}></View>
-            <Text>업체명</Text>
-          </View>
-
-          {/* 더보기 */}
-          <View >
-            <View View style={styles.DetailIcons}></View>
-          </View>
-
-        </View>
-
-        <View style={styles.ListContainer}>
-
-          {/* 순위/업체사진/업체명 */}
-          <View style={[{width : 163, flexDirection : "row", alignItems : 'center'}]}>
-            <Text style={{marginRight : 16}}>#1</Text>
-            <View style={styles.ListThumnail}></View>
-            <Text>업체명</Text>
-          </View>
-
-          {/* 더보기 */}
-          <View >
-            <View View style={styles.DetailIcons}></View>
-          </View>
-
-        </View>
-
-      </View>
+      <ScrollView style={styles.ListBg} nestedScrollEnabled={true}>
+        <Top10Box placename={"업체1"} id={1}/>
+        <Top10Box placename={"업체2"} id={2}/>
+        <Top10Box placename={"업체3"} id={3}/>
+        <Top10Box placename={"업체4"} id={4}/>
+        <Top10Box placename={"업체5"} id={5}/>
+        <Top10Box placename={"업체6"} id={6}/>
+        <Top10Box placename={"업체7"} id={7}/>
+        <Top10Box placename={"업체8"} id={8}/>
+        <Top10Box placename={"업체9"} id={9}/>
+        <Top10Box placename={"업체10"} id={10}/>
+      </ScrollView>
 
     </View>
+    // </ScrollView>
   )
 }
 
@@ -98,37 +62,14 @@ const styles = StyleSheet.create({
   },
   ListBg : {
     width : "100%",
-    height : 313,
+    height : "100%",
     backgroundColor : "#d9d9d9",
     borderRadius : 10,
-    justifyContent : 'space-around',
-    alignItems : 'center',
     paddingHorizontal : 10,
     paddingVertical : 16, 
+    marginTop : 24
+
   },
-  ListContainer : {
-    width : "100%",
-    height : 80,
-    backgroundColor : "#fff",
-    borderRadius : 10,
-    flexDirection : 'row',
-    justifyContent : 'space-between',
-    alignItems : 'center',
-    padding : 10,
-  },
-  ListThumnail : {
-    width : 64,
-    height :64,
-    backgroundColor : "black",
-    borderRadius : 10,
-    marginRight :16,
-  },
-  DetailIcons : {
-    width : 24,
-    height :24,
-    backgroundColor : "black",
-    borderRadius : 10,
-  }
 })
 
 export default Top10Place
