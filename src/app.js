@@ -43,7 +43,7 @@ http.createServer(function (req, res) {
     res.writeHead(200, {"content-type": "application/json; charset=utf-8"});
     res.write(JSON.stringify(data))
   })
-}
+} res.end();
 }).listen(3020, function(){
   console.log('서버가 작동되고 있습니다!');
 });
