@@ -45,13 +45,13 @@ const FindRoute = () => {
       {/* 업체리스트 컨테이너  */}
       <ScrollView style = {styles.listContainer}>
         
-        <Listbox></Listbox>
-        <Listbox></Listbox>
-        <Listbox></Listbox>
-        <Listbox></Listbox>
-        <Listbox></Listbox>
-        <Listbox></Listbox>
-        <Listbox></Listbox>
+        <Listbox name={"숙소1"} price={"70,800 원"}></Listbox>
+        <Listbox name={"숙소2"} price={"110,800 원"}></Listbox>
+        <Listbox name={"숙소3"} price={"90,800 원"}></Listbox>
+        <Listbox name={"숙소4"} price={"50,800 원"}></Listbox>
+        <Listbox name={"숙소5"} price={"80,800 원"}></Listbox>
+        <Listbox name={"숙소6"} price={"200,800 원"}></Listbox>
+        <Listbox name={"숙소7"} price={"124,800 원"}></Listbox>
       
       </ScrollView>
 

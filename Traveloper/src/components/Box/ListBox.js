@@ -11,6 +11,8 @@ const Listbox = ({
   flexDirection,
   position,
   onPress,
+  name,
+  price
 }) => {
   return (
     <Pressable 
@@ -45,8 +47,8 @@ const Listbox = ({
         justifyContent :'space-between',
         paddingHorizontal : 20,
       }}>
-        <Text style={{color:"white"}}>숙소정보</Text>
-        <Text style={{color:"white"}}>100,500 원</Text>
+        <Text style={{color:"white"}}>{name}</Text>
+        <Text style={{color:"white"}}>{price}</Text>
       </View>
     </Pressable>
   )
