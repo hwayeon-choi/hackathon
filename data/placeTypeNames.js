@@ -10,7 +10,25 @@ let placeTypeName = {
     7: '위탁관리업',
     8: '체험',
     9: '관광지',
-    10: '반려동물 편의시설(놀이터)'
+    10: '반려동물 편의시설(놀이터)',
+
+    11: '서울특별시',
+    12: '강원도',
+    13: '경기도',
+    14: '경상남도',
+    15: '경상북도',
+    16: '강원도',
+    17: '대구광역시',
+    18: '대전광역시',
+    19: '충청북도',
+    20: '충청남도',
+    21: '부산광역시',
+    22: '울산광역시',
+    23: '인천광역시',
+    24: '전라북도',
+    25: '전라남도',
+    26: '광주광역시',
+    27: '제주특별자치도',
   },
   eng:{
     0: 'restaurant',
@@ -23,7 +41,26 @@ let placeTypeName = {
     7: 'pet_hotel',
     8: 'activity',
     9: 'tour',
-    10: 'pet_rest'
+    10: 'pet_rest',
+
+    
+    11: 'tjdnf',
+    12: 'rkddnjs',
+    13: 'rudrl',
+    14: 'rudtkdskaeh',
+    15: 'rudtkdqnreh',
+    16: 'rkddnjs',
+    17: 'eorn',
+    18: 'eowjs',
+    19: 'cndcjdqnreh',
+    20: 'cndcjdskaeh',
+    21: 'qtnks',
+    22: 'dnftks',
+    23: 'dlscjs',
+    24: 'wjsfkqnreh',
+    25: 'wjsfkskaeh',
+    26: 'rhdkwn',
+    27: 'wpwn',
   }
 };
 

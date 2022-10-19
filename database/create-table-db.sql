@@ -33,3 +33,17 @@ CREATE TABLE place_detail (
   PRIMARY KEY (place_detail_id)
 );
 
+
+-- 견종
+CREATE TABLE dog_type (
+  dog_type_id INT NOT NULL AUTO_INCREMENT,
+  small VARCHAR(100) NOT NULL COMMENT '소형견',
+  middle VARCHAR(100) NOT NULL COMMENT '중형견',
+  big VARCHAR(100) NOT NULL COMMENT '대형견',
+  PRIMARY KEY (dog_type_id)
+);
+
+-- 해시태그
+CREATE TABLE hashtag (
+
+);

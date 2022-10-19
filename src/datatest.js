@@ -1,23 +1,25 @@
-import data from '../database/DB_filter_save_to_json/all.json' assert{type: "json"};
+import data from "../database/DB_filter_save_to_json/all.json" assert { type: "json" };
 
-// let test = data.filter();
-// console.log(test); //보이지 않는 index 출력
-
-// console.log(data[0]); 
-
-let testStr = 'company_name';
-
-for(let i=0; i<data.length; i++){
-  let datas = data[i];
-  let keys = Object.keys(datas);
-  for(let j=0; j<keys.length; j++){
-    // console.log(keys[j]);
-    if(testStr === keys[j]){
-      console.log(data[i]);
-    };
+export default function keyName() {
+  let set = [];
+  for (let i = 0; i < data.length; i++) {
+    let datas = data[i];
+    // let keys = Object.keys(datas);
+    // console.log(keys); //키
+    let vals = Object.values(datas);
+    for (let j = 0; j < vals.length; j++) {
+      let test = "동물병원";
+      if (test === vals[j]) {
+        set.push(vals);
+        // console.log(vals); //값
+      }
+    }
   }
+  return set;
 }
-//진행중...
+// console.log(keyName());
+
+
 
 
 
@@ -35,8 +37,4 @@ let testTwo = Object.values(data);
 
 let testThree = Object.entries(data);
 // console.log(testThree);
-// console.log(Array.isArray(testTwo)); //true 
-
-
-
-
+// console.log(Array.isArray(testTwo)); //true
