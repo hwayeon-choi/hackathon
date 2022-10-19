@@ -9,9 +9,9 @@ class User {
   async login() {
     const client = this.body;
     try {
-      const { id, password } = await UserStorage.getUserInfo(client.id);
+      const { id, password } = await UserStorage.getUserInfo(client.id, client.password);
   
-      if (id) {
+      if (id, password) {
         if(id === client.id && password === client.password) {
           return { success : true };
         }
@@ -26,9 +26,12 @@ class User {
   async register() {
     const client = this.body;
     try {
-      const response = await UserStorage.save(client);
-      
-      return response;
+      if(client.password === client.confirmPassword) {
+        const response = await UserStorage.save(client);
+        
+        return response;
+      }
+      return { success : false, msg : "비밀번호를 확인해주세요."};
     } catch (err) {
       return { success : false, msg : err };
     }
@@ -37,11 +40,36 @@ class User {
   async userDelete() {
     const client = this.body;
     try {
-      const { id, password } = await UserStorage.deleteUserInfo(client.id);
+      const { id, password } = await UserStorage.getUserInfo(client.id, client.password);
       
-      if (id) {
+      if (id, password) {
         if(id === client.id && password === client.password) {
-          return { success : true };
+          const response = await UserStorage.deleteUserInfo(client.id);
+    
+          return { success : true, msg : "탈퇴가 정상 처리되었습니다." };
+        }
+        return { success : false, msg : "비밀번호가 틀렸습니다." };
+      }
+      return { success : false, msg : "존재하지 않는 아이디입니다." };
+    } catch (err) {
+      return { success : false, msg : err };
+    }
+  }
+
+  async userEdit() {
+    const client = this.body;
+    try {
+      const { id, password } = await UserStorage.getUserInfo(client.id, client.oldPassword);
+      
+      if (id, password) {
+        if(id === client.id && password === client.oldPassword) {
+
+          if(client.newPassword === client.confirmPassword) {
+            const response = await UserStorage.editUserInfo(client.newPassword, client.id);
+
+            return { success : true, msg : "비밀번호가 변경되었습니다." };
+          }
+          return { success : false, msg : "비밀번호를 확인해주세요." };
         }
         return { success : false, msg : "비밀번호가 틀렸습니다." };
       }

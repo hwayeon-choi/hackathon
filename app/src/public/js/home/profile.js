@@ -4,10 +4,14 @@ const editBtn = document.querySelector("#editBtn"),
   updateBtn = document.querySelector("#updateBtn"),
   deleteBtn = document.querySelector("#deleteBtn");
 
-// editBtn.addEventListener("click", profile);
+editBtn.addEventListener("click", userEdit);
 // updateBtn.addEventListener("click", profile);
-deleteBtn.addEventListener("click", profile);
+deleteBtn.addEventListener("click", userDelete);
 
-function profile() {
+function userEdit() {
+  location.href = "/userEdit";
+}
+
+function userDelete() {
   location.href = "/userDelete";
 }

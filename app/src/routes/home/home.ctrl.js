@@ -19,6 +19,9 @@ const output = {
   },
   userDelete : (req, res) => {
     res.render("home/userDelete");
+  },
+  userEdit : (req, res) => {
+    res.render("home/userEdit");
   }
 };
 
@@ -38,6 +41,11 @@ const process = {
   userDelete : async (req, res) => {
     const user = new User(req.body);
     const response = await user.userDelete();
+    return res.json(response);
+  },
+  userEdit : async (req, res) => {
+    const user = new User(req.body);
+    const response = await user.userEdit();
     return res.json(response);
   }
 }

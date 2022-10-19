@@ -9,7 +9,7 @@ class UserStorage {
       const query = "SELECT * FROM users WHERE id = ?";
       db.query(query, [id], (err, data) => {
         if (err) reject(`${err}`);
-        console.log(data);
+        // console.log(data);
         resolve(data[0]);
       });
     });
@@ -21,6 +21,7 @@ class UserStorage {
       db.query(query, [userInfo.id, userInfo.name, userInfo.password], (err) => {
         if (err) reject(`${err}`);
         resolve({ success : true });
+        // console.log(userInfo.id);
       });
     });
   }
@@ -30,8 +31,18 @@ class UserStorage {
       const query = "DELETE FROM users WHERE id = ?";
       db.query(query, [id], (err, data) => {
         if (err) reject(`${err}`);
-        console.log(data);
+        // console.log(id);
         resolve(data[0]);
+      });
+    });
+  }
+
+  static async editUserInfo(newPassword, id) {
+    return new Promise((resolve, reject) => {
+      const query = "UPDATE users SET password = ? WHERE id = ?";
+      db.query(query, [newPassword, id], (err) => {
+        if (err) reject(`${err}`);
+        resolve({ success : true });
       });
     });
   }

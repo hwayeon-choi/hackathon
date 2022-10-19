@@ -1,19 +1,23 @@
 "use strict";
 
 const id = document.querySelector("#id"),
-  password = document.querySelector("#pw"),
-  submitBtn = document.querySelector("button");
+  oldPassword = document.querySelector("#pw-old"),
+  newPassword = document.querySelector("#pw-new"),
+  confirmPassword = document.querySelector("#pw-confirm"),
+  editBtn = document.querySelector("button");
 
-  submitBtn.addEventListener("click", userDelete);
+  editBtn.addEventListener("click", userEdit);
 
-  function userDelete() {
+  function userEdit() {
     // request data
     const req = {
       id : id.value,
-      password : password.value
+      oldPassword : oldPassword.value,
+      newPassword : newPassword.value,
+      confirmPassword : confirmPassword.value
     };
     // server에 전달
-    fetch("/userDelete", {
+    fetch("/userEdit", {
       // body로 전달 시, POST 메소드 사용
       method : "POST",
       // 전달하는 data가 JSON 형식
