@@ -7,70 +7,76 @@
   <title>Document</title>
 </head>
 <body>
-  <div>첫번째 유저
-    <input type="button" value="위시리스트" onclick="location.href='/wishlist'">
-    <input type="button" value="인기 장소 TOP10" onclick="location.href='/popular'">
+  <div style="display:flex">위시리스트
+    <select name="job">
+      <option value="">유저선택</option>
+      <option value="학생">1</option>
+      <option value="회사원">2</option>
+      <option value="기타">3</option>
+    </select>
   </div>
   <br>
+  <input type="button" value="인기 장소 TOP10" onclick="location.href='/popular'">
   <br>
-  <div>첫번째 장소
-    <input type="button" value="좋아요" onclick="location.href='/like1'">
-    <input type="button" value="좋아요 취소" onclick="location.href='/dislike1'">
+  <br>
+  <div style="display:flex">첫번째 장소
+    <input type="button" value="좋아요" onclick="location.href='/like?order=like&placeId=1'">
+    <input type="button" value="좋아요 취소" onclick="location.href='/like?order=dislike&placeId=1'">
   </div>
   <br>
   <div style="display:flex">두번째 장소
-    <input type="button" value="좋아요" onclick="location.href='/like2'">
-    <input type="button" value="좋아요 취소" onclick="location.href='/dislike2'">
+    <input type="button" value="좋아요" onclick="location.href='/like?order=like&placeId=2'">
+    <input type="button" value="좋아요 취소" onclick="location.href='/like?order=dislike&placeId=2'">
   </div>
   <br>
   <div style="display:flex">세번째 장소
-    <input type="button" value="좋아요" onclick="location.href='/like3'">
-    <input type="button" value="좋아요 취소" onclick="location.href='/dislike3'">
+    <input type="button" value="좋아요" onclick="location.href='/like?order=like&placeId=3'">
+    <input type="button" value="좋아요 취소" onclick="location.href='/like?order=dislike&placeId=3'">
   </div>
   <br>
   <div style="display:flex">네번째 장소
-    <input type="button" value="좋아요" onclick="location.href='/like4'">
-    <input type="button" value="좋아요 취소" onclick="location.href='/dislike4'">
+    <input type="button" value="좋아요" onclick="location.href='/like?order=like&placeId=4'">
+    <input type="button" value="좋아요 취소" onclick="location.href='/like?order=dislike&placeId=4'">
   </div>
   <br>
   <div style="display:flex">다섯번째 장소
-    <input type="button" value="좋아요" onclick="location.href='/like5'">
-    <input type="button" value="좋아요 취소" onclick="location.href='/dislike5'">
+    <input type="button" value="좋아요" onclick="location.href='/like?order=like&placeId=5'">
+    <input type="button" value="좋아요 취소" onclick="location.href='/like?order=dislike&placeId=5'">
   </div>
   <br>
   <div style="display:flex">여섯번째 장소
-    <input type="button" value="좋아요" onclick="location.href='/like6'">
-    <input type="button" value="좋아요 취소" onclick="location.href='/dislike6'">
+    <input type="button" value="좋아요" onclick="location.href='/like?order=like&placeId=6'">
+    <input type="button" value="좋아요 취소" onclick="location.href='/like?order=dislike&placeId=6'">
   </div>
   <br>
   <div style="display:flex">일곱번째 장소
-    <input type="button" value="좋아요" onclick="location.href='/like7'">
-    <input type="button" value="좋아요 취소" onclick="location.href='/dislike7'">
+    <input type="button" value="좋아요" onclick="location.href='/like?order=like&placeId=7'">
+    <input type="button" value="좋아요 취소" onclick="location.href='/like?order=dislike&placeId=7'">
   </div>
   <br>
   <div style="display:flex">여덟번째 장소
-    <input type="button" value="좋아요" onclick="location.href='/like8'">
-    <input type="button" value="좋아요 취소" onclick="location.href='/dislike8'">
+    <input type="button" value="좋아요" onclick="location.href='/like?order=like&placeId=8'">
+    <input type="button" value="좋아요 취소" onclick="location.href='/like?order=dislike&placeId=8'">
   </div>
   <br>
   <div style="display:flex">아홉번째 장소
-    <input type="button" value="좋아요" onclick="location.href='/like9'">
-    <input type="button" value="좋아요 취소" onclick="location.href='/dislike9'">
+    <input type="button" value="좋아요" onclick="location.href='/like?order=like&placeId=9'">
+    <input type="button" value="좋아요 취소" onclick="location.href='/like?order=dislike&placeId=9'">
   </div>
   <br>
   <div style="display:flex">열번째 장소
-    <input type="button" value="좋아요" onclick="location.href='/like10'">
-    <input type="button" value="좋아요 취소" onclick="location.href='/dislike10'">
+    <input type="button" value="좋아요" onclick="location.href='/like?order=like&placeId=10'">
+    <input type="button" value="좋아요 취소" onclick="location.href='/like?order=dislike&placeId=10'">
   </div>
   <br>
   <div style="display:flex">열한번째 장소
-    <input type="button" value="좋아요" onclick="location.href='/like11'">
-    <input type="button" value="좋아요 취소" onclick="location.href='/dislike11'">
+    <input type="button" value="좋아요" onclick="location.href='/like?order=like&placeId=11'">
+    <input type="button" value="좋아요 취소" onclick="location.href='/like?order=dislike&placeId=11'">
   </div>
   <br>
   <div style="display:flex">열두번째 장소
-    <input type="button" value="좋아요" onclick="location.href='/like12'">
-    <input type="button" value="좋아요 취소" onclick="location.href='/dislike12'">
+    <input type="button" value="좋아요" onclick="location.href='/like?order=like&placeId=12'">
+    <input type="button" value="좋아요 취소" onclick="location.href='/like?order=dislike&placeId=12'">
   </div>
 </body>
 </html>
