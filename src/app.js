@@ -16,6 +16,7 @@ const connection = mysql.createConnection({
 
 /* 임시로 만들어놓은 유저 구분 변수 */
 let userId = 3 
+let placeId = 3 
 
 /* 서버 가동 */
 http.createServer(function (req, res) {
@@ -26,7 +27,35 @@ http.createServer(function (req, res) {
   if(pathname === '/'){
     res.writeHead(200, {"content-type": "text/html; charset=utf-8"});
     res.write(data);
+    
+    /* 찜 여부 확인 */
+    let sql = `SELECT * FROM favorite WHERE userid=${userId} AND placeid=${placeId};`
+    connection.query(sql, function(err, rows, fields){
+      if(err) console.log(err);
+      console.log(rows);
+      let timeNow = Math.floor(Date.now()/1000)
+      // 파일로 저장
+      fs.writeFile(`./inquiry-log/favoriteOX${timeNow}.json`, JSON.stringify(rows), 'utf-8',(error)=> {
+        if(error === true) {
+          console.error('this is error');
+        } else {
+          return
+        }
+      })
+      // 다시 호출
+      fs.readFile(`./inquiry-log/favoriteOX${timeNow}.json`, 'utf8', (err, data) => {
+        if (err) {
+          console.error(err)
+          return
+        }
+        console.log(timeNow)
+        console.log(data)
+        res.writeHead(200, {"content-type": "application/json; charset=utf-8"});
+        res.write(JSON.stringify(data))
+      })
+    });
   } 
+
   /* 찜하기 */
    else if(pathname === '/like') {
     let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=${placeId};`
@@ -99,7 +128,9 @@ http.createServer(function (req, res) {
         res.write(JSON.stringify(data))
       })
     });
-  } res.end();
+  } 
+  
+  res.end();
 }).listen(3000, function(){
   console.log('서버가 작동되고 있습니다!');
 });
