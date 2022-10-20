@@ -7,6 +7,15 @@
   <title>Document</title>
 </head>
 <body>
+  <div style="display:flex">로그인
+    <select onchange="window.open(value,'_blank');">
+      <option>유저</option>
+      <option value="'/user1wishlist?userId=1">첫번째 유저</option>
+      <option value="location.href='/wishlist?userId=2">두번째 유저</option>
+      <option value="location.href='/wishlist?userId=3">세번째 유저</option>
+    </select>
+  </div>
+  <br>
   <div style="display:flex">위시리스트
     <input type="button" value="첫번째 유저" onclick="location.href='/wishlist?userId=1'">
     <input type="button" value="첫번째 유저" onclick="location.href='/wishlist?userId=2'">

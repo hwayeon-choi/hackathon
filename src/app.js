@@ -27,7 +27,8 @@ http.createServer(function (req, res) {
       if(err) console.log(err);
       let timeNow = `./inquiry-log/popular${Math.floor(Date.now()/1000)}.json`
       console.log(timeNow)
-        /* 파일로 저장 */
+      
+      /* 파일로 저장 */
       fs.writeFile(timeNow, JSON.stringify(rows), 'utf-8',(error)=> {
         if(error === true) {
           console.error('this is error');

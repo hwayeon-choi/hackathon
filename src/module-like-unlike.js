@@ -23,28 +23,21 @@ http.createServer(function (req, res) {
   if(pathname === '/'){
     res.writeHead(200, {"content-type": "text/html; charset=utf-8"});
     res.write(data);
-  } else if(pathname === '/popular'){
-  let sql1 = `SELECT * FROM place ORDER BY favorite DESC LIMIT 10;`
-  connection.query(sql1, function(err, rows, fields){
-    if(err) console.log(err);
-    /* 파일로 저장 */
-    fs.writeFile('./inquiry-log/popular.json', JSON.stringify(rows), 'utf-8',(error)=> {
-      if(error === true) {
-        console.error('this is error');
-      }
-    })
-  });
-  /* 다시 호출 */
-  fs.readFile('./inquiry-log/popular.json', 'utf8', (err, data) => {
-    if (err) {
-      console.error(err)
-      return
-    }
-    console.log(data)
-    res.writeHead(200, {"content-type": "application/json; charset=utf-8"});
-    res.write(JSON.stringify(data))
-  })
+  } else if(pathname === '/like'){ // 찜하기
+    let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=${placeId};`
+    let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(${userId}, ${placeId});`
+    connection.query(sql1+sql2, function(err, rows, fields){
+        if(err) console.log(err);
+        console.log(rows);
+    });
+  } else if(pathname === '/dislike1'){ // 찜 취소
+    let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=1;`
+    let sql2 = `DELETE FROM favorite WHERE userid = ${userId} or placeid = ${placeId} limit 1`
+    connection.query(sql1+sql2, function(err, rows, fields){
+        if(err) console.log(err);
+        console.log(rows);
+    });
 } res.end();
-}).listen(3010, function(){
+}).listen(3001, function(){
   console.log('서버가 작동되고 있습니다!');
 });
