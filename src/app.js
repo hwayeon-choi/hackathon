@@ -5,6 +5,7 @@ import fs from 'fs';
 import mysql from 'mysql'
 import url from 'url'
 
+/* MySQL 가동 */
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -13,8 +14,10 @@ const connection = mysql.createConnection({
   multipleStatements: true
 })
 
-let userId = 3 // 임시로 만들어놓은 유저 ID 변수
+/* 임시로 만들어놓은 유저 구분 변수 */
+let userId = 3 
 
+/* 서버 가동 */
 http.createServer(function (req, res) {
   const data = fs.readFileSync('./index.html');
   let _url = req.url;
@@ -23,10 +26,29 @@ http.createServer(function (req, res) {
   if(pathname === '/'){
     res.writeHead(200, {"content-type": "text/html; charset=utf-8"});
     res.write(data);
+  } 
+  /* 찜하기 */
+   else if(pathname === '/like') {
+    let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=${placeId};`
+    let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(${userId}, ${placeId});`
+    connection.query(sql1+sql2, function(err, rows, fields){
+        if(err) console.log(err);
+        console.log(rows);
+    });
+  } 
+   
+  /* 찜 취소하기 */
+   else if(pathname === '/dislike'){
+    let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=${placeId};`
+    let sql2 = `DELETE FROM favorite WHERE userid=${userId} or placeid=${placeId} limit 1`
+    connection.query(sql1+sql2, function(err, rows, fields){
+        if(err) console.log(err);
+        console.log(rows);
+    })
   }
 
     /* 위시리스트 */
-    else if(pathname === '/wishlist'){
+   else if(pathname === '/wishlist'){
       let sql = `SELECT placename FROM place WHERE placeid=any(SELECT placeid FROM favorite WHERE userid=${userId});`
       connection.query(sql, function(err, rows, fields){
         if(err) console.log(err);
