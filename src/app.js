@@ -13,6 +13,8 @@ const connection = mysql.createConnection({
   multipleStatements: true
 })
 
+let userId = 3 // 임시로 만들어놓은 유저 ID 변수
+
 http.createServer(function (req, res) {
   const data = fs.readFileSync('./index.html');
   let _url = req.url;
@@ -21,23 +23,50 @@ http.createServer(function (req, res) {
   if(pathname === '/'){
     res.writeHead(200, {"content-type": "text/html; charset=utf-8"});
     res.write(data);
-  } else if(pathname === '/popular'){ //top 10 모듈
+  }
+
+    /* 위시리스트 */
+    else if(pathname === '/wishlist'){
+      let sql = `SELECT placename FROM place WHERE placeid=any(SELECT placeid FROM favorite WHERE userid=${userId});`
+      connection.query(sql, function(err, rows, fields){
+        if(err) console.log(err);
+        let timeNow = Math.floor(Date.now()/1000)
+        // 파일로 저장
+        fs.writeFile(`./inquiry-log/user${userId}-${timeNow}.json`, JSON.stringify(rows), 'utf-8',(error)=> {
+          if(error === true) {
+            console.error('this is error');
+          }
+        })
+        // 다시 호출
+        fs.readFile(`./inquiry-log/user${userId}-${timeNow}.json`, 'utf8', (err, data) => {
+          if (err) {
+            console.error(err)
+            return
+          }
+          console.log(data)
+          res.writeHead(200, {"content-type": "application/json; charset=utf-8"});
+          res.write(JSON.stringify(data))
+        })
+      });
+    }
+
+    /* top 10 */
+    else if(pathname === '/popular'){ 
     let sql = `SELECT * FROM place ORDER BY favorite DESC LIMIT 10;`
     connection.query(sql, function(err, rows, fields){
       if(err) console.log(err);
-      let timeNow = `./inquiry-log/popular${Math.floor(Date.now()/1000)}.json`
+      let timeNow = Math.floor(Date.now()/1000)
       console.log(timeNow)
-      
-      /* 파일로 저장 */
-      fs.writeFile(timeNow, JSON.stringify(rows), 'utf-8',(error)=> {
+      // 파일로 저장
+      fs.writeFile(`./inquiry-log/popular${timeNow}.json`, JSON.stringify(rows), 'utf-8',(error)=> {
         if(error === true) {
           console.error('this is error');
         } else {
           return
         }
       })
-      /* 다시 호출 */
-      fs.readFile(timeNow, 'utf8', (err, data) => {
+      // 다시 호출
+      fs.readFile(`./inquiry-log/popular${timeNow}.json`, 'utf8', (err, data) => {
         if (err) {
           console.error(err)
           return

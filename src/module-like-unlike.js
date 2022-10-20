@@ -13,30 +13,30 @@ const connection = mysql.createConnection({
   multipleStatements: true
 })
 
+
+
 http.createServer(function (req, res) {
   const data = fs.readFileSync('./index.html');
   let _url = req.url;
-  console.log(_url)
   let pathname = url.parse(_url, true).pathname;
-  console.log(pathname)
-  
   if(pathname === '/'){
     res.writeHead(200, {"content-type": "text/html; charset=utf-8"});
     res.write(data);
   } else if(pathname === '/like'){ // 찜하기
-    let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=${placeId};`
+    console.log(req.params)
+/*     let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=${placeId};`
     let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(${userId}, ${placeId});`
     connection.query(sql1+sql2, function(err, rows, fields){
         if(err) console.log(err);
         console.log(rows);
     });
   } else if(pathname === '/dislike1'){ // 찜 취소
-    let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=1;`
+    let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=${placeId};`
     let sql2 = `DELETE FROM favorite WHERE userid = ${userId} or placeid = ${placeId} limit 1`
     connection.query(sql1+sql2, function(err, rows, fields){
         if(err) console.log(err);
         console.log(rows);
-    });
+    }); */
 } res.end();
 }).listen(3001, function(){
   console.log('서버가 작동되고 있습니다!');
