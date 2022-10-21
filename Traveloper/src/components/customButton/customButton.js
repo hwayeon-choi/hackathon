@@ -65,6 +65,48 @@ const styles = StyleSheet.create({
     height : 50,
     color : "#FFF",
     borderRadius : 30,
+  },
+  container_dateButton : {
+    backgroundColor : "#000",
+    height : 60,
+    marginTop : 16,
+    color : "#FFF",
+    borderRadius : 10,
+    marginBottom : 20
+  },
+  container_location : {
+    backgroundColor : "#000",
+    height : 260,
+    color : "#FFF",
+    borderRadius : 10,
+  },
+  container_dogInfo : {
+    backgroundColor : "#000",
+    height : 60,
+    color : "#FFF",
+    borderRadius : 10,
+  },
+  container_transportation : {
+    backgroundColor : "#000",
+    width : "48%",
+    height : 60,
+    color : "#FFF",
+    borderRadius : 10,
+  },
+  container_fillterReset : {
+    backgroundColor : "#000",
+    width : 60,
+    height : 60,
+    color : "#FFF",
+    borderRadius : 10,
+    marginRight : 16,
+  },
+  container_fillterChoose : {
+    backgroundColor : "#000",
+    flex : 1,
+    height : 60,
+    color : "#FFF",
+    borderRadius : 10,
   }
 })
 

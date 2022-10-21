@@ -1,26 +1,68 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import {createbottomTabNavigator} from "@react-navigation/bottom-tabs"
-import HomeScreen from '../screens/HomeScreen';
-// import {HomeIcon, HeartIcon, MapIcon,PencilSquareIcon,Cog6ToothIcon } from "react-native-heroicons/outline"
-import {HomeIcon, HeartIcon, MapIcon,PencilSquareIcon,Cog6ToothIcon } from "react-native-heroicons/solid"
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import Home from '../screens/Home/Home';
+import { HomeIcon,HeartIcon,MapIcon,PencilSquareIcon,Cog6ToothIcon } from 'react-native-heroicons/outline';
 
+const Tab = createBottomTabNavigator();
 
-const Tab = createbottomTabNavigator();
+function WishScreen() { return <Text>wish</Text>}
+function MapScreen() { return <Text>map</Text>}
+function SNSScreen() { return <Text>sns</Text>}
+function SettingScreen() { return <Text>settings</Text>}
 
-const HomeTabNavigator = () => {
+const HomeTabNavigator = ({props,color}) => {
   return (
-    <Tab.navigator>
-      <Tab.Screen
-      name = {"Home"}
-      component = {HomeScreen}
-      options={{
-        topBarIcon : ({color : string}) => (
-          <HomeIcon size={24} color={color}/>
-        )
-      }}
-      />
-    </Tab.navigator>
+    <Tab.Navigator screenOptions={{
+      tabBarActiveTintColor : "#6BB8D0"
+    }}>
+      <Tab.Screen 
+        name="Home" 
+        component={Home}
+        options={{
+          tabBarIcon : ({color})=> (
+            <HomeIcon name="home" size={24} color={color}/>
+          )
+        }}
+        />
+        <Tab.Screen 
+        name="Wish" 
+        component={WishScreen}
+        options={{
+          tabBarIcon : ({color})=> (
+            <HeartIcon name="home" size={24} color={color}/>
+          )
+        }}
+        />
+        <Tab.Screen 
+        name="Map" 
+        component={MapScreen}
+        options={{
+          tabBarIcon : ({color})=> (
+            <MapIcon name="home" size={24} color={color}/>
+          )
+        }}
+        />
+        <Tab.Screen 
+        name="SNS" 
+        component={SNSScreen}
+        options={{
+          tabBarIcon : ({color})=> (
+            <PencilSquareIcon name="home" size={24} color={color}/>
+          )
+        }}
+        />
+        <Tab.Screen 
+        name="Setting" 
+        component={SettingScreen}
+        options={{
+          tabBarIcon : ({color})=> (
+            <Cog6ToothIcon name="home" size={24} color={color}/>
+          )
+        }}
+        />
+        
+    </Tab.Navigator>
   )
 }
 

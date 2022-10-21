@@ -1,5 +1,5 @@
-import { View, StyleSheet, SafeAreaView, Pressable, AsyncStorageStatic } from 'react-native'
-import React,{useLayoutEffect, useState} from 'react'
+import { View, StyleSheet, SafeAreaView, Pressable, AsyncStorageStatic, BackHandler, Alert } from 'react-native'
+import React,{useEffect, useLayoutEffect, useState} from 'react'
 import { NavigationContainer, useNavigation } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { ScrollView } from 'react-native-gesture-handler'
@@ -7,49 +7,35 @@ import {HeartIcon} from 'react-native-heroicons/solid'
 import Listbox from '../../components/Box/ListBox'
 import CategoryBox from '../../components/Box/CategoryBox'
 import HashTagButton from '../../components/customButton/HashTagButton'
-import FillterPopUP from '../../components/FillterPopUP'
 import CompanyName from '../../components/Box/CompanyName'
-
-
+import { MagnifyingGlassIcon } from 'react-native-heroicons/outline';
+import Filter from '../../components/Filter'
 
 
 const Stack = createNativeStackNavigator();
 
-const FindRoute = () => {
 
-  const navigation = useNavigation();
-  // const BackHandler = BackHandler();
-  const [FindRoute, setFindRoute] = useState('');
-
-  function Fillter() {
-    console.log("fillter")
-    return (<FillterPopUP></FillterPopUP>)
-  }
-
-  useLayoutEffect(()=>{
-    navigation.setOptions({
-      headerShown : false
-    })
-  })
-
-  // const localJSON = require('../../DB/data.json')
-  // for(let i=0; i < localJSON.length; i++){
-  //   console.log(localJSON[i].company_name);
-  // }
-
-  return (
+const FindRoute = ({navigation}) => {
   
-    <>
-
+  return (
     <SafeAreaView style={styles.root}>
       {/* 검색창 + 해시태그 버튼  */}
       <View style={styles.containerOne}>
-        <Pressable style={styles.input} onPress={Fillter}/>
-          <HashTagButton/>
+        {/* 필터검색버튼 */}
+        <Pressable 
+        style={styles.input} 
+        onPress={()=> navigation.navigate('Filter')} >
+          <MagnifyingGlassIcon color={"#ccc"}/>
+        </Pressable>
+        {/* 해시태그버튼 */}
+        <HashTagButton/>
       </View>
 
       {/* 카테고리 컨테이너  */}
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator = {false} style={styles.categoryContainer}>
+      <ScrollView 
+      horizontal={true} 
+      showsHorizontalScrollIndicator = {false} 
+      style={styles.categoryContainer}>
         <CategoryBox text={"식당"} backgroundColor={"#333"} color={"#fff"}></CategoryBox>
         <CategoryBox text={"숙소"}></CategoryBox>
         <CategoryBox text={"카페"}></CategoryBox>
@@ -61,13 +47,8 @@ const FindRoute = () => {
       <ScrollView style = {styles.listContainer}>
         <CompanyName/>
       </ScrollView>
-
     </SafeAreaView>
-    
-    <SafeAreaView>
-      {/* <FillterPopUP /> */}
-    </SafeAreaView>
-    </>
+    // {/* <FillterPopUP/> */}
   )
 }
 
@@ -76,7 +57,7 @@ const styles = StyleSheet.create({
     padding : 20,
     width: "100%",
     height : "100%",
-    zIndex : 0,
+    zIndex : 1,
     position : 'absolute'
   },
   containerOne : {
@@ -91,6 +72,8 @@ const styles = StyleSheet.create({
     borderRadius : 30,
     borderColor : "#e0e0e0",
     borderWidth : 1,
+    justifyContent : 'center',
+    padding : 16
   },
   categoryContainer : {
     flexDirection : 'row',

@@ -8,11 +8,11 @@ const Stack = createNativeStackNavigator();
 
 
 
-const FillterPopUP = () => {
+const Fillter = () => {
   return (
     <NavigationContainer independent={true}>
         <View style={styles.root}>
-          <Text>FillterPopUP</Text>
+          
         </View>
     </NavigationContainer>
   )
@@ -24,12 +24,12 @@ const styles = StyleSheet.create({
     width : '100%',
     height : "100%",
     borderRadius : 10,
-    opacity : 0.3,
-    zIndex : 1,
+    opacity : 0.7,
+    zIndex : 12,
     top : 52,
     // flex : 1,
     // position : 'absolute'
   }
 })
 
-export default FillterPopUP
+export default Fillter
