@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import filteredCategory from './filteredCate';
 
-const AllFilterClickListener = (e, filterProp) => {
+function FilterClickListener() {
   //상태변화
   const [searchState, setSearchState] = useState({
     passingCates: {
@@ -30,6 +29,10 @@ const AllFilterClickListener = (e, filterProp) => {
       },
     },
   });
+
+  const onClicked =()=> {
+    setSearchState(testState => testState);
+  }
 
   let name = e.target.textContent;
   if (name === "서울특별시") {

@@ -1,42 +1,32 @@
-import React from "react";
-
-// function Category({ cate }) {
-//   return (
-//     <button
-//       className={cate.value}
-//     > {cate.name} </button>
+import React, { useState } from 'react';
+import CreateBtn from './CreateBtn';
+// function Main() {
+//   //상태 생성
+//   //처음 상태
+//   const [intState, setIntState] = useState([])
+//   //data.Json에서 선택한 카테고리에 해당하는 내용물 들어있는 상태
+//   const [cateState, setCateState] = useState([])
+//   //처음 화면에 데이터가 준비되었는지 관리할 상태
+//   const [ready, setReady] = useState(true)
+  
+//   const category =(cate)=> {
+//     if(cate == '전체'){
+//       //전체 상태에서 초기화
+//       setCateState(intState)
+//     } else {
+//       setCateState(intState.filter((data) => {
+//         return data.category == cate
+//       }))
+//     }
+//   }
+//   return ready ? console.log('test') : (
+//     <BtnMaker onClick={()=> {category('test1')}}></BtnMaker>
+//     {cateState.map()}
 //   )
-// };
-
-function Category({ region }) {
-  return (
-    <button
-      className={region.value}
-    > {region.name} </button>
-  )
-}
+// }
 
 
 function CreateCate() {
-  const regions = [
-    {
-      name: '전체',
-      value: 'all'
-    },
-    {
-      name: '서울특별시',
-      value: 'seoul'
-    },
-    {
-      name: '대전광역시',
-      value: 'daegeon'
-    },
-    {
-      name: '부산광역시',
-      value: 'busan'
-    },
-  ];
-
   const passingCates = {
     region: {
       seoul: "서울특별시",
@@ -62,15 +52,55 @@ function CreateCate() {
       big: "대형견",
     },
   }
+  const getKeys = Object.keys(passingCates); //region, plce_type, dog_type(문자열)
+  const getvals = Object.values(passingCates); //키에 해당하는 각 객체 반환
 
+  //소객체의 키값
+  const getKeysRegion = Object.keys(passingCates.region);
+  const getKeysPlace = Object.keys(passingCates.place_type);
+  const getKeysDog = Object.keys(passingCates.dog_type);
+
+  //소객체의 값
+  const getValsRegion = Object.values(passingCates.region);
+  const getValsPlace = Object.values(passingCates.place_type);
+  const getValsDog = Object.values(passingCates.dog_type);
+
+  const onClick=()=>{
+    //클릭했을 때 이벤트.. 
+    console.log('clicked')
+  }
+
+  // const getKeys = Object.keys(passingCates.region);
   return (
     <div>
-      {regions.map((region, index) => {
-        <Category
-          region={region}
-          key={index}
-        />
+      {/* {getKeys.map((entrie, index) => {
+        console.log(entrie);
       })}
+      {getvals.map((entrie, index) => {
+        console.log(entrie);
+      })} */}
+      {getKeysRegion.map((entrie, index) => {
+        console.log(entrie);
+        <CreateBtn     
+          className={entrie.seoul}
+          cateName={entrie.seoul}
+          onClick={onClick} />
+      })}
+      {/* {getKeysPlace.map((entrie, index) => {
+        console.log(entrie);
+      })}      
+      {getKeysDog.map((entrie, index) => {
+        console.log(entrie);
+      })}
+      {getValsRegion.map((entrie, index) => {
+        console.log(entrie);
+      })}
+      {getValsPlace.map((entrie, index) => {
+        console.log(entrie);
+      })}      
+      {getValsDog.map((entrie, index) => {
+        console.log(entrie);
+      })} */}
     </div>
   )
 }
