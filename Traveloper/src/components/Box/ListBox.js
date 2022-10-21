@@ -2,6 +2,9 @@ import { View, Text, StyleSheet, Pressable} from 'react-native'
 import React,{useState} from 'react'
 import { HeartIcon } from 'react-native-heroicons/solid'
 
+const localJSON = require('../../DB/data.json')
+
+
 const Listbox = ({
   width,
   height,
@@ -23,7 +26,7 @@ const Listbox = ({
       borderRadius : borderRadius || 10,
       marginBottom : marginBottom || 24,
       flexDirection : flexDirection || "column-reverse",
-      position : position || 'relative'
+      position : position || 'relative',
     }}
     onPress = {onPress}
     >
@@ -34,7 +37,8 @@ const Listbox = ({
           position :'absolute',
           top : 20,
           right :20
-        }}>
+        }}
+        >
       </HeartIcon>
       <View style={{
         height : "25%",

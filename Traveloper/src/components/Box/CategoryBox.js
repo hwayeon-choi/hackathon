@@ -1,11 +1,11 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const CategoryBox = ({text}) => {
+const CategoryBox = ({text,backgroundColor,color}) => {
   return (
     <View 
     style= {{
-      backgroundColor : "#d9d9d9",
+      backgroundColor :  backgroundColor ? backgroundColor :"#d9d9d9",
       width : 80,
       marginRight : 10,
       borderRadius : 10,
@@ -13,7 +13,9 @@ const CategoryBox = ({text}) => {
       alignItems : 'center',
     }}
     >
-      <Text>{text}</Text>
+      <Text style={{
+      color : color ? color : "#000"
+      }}>{text}</Text>
     </View>
   )
 }

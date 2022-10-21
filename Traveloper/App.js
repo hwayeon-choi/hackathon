@@ -15,6 +15,7 @@ import { HomeIcon,HeartIcon,MapIcon,PencilSquareIcon,Cog6ToothIcon } from 'react
 import HomeScreen from './src/screens/Home/HomeScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import { color } from 'react-native-reanimated';
+import 'react-native-gesture-handler'
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();

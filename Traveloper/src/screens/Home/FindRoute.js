@@ -1,4 +1,4 @@
-import { safeAreaView,View, Text, BackHandler, Alert, StyleSheet, ImageBackground, SafeAreaView, TextInput, Pressable } from 'react-native'
+import { View, StyleSheet, SafeAreaView, Pressable, AsyncStorageStatic } from 'react-native'
 import React,{useLayoutEffect, useState} from 'react'
 import { NavigationContainer, useNavigation } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
@@ -7,6 +7,8 @@ import {HeartIcon} from 'react-native-heroicons/solid'
 import Listbox from '../../components/Box/ListBox'
 import CategoryBox from '../../components/Box/CategoryBox'
 import HashTagButton from '../../components/customButton/HashTagButton'
+import FillterPopUP from '../../components/FillterPopUP'
+import CompanyName from '../../components/Box/CompanyName'
 
 
 
@@ -19,23 +21,36 @@ const FindRoute = () => {
   // const BackHandler = BackHandler();
   const [FindRoute, setFindRoute] = useState('');
 
+  function Fillter() {
+    console.log("fillter")
+    return (<FillterPopUP></FillterPopUP>)
+  }
+
   useLayoutEffect(()=>{
     navigation.setOptions({
       headerShown : false
     })
   })
 
+  // const localJSON = require('../../DB/data.json')
+  // for(let i=0; i < localJSON.length; i++){
+  //   console.log(localJSON[i].company_name);
+  // }
+
   return (
+  
+    <>
+
     <SafeAreaView style={styles.root}>
       {/* 검색창 + 해시태그 버튼  */}
       <View style={styles.containerOne}>
-        <TextInput style={styles.input}/>
+        <Pressable style={styles.input} onPress={Fillter}/>
           <HashTagButton/>
       </View>
 
       {/* 카테고리 컨테이너  */}
       <ScrollView horizontal={true} showsHorizontalScrollIndicator = {false} style={styles.categoryContainer}>
-        <CategoryBox text={"맛집"}></CategoryBox>
+        <CategoryBox text={"식당"} backgroundColor={"#333"} color={"#fff"}></CategoryBox>
         <CategoryBox text={"숙소"}></CategoryBox>
         <CategoryBox text={"카페"}></CategoryBox>
         <CategoryBox text={"운동장"}></CategoryBox>
@@ -44,30 +59,31 @@ const FindRoute = () => {
       
       {/* 업체리스트 컨테이너  */}
       <ScrollView style = {styles.listContainer}>
-        
-        <Listbox name={"숙소1"} price={"70,800 원"}></Listbox>
-        <Listbox name={"숙소2"} price={"110,800 원"}></Listbox>
-        <Listbox name={"숙소3"} price={"90,800 원"}></Listbox>
-        <Listbox name={"숙소4"} price={"50,800 원"}></Listbox>
-        <Listbox name={"숙소5"} price={"80,800 원"}></Listbox>
-        <Listbox name={"숙소6"} price={"200,800 원"}></Listbox>
-        <Listbox name={"숙소7"} price={"124,800 원"}></Listbox>
-      
+        <CompanyName/>
       </ScrollView>
 
     </SafeAreaView>
+    
+    <SafeAreaView>
+      {/* <FillterPopUP /> */}
+    </SafeAreaView>
+    </>
   )
 }
 
 const styles = StyleSheet.create({
   root : {
     padding : 20,
+    width: "100%",
+    height : "100%",
+    zIndex : 0,
+    position : 'absolute'
   },
   containerOne : {
     flexDirection : 'row',
     height : 50,
     justifyContent : 'space-between',
-    marginTop : 64
+    marginTop : 64,
   },
   input : {
     width : "75%",
