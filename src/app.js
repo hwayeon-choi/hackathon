@@ -5,7 +5,7 @@ import fs from 'fs';
 import mysql from 'mysql'
 import url from 'url'
 
-/* MySQL 가동 */
+// MySQL 가동 
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -14,15 +14,18 @@ const connection = mysql.createConnection({
   multipleStatements: true
 })
 
-/* 서버 가동 */
+// 서버 가동 
 http.createServer(function (req, res) {
-  let _url = req.url;
+  const _url = req.url;
+  const pathname = url.parse(_url, true).pathname;
   console.log(_url);
-  // let pathname = url.parse(_url, true).pathname;
   // console.log(pathname);
 
-  /* 찜 여부 확인 */
-  /* if(pathname === '/like-ox') {
+  // 찜 여부 확인 
+   if(pathname === '/likeOX') {
+    let queryData = url.parse(_url, true).query;
+    let userId = queryData.userId;
+    let placeId = queryData.placeId;
     let sql = `SELECT EXISTS(SELECT * FROM favorite WHERE userid=${userId} AND placeid=${placeId}) AS dup;`
     connection.query(sql, function(err, rows, fields){
       if(err) console.log(err);
@@ -44,34 +47,37 @@ http.createServer(function (req, res) {
         }
         console.log(timeNow)
         console.log(data)
-        res.writeHead(200, {"content-type": "application/json; charset=utf-8"});
+        res.writeHead(200,{
+          "Access-Control-Allow-Origin":"*",
+          "content-type":"application/json; charset=utf-8",
+        });
         res.write(JSON.stringify(data))
       })
     });
-  } */
+  } 
 
-  /* 찜하기 */
-  /* else if(pathname === '/like') {
+/*   // 찜하기 
+   else if(pathname === '/like') {
     let sql1 = `UPDATE place SET favorite=favorite+1 WHERE placeid=${placeId};`
     let sql2 = `INSERT INTO favorite(userid, placeid) VALUES(${userId}, ${placeId});`
     connection.query(sql1+sql2, function(err, rows, fields){
         if(err) console.log(err);
         console.log(rows);
     });
-  } */
+  } 
    
-  /* 찜 취소하기 */
-  /* else if(pathname === '/dislike'){
+  // 찜 취소하기 
+   else if(pathname === '/dislike'){
     let sql1 = `UPDATE place SET favorite=favorite-1 WHERE placeid=${placeId};`
     let sql2 = `DELETE FROM favorite WHERE userid=${userId} or placeid=${placeId} limit 1`
     connection.query(sql1+sql2, function(err, rows, fields){
         if(err) console.log(err);
         console.log(rows);
     })
-  } */
+  } 
 
-    /* 위시리스트 */
-  /* else if(pathname === '/wishlist'){
+  // 위시리스트 
+   else if(pathname === '/wishlist'){
       let sql = `SELECT placename FROM place WHERE placeid=any(SELECT placeid FROM favorite WHERE userid=${userId});`
       connection.query(sql, function(err, rows, fields){
         if(err) console.log(err);
@@ -93,10 +99,10 @@ http.createServer(function (req, res) {
           res.write(JSON.stringify(data))
         })
       });
-    } */
+    } 
 
-    /* top 10 */
-  /* else if(pathname === '/popular'){ 
+    // top 10 
+   else if(pathname === '/popular'){ 
     let sql = `SELECT * FROM place ORDER BY favorite DESC LIMIT 10;`
     connection.query(sql, function(err, rows, fields){
       if(err) console.log(err);
@@ -122,9 +128,7 @@ http.createServer(function (req, res) {
         res.write(JSON.stringify(data))
       })
     });
-  } */
-  
-  res.end();
+  }  */
 }).listen(3000, function(){
   console.log('서버가 작동되고 있습니다!');
 });
