@@ -24,4 +24,7 @@ app.use(express.urlencoded({ extended : true }));
 // middleware 등록
 app.use("/", home); // use => 미들웨어를 등록해주는 메서드
 
+// express로 하여금 /uploads url에서 "uploads" 폴더 내에 접근 권한 부여
+app.use("/uploads", express.static("uploads"));
+
 module.exports = app;

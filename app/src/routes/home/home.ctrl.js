@@ -2,6 +2,9 @@
 "use strict";
 
 const User = require("../../model/User");
+const multer = require('multer');
+const fs = require('fs');
+const path = require('path');
 
 // page rendering 함수
 const output = {
@@ -22,6 +25,9 @@ const output = {
   },
   userEdit : (req, res) => {
     res.render("home/userEdit");
+  },
+  userUpload : (req, res) => {
+    res.render("home/userUpload");
   }
 };
 
@@ -46,6 +52,16 @@ const process = {
   userEdit : async (req, res) => {
     const user = new User(req.body);
     const response = await user.userEdit();
+    return res.json(response);
+  },
+  userUpload : async (req, res) => {
+    const user = new User(req.body);
+    const response = await user.userUpload();
+    return res.json(response);
+  },
+  getProfile : async (req, res) => {
+    const user = new User(req.body);
+    const response = await user.getProfile();
     return res.json(response);
   }
 }

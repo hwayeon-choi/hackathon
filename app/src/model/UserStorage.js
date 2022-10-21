@@ -46,6 +46,26 @@ class UserStorage {
       });
     });
   }
+
+  static async saveImgInfo(profileImg, id) {
+    return new Promise((resolve, reject) => {
+      const query = "UPDATE users SET profileImg = ? WHERE id = ?";
+      db.query(query, [img], (err) => {
+        if (err) reject(`${err}`);
+        resolve({ success : true });
+      });
+    });
+  }
+
+  static async getImgInfo(id) {
+    return new Promise((resolve, reject) => {
+      const query = "SELECT profileImg FROM users WHERE id = ?";
+      db.query(query, [id], (err, data) => {
+        if (err) reject(`${err}`);
+        resolve({ success : true });
+      });
+    });
+  }
 }
 
 module.exports = UserStorage;

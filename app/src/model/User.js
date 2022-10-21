@@ -78,6 +78,30 @@ class User {
       return { success : false, msg : err };
     }
   }
+
+  async userUpload() {
+    const client = this.body;
+    try {
+      const response = await UserStorage.saveImgInfo(client);        
+      return response;
+    } catch (err) {
+      return { success : false, msg : err };
+    }
+  }
+
+  async getProfile() {
+    const client = this.body;
+    try {
+      if(id === client.id) {
+        const response = await UserStorage.getImgInfo(client);
+        
+        return response;
+      }
+      return { success : false, msg : "로그인이 필요한 기능입니다."};
+    } catch (err) {
+      return { success : false, msg : err };
+    }
+  }
 }
 
 module.exports = User;
