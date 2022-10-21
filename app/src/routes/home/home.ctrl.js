@@ -2,9 +2,6 @@
 "use strict";
 
 const User = require("../../model/User");
-const multer = require('multer');
-const fs = require('fs');
-const path = require('path');
 
 // page rendering 함수
 const output = {
@@ -28,6 +25,13 @@ const output = {
   },
   userUpload : (req, res) => {
     res.render("home/userUpload");
+  },
+  loginCheck : (req, res) => {
+    if(req.session.loginData) {
+      res.send({ loggedIn : true, loginData : req.session.loginData });
+    } else {
+      res.send({ loggedIn : false });
+    }
   }
 };
 
@@ -63,6 +67,17 @@ const process = {
     const user = new User(req.body);
     const response = await user.getProfile();
     return res.json(response);
+  },
+  loginCheck : async(req, res) => {
+    const user = new User(req.body);
+    const response = await user.login();
+    req.session.displayName = user.id;
+    req.session.save(() => {
+      return res.json({
+        state : true,
+        msg : "로그인 세션 유지"
+      })
+    })
   }
 }
 
