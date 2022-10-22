@@ -29,6 +29,7 @@ function login() {
   .then((res) => res.json())
   .then((res) => {
     if(res.success) {
+      console.log("hi");
       location.href = "/profile";
     } else {
       alert(res.msg);

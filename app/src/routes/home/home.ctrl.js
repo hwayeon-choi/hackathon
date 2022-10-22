@@ -11,8 +11,9 @@ const output = {
   },
   login : (req, res) => {
     res.render("home/login");
-    // if(req.session.id) {
-    //   return res.json({ status : 201, userInfo : req.userInfo });
+    // if(req.session.user_id) {
+    //   console.log(req.session.user_id);
+    //   return res.json({ status : 201, userInfo : req.session.user_id });
     // }
   },
   register : (req, res) => {
@@ -38,8 +39,8 @@ const process = {
   login : async (req, res) => {
     const user = new User(req.body);
     const response = await user.login();
-    if(response === true) {
-      req.session.id = user.id;
+    if(response.success === true) {
+      req.session.user_id = user.body.id;
       return res.json(response);
     } else {
       return res

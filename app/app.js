@@ -5,7 +5,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const session = require("express-session");
-const cookieParser = require("cookie-parser");
+// const cookieParser = require("cookie-parser");
 
 // routing
 const home = require("./src/routes/home");
@@ -32,18 +32,18 @@ app.use(cors({
   origin : true,
   credentials : true
 }))
-app.use(cookieParser("loginData"));
+// app.use(cookieParser("loginData"));
 app.use(
   session({
-    key : "loginData", 
-    secret : "loginData", 
+    // key : "loginData", 
+    secret : "secret cat", 
     resave : false, 
-    saveUninitialized : false, 
-    cookie : { 
-      httpOnly: false, 
-      Secure: true,
-      // expires : 60 * 60 * 24, 
-    },
+    saveUninitialized : true 
+    // cookie : { 
+    //   httpOnly: false, 
+    //   Secure: true,
+    //   // expires : 60 * 60 * 24, 
+    // },
   })
 );
 
