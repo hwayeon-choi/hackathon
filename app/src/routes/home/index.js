@@ -2,6 +2,7 @@
 
 const router = require('express').Router();
 const ctrl = require("./home.ctrl");
+const userCheck = require("../../public/js/home/loginCheck");
 
 // controller file을 불러와서 해당하는 객체에 접근
 // root 경로로 왔을 떄는 home controller로
@@ -13,7 +14,6 @@ router.get("/profile", ctrl.output.profile);
 router.get("/userDelete", ctrl.output.userDelete);
 router.get("/userEdit", ctrl.output.userEdit);
 router.get("/userUpload", ctrl.output.userUpload);
-router.get("/loginCheck", ctrl.output.loginCheck);
 
 // server로 login data를 받는 API
 // client로부터 url에 post 요청을 받으면 callback 함수 실행
@@ -22,7 +22,6 @@ router.post("/register", ctrl.process.register);
 router.post("/userDelete", ctrl.process.userDelete);
 router.post("/userEdit", ctrl.process.userEdit);
 router.post("/profile", ctrl.process.getProfile);
-router.post("/login", ctrl.process.loginCheck);
 
 // form 데이터나 태그를 통해 업로드한 이미지를 올리면 req.file로 정보가 들어온다
 // upload.single('img') 미들웨어 : 이미지가 아닌 나머지 데이터는 그대로 req.body에 들어온다

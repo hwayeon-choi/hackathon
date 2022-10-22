@@ -32,15 +32,17 @@ app.use(cors({
   origin : true,
   credentials : true
 }))
-app.use(cookieParser());
+app.use(cookieParser("loginData"));
 app.use(
   session({
-    key : "loginData", // session이 저장될 key값
-    secret : "testSecret", // 서명에 필요한 값
-    resave : false, // 수정이 일어나지 않아도 resave를 할건지
-    saveUninitialized : false, // 권한이 필요한 법률 준수에 유용
-    cookie : { // 세션 관리
-      expires : 60 * 60 * 24, // 쿠키가 얼마나 지속될 것인지 설정
+    key : "loginData", 
+    secret : "loginData", 
+    resave : false, 
+    saveUninitialized : false, 
+    cookie : { 
+      httpOnly: false, 
+      Secure: true,
+      // expires : 60 * 60 * 24, 
     },
   })
 );

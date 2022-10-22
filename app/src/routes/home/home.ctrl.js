@@ -1,6 +1,7 @@
 // controller
 "use strict";
 
+// const { rawListeners } = require("../../config/db");
 const User = require("../../model/User");
 
 // page rendering 함수
@@ -10,6 +11,9 @@ const output = {
   },
   login : (req, res) => {
     res.render("home/login");
+    // if(req.session.id) {
+    //   return res.json({ status : 201, userInfo : req.userInfo });
+    // }
   },
   register : (req, res) => {
     res.render("home/register");
@@ -25,13 +29,6 @@ const output = {
   },
   userUpload : (req, res) => {
     res.render("home/userUpload");
-  },
-  loginCheck : (req, res) => {
-    if(req.session.loginData) {
-      res.send({ loggedIn : true, loginData : req.session.loginData });
-    } else {
-      res.send({ loggedIn : false });
-    }
   }
 };
 
@@ -41,7 +38,14 @@ const process = {
   login : async (req, res) => {
     const user = new User(req.body);
     const response = await user.login();
-    return res.json(response);
+    if(response === true) {
+      req.session.id = user.id;
+      return res.json(response);
+    } else {
+      return res
+        .clearCookie("connect.sid")
+        .json(response);
+    }
   },
   register : async (req, res) => {
     const user = new User(req.body);
@@ -68,17 +72,6 @@ const process = {
     const response = await user.getProfile();
     return res.json(response);
   },
-  loginCheck : async(req, res) => {
-    const user = new User(req.body);
-    const response = await user.login();
-    req.session.displayName = user.id;
-    req.session.save(() => {
-      return res.json({
-        state : true,
-        msg : "로그인 세션 유지"
-      })
-    })
-  }
 }
 
 module.exports = {
