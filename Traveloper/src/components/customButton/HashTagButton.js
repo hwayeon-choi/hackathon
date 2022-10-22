@@ -1,25 +1,36 @@
-import { View, Text } from 'react-native'
+import { View, Text,StyleSheet,Pressable } from 'react-native'
 import React from 'react'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import HashTag from '../../screens/Home/HashTag';
 
-const HashTagButton = () => {
+const Stack = createNativeStackNavigator();
+
+
+const HashTagButton = ({navigation}) => {
   return (
-    <View style={{
-      backgroundColor : "#000",
-      width : "20%",
-      height : 50,
-      color : "#FFF",
-      borderRadius : 30,
-      justifyContent :'center',
-      alignItems : "center"
-    }}>
-      <Text 
-      style={{
-        color: "#fff", 
-        fontWeight:"900", 
-        fontSize : 16
-        }}>#</Text>
-    </View>
+    <Pressable 
+    style={styles.hashTagContainer}
+    onPress = {()=> navigation.navigate('HashTag')}
+    >
+      <Text style={styles.hashTag}>#</Text>
+    </Pressable>
   )
 }
+const styles = StyleSheet.create({
+  hashTagContainer : {
+    backgroundColor : "#000",
+    width : "20%",
+    height : 50,
+    color : "#FFF",
+    borderRadius : 30,
+    justifyContent :'center',
+    alignItems : "center"
+  },
+  hashTag : {
+    color: "#fff", 
+    fontWeight:"900", 
+    fontSize : 16
+  }
+})
 
 export default HashTagButton

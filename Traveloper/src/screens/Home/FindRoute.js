@@ -1,15 +1,13 @@
-import { View, StyleSheet, SafeAreaView, Pressable, AsyncStorageStatic, BackHandler, Alert } from 'react-native'
+import { Text,View, StyleSheet, SafeAreaView, Pressable,ScrollView ,AsyncStorageStatic, BackHandler, Alert } from 'react-native'
 import React,{useEffect, useLayoutEffect, useState} from 'react'
 import { NavigationContainer, useNavigation } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { ScrollView } from 'react-native-gesture-handler'
-import {HeartIcon} from 'react-native-heroicons/solid'
 import Listbox from '../../components/Box/ListBox'
 import CategoryBox from '../../components/Box/CategoryBox'
-import HashTagButton from '../../components/customButton/HashTagButton'
 import CompanyName from '../../components/Box/CompanyName'
 import { MagnifyingGlassIcon } from 'react-native-heroicons/outline';
 import Filter from '../../components/Filter'
+import HashTag from "./HashTag"
 
 
 const Stack = createNativeStackNavigator();
@@ -24,11 +22,18 @@ const FindRoute = ({navigation}) => {
         {/* 필터검색버튼 */}
         <Pressable 
         style={styles.input} 
-        onPress={()=> navigation.navigate('Filter')} >
+        onPress={()=> navigation.navigate('Filter')} 
+        >
           <MagnifyingGlassIcon color={"#ccc"}/>
         </Pressable>
         {/* 해시태그버튼 */}
-        <HashTagButton/>
+        <HashTag/>
+        {/* <Pressable 
+        style={styles.hashTagContainer}
+        onPress = {()=> navigation.navigate('HashTag')}
+        >
+          <Text style={styles.hashTag}>#</Text>
+        </Pressable> */}
       </View>
 
       {/* 카테고리 컨테이너  */}
@@ -36,11 +41,11 @@ const FindRoute = ({navigation}) => {
       horizontal={true} 
       showsHorizontalScrollIndicator = {false} 
       style={styles.categoryContainer}>
-        <CategoryBox text={"식당"} backgroundColor={"#333"} color={"#fff"}></CategoryBox>
+        <CategoryBox text={"식당"}></CategoryBox>
         <CategoryBox text={"숙소"}></CategoryBox>
         <CategoryBox text={"카페"}></CategoryBox>
         <CategoryBox text={"운동장"}></CategoryBox>
-        <CategoryBox text={"공원"}></CategoryBox>
+        <CategoryBox text={"산책 & 공원"}></CategoryBox>
       </ScrollView>
       
       {/* 업체리스트 컨테이너  */}
@@ -58,7 +63,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height : "100%",
     zIndex : 1,
-    position : 'absolute'
+    position : 'absolute',
   },
   containerOne : {
     flexDirection : 'row',
@@ -86,6 +91,20 @@ const styles = StyleSheet.create({
     height : "75%",
     marginTop : 24,
   },
+  hashTagContainer : {
+    backgroundColor : "#000",
+    width : "20%",
+    height : 50,
+    color : "#FFF",
+    borderRadius : 30,
+    justifyContent :'center',
+    alignItems : "center"
+  },
+  hashTag : {
+    color: "#fff", 
+    fontWeight:"900", 
+    fontSize : 16
+  }
 })
 
 

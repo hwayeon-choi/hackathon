@@ -5,6 +5,7 @@
  * @format
  * @flow strict-local
  */
+
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -17,6 +18,7 @@ import Home from './src/screens/Home/Home';
 import FindRoute from './src/screens/Home/FindRoute';
 import Filter from './src/components/Filter';
 import HomeTabNavigator from './src/navigation/HomeTabNavigator';
+import HashTag from './src/screens/Home/HashTag';
 
 function WishScreen() { return <Text>wish</Text>}
 function MapScreen() { return <Text>map</Text>}
@@ -57,6 +59,14 @@ export default function App() {
           headerShown : false
         }}
         />
+
+        {/* <Stack.Screen 
+        name="HashTag" 
+        component={HashTag}
+        options={{
+          headerShown : false
+        }}
+        /> */}
         
       </Stack.Navigator>
   {/* </HomeTabNavigator> */}
