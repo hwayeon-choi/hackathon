@@ -1,12 +1,15 @@
 ﻿// nodemon watch `파일명` 
 // mysql -uroot -p
-import http from 'http';
-import fs from 'fs';
+import express from 'express';
+import fs, { appendFile } from 'fs';
 import mysql from 'mysql'
 import url from 'url'
 
+const app = express()
+const port = 3000
+
 // MySQL 가동 
-const connection = mysql.createConnection({
+const con = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '12341234',
@@ -14,18 +17,28 @@ const connection = mysql.createConnection({
   multipleStatements: true
 })
 
-// 서버 가동 
-http.createServer(function (req, res) {
-  const _url = req.url;
-  const pathname = url.parse(_url, true).pathname;
-  console.log(_url);
-  // console.log(pathname);
+app.get('/likeOX', (req, res) => {
+  let userId = req.query.userId;
+  let placeId = req.query.placeId;
+  let sql = `SELECT EXISTS(SELECT * FROM favorite WHERE userid=${userId} AND placeid=${placeId}) AS dup;`
+  con.query(sql, function(err, rows, fields){
+    if(err) console.log(err);
+    let resData
+    if(rows===1){
+      resData=true
+    } else {
+      resData = false
+    }
+    res.send(resData)
+    
+  })
+})
 
-  // 찜 여부 확인 
-   if(pathname === '/likeOX') {
-    let queryData = url.parse(_url, true).query;
-    let userId = queryData.userId;
-    let placeId = queryData.placeId;
+/* 
+   if(pathname === '/') { // 찜 여부 확인
+    let req.query = url.parse(_url, true).query;
+    let userId = req.query.userId;
+    let placeId = req.query.placeId;
     let sql = `SELECT EXISTS(SELECT * FROM favorite WHERE userid=${userId} AND placeid=${placeId}) AS dup;`
     connection.query(sql, function(err, rows, fields){
       if(err) console.log(err);
@@ -54,7 +67,7 @@ http.createServer(function (req, res) {
         res.write(JSON.stringify(data))
       })
     });
-  } 
+  }  */
 
 /*   // 찜하기 
    else if(pathname === '/like') {
@@ -129,6 +142,5 @@ http.createServer(function (req, res) {
       })
     });
   }  */
-}).listen(3000, function(){
-  console.log('서버가 작동되고 있습니다!');
-});
+
+app.listen(port, () => console.log('서버가 작동되고 있습니다!'))
