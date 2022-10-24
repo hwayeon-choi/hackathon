@@ -19,7 +19,8 @@
   "type": "module",
   "dependencies": {
     "ejs": "^3.1.8",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "react-native": "^0.70.3"
   },
   "types": "module"
 }
