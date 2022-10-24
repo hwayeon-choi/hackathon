@@ -6,11 +6,11 @@ const Filter3 = () => {
 
   //첫번째 카테고리 상태 설정
   const [regionClick, setregionClick] = useState(null);
-  const [prevClick, setPrevClick] = useState(null);
+  const [regionPrevClick, setRegionPrevClick] = useState(null);
 
   //두번째 카테고리 상태 설정
   const [placeClick, setplaceClick] = useState(null);
-  const [placePrevClick, setplacePrevClick] = useState(null);
+  const [placePrevClick, setPlacePrevClick] = useState(null);
 
   //세번째 카테고리 상태 설정
   const [dogClick, setDogClick] = useState(null);
@@ -49,13 +49,13 @@ const Filter3 = () => {
         region.style.border = "1px solid #6C6C6C";
       }
 
-      if (prevClick !== null) {
-        let prev = document.getElementById(prevClick);
+      if (regionPrevClick !== null) {
+        let prev = document.getElementById(regionPrevClick);
         prev.style.backgroundColor = "#fff";
         prev.style.border = "1px solid #E6E7E8";
       }
 
-      setPrevClick(regionClick);
+      setRegionPrevClick(regionClick);
     }, [regionClick]);
 
   React.useEffect(
@@ -80,7 +80,7 @@ const Filter3 = () => {
         prev.style.border = "1px solid #E6E7E8";
       }
 
-      setplacePrevClick(placeClick);
+      setPlacePrevClick(placeClick);
     }, [placeClick]);
 
     
