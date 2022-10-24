@@ -1,16 +1,16 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import data from '../db/cateData.json';
 import placeData from '../db/all.json';
 
 const Filter3 = () => {
 
   //첫번째 카테고리 상태 설정
-  const [currentClick, setCurrentClick] = useState(null);
+  const [regionClick, setregionClick] = useState(null);
   const [prevClick, setPrevClick] = useState(null);
 
   //두번째 카테고리 상태 설정
-  const [rentClick, setRentClick] = useState(null);
-  const [rentPrevClick, setRentPrevClick] = useState(null);
+  const [placeClick, setplaceClick] = useState(null);
+  const [placePrevClick, setplacePrevClick] = useState(null);
 
   //세번째 카테고리 상태 설정
   const [dogClick, setDogClick] = useState(null);
@@ -21,11 +21,11 @@ const Filter3 = () => {
 
 
   const GetClick = (e) => {
-    setCurrentClick(e.target.id);
+    setregionClick(e.target.id);
     // console.log(e.target.id);
   };
-  const GetRent = (e) => {
-    setRentClick(e.target.id)
+  const GetPlace = (e) => {
+    setplaceClick(e.target.id)
   };
   const Getdog = (e) => {
     setDogClick(e.target.id)
@@ -34,19 +34,19 @@ const Filter3 = () => {
 
   React.useEffect(
     (e) => {
-      if (currentClick !== null) {
-        let current = document.getElementById(currentClick);
+      if (regionClick !== null) {
+        let region = document.getElementById(regionClick);
         placeData.filter(item=> {
-          if(item.region === current.innerHTML){
+          if(item.region === region.innerHTML){
             return (
               console.log(item)
             )
           }
         })
-        // console.log(current.innerHTML); 
+        // console.log(region.innerHTML); 
         //클릭한 메뉴1번 출력
-        current.style.backgroundColor = "#E3E3E3";
-        current.style.border = "1px solid #6C6C6C";
+        region.style.backgroundColor = "#E3E3E3";
+        region.style.border = "1px solid #6C6C6C";
       }
 
       if (prevClick !== null) {
@@ -55,33 +55,33 @@ const Filter3 = () => {
         prev.style.border = "1px solid #E6E7E8";
       }
 
-      setPrevClick(currentClick);
-    }, [currentClick]);
+      setPrevClick(regionClick);
+    }, [regionClick]);
 
   React.useEffect(
     (e) => {
-      if (rentClick !== null) {
-        let rent = document.getElementById(rentClick);
+      if (placeClick !== null) {
+        let place = document.getElementById(placeClick);
         placeData.filter(item=> {
-          if(item.place_type === rent.innerHTML){
+          if(item.place_type === place.innerHTML){
             return (
               console.log(item)
             )
           }
         })
         //클릭한 메뉴2번 출력
-        rent.style.backgroundColor = "#E3E3E3";
-        rent.style.border = "1px solid #6C6C6C";
+        place.style.backgroundColor = "#E3E3E3";
+        place.style.border = "1px solid #6C6C6C";
       }
 
-      if (rentPrevClick !== null) {
-        let prev = document.getElementById(rentPrevClick);
+      if (placePrevClick !== null) {
+        let prev = document.getElementById(placePrevClick);
         prev.style.backgroundColor = "#fff";
         prev.style.border = "1px solid #E6E7E8";
       }
 
-      setRentPrevClick(rentClick);
-    }, [rentClick]);
+      setplacePrevClick(placeClick);
+    }, [placeClick]);
 
     
   React.useEffect(
@@ -109,16 +109,16 @@ const Filter3 = () => {
       setDogPrevClick(dogClick);
     }, [dogClick]);
 
-  const findOffice = () => {
-    console.log(currentClick) 
+  const result = () => {
+    console.log(regionClick) 
     //선택한 상태가 아닐 시 null
     //선택한 상태가 있을 시 클릭한 id 출력
-    console.log(rentClick) //선택한 상태가 아닐 시 null
+    console.log(placeClick) //선택한 상태가 아닐 시 null
   }
   const refreshBtn = () => {
     console.log('초기화')
-    console.log(setCurrentClick(null))
-    console.log(setRentClick(null))
+    console.log(setregionClick(null))
+    console.log(setplaceClick(null))
   }
   return (
     <>
@@ -141,7 +141,7 @@ const Filter3 = () => {
             {data.place_type.map(item => 
             <button
               id={item.engName}
-              onClick={GetRent}
+              onClick={GetPlace}
             >{item.korName}</button>
               )}
         </div>
@@ -164,7 +164,7 @@ const Filter3 = () => {
             >초기화</button>
             <button
               id="8"
-              onClick={findOffice}
+              onClick={result}
             >찾기</button>
           </div>
         </div>
