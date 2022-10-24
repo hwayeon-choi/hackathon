@@ -13,6 +13,7 @@ export default LocationList = () => {
       style={styles.locationThum}
       source={require('../../../asset/img/busan.jpg')}
       imageStyle={{borderRadius : 10}}
+      key = {1}
       />
       <Text style={{fontSize : 12, fontWeight : "500"}}>{data}</Text>
     </Pressable>

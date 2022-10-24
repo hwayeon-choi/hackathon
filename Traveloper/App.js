@@ -19,6 +19,7 @@ import FindRoute from './src/screens/Home/FindRoute';
 import Filter from './src/components/Filter';
 import HomeTabNavigator from './src/navigation/HomeTabNavigator';
 import HashTag from './src/screens/Home/HashTag';
+import LoginScreen from './src/screens/LoginScreen';
 
 function WishScreen() { return <Text>wish</Text>}
 function MapScreen() { return <Text>map</Text>}
@@ -35,6 +36,14 @@ export default function App() {
     <NavigationContainer>
       {/* <HomeTabNavigator> */}
       <Stack.Navigator>
+
+        <Stack.Screen 
+        name="Login" 
+        component={LoginScreen}
+        options={{
+          headerShown : false
+        }}
+        />
 
         <Stack.Screen 
         name="Home" 

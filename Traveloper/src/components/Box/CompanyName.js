@@ -29,7 +29,7 @@ const CompanyName = () => {
   let nameList = Arr.map((newArr)=>(
     <Listbox 
     name={newArr}
-    // key={""}
+    key={localJSON.place_deatil_id}
     />
     ))
 

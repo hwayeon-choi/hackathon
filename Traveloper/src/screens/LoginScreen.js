@@ -1,9 +1,10 @@
 import React,{useLayoutEffect, useState} from "react";
-import { View, Text, Image , StyleSheet, TextInput, Button, ScrollView} from "react-native";
+import { View, Text, Image , StyleSheet, TextInput, Button, ScrollView, Pressable} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import CustomButton from "../components/customButton/customButton";
 import Custominput from "../components/customInput/custominput"
+import Home from "./Home/Home";
 
 const LoginScreen = ()=> {
 
@@ -33,7 +34,7 @@ const LoginScreen = ()=> {
     console.warn("apple로 로그인")
   }
 
-  const onRegister = ()=> {
+  const onRegister = ({navigation})=> {
     console.warn('회원가입하기')
   }
 
@@ -61,7 +62,7 @@ const LoginScreen = ()=> {
       />
 
       <CustomButton 
-      onPress={onSignInPress} 
+      onPress={()=>navigation.navigate('Home')} 
       text="로그인"
       />
     
