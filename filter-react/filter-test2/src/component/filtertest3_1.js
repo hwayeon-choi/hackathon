@@ -40,14 +40,14 @@ const Filter = () => {
         });
         // console.log(region.innerHTML);
         //클릭한 메뉴1번 출력
-        region.style.backgroundColor = "#E3E3E3";
+        region.style.backgroundColor = "#6BB8D0";
         region.style.border = "1px solid #6C6C6C";
       }
 
       if (regionPrevClick !== null) {
         let prev = document.getElementById(regionPrevClick);
-        prev.style.backgroundColor = "#fff";
-        prev.style.border = "1px solid #E6E7E8";
+        prev.style.backgroundColor = "#E5E5E5";
+        prev.style.border = "1px solid #6C6C6C";
       }
 
       setRegionPrevClick(regionClick);
@@ -65,14 +65,14 @@ const Filter = () => {
           }
         });
         //클릭한 메뉴2번 출력
-        place.style.backgroundColor = "#E3E3E3";
+        place.style.backgroundColor = "#6BB8D0";
         place.style.border = "1px solid #6C6C6C";
       }
 
       if (placePrevClick !== null) {
         let prev = document.getElementById(placePrevClick);
-        prev.style.backgroundColor = "#fff";
-        prev.style.border = "1px solid #E6E7E8";
+        prev.style.backgroundColor = "#E5E5E5";
+        prev.style.border = "1px solid #6C6C6C";
       }
 
       setPlacePrevClick(placeClick);
@@ -90,14 +90,14 @@ const Filter = () => {
           }
         });
         //클릭한 메뉴3번 출력
-        dogType.style.backgroundColor = "#E3E3E3";
+        dogType.style.backgroundColor = "#6BB8D0";
         dogType.style.border = "1px solid #6C6C6C";
       }
 
       if (dogPrevClick !== null) {
         let prev = document.getElementById(dogPrevClick);
-        prev.style.backgroundColor = "#fff";
-        prev.style.border = "1px solid #E6E7E8";
+        prev.style.backgroundColor = "#E5E5E5";
+        prev.style.border = "1px solid #6C6C6C";
       }
 
       setDogPrevClick(dogClick);
@@ -105,31 +105,39 @@ const Filter = () => {
     [dogClick]
   );
 
-  //*찾기버튼 눌렀을 때 이벤트(필어틸ㅇ)
   const result = () => {
     //선택한 상태가 아닐 시 null
     //선택한 상태가 있을 시 클릭한 id 출력
     console.log(regionClick); //타입 string
     console.log(dogClick); 
     console.log(placeClick); 
-
-    //1차 필터 : 지역,견종
+    FilterResult();
+  }
+  
+  //*찾기버튼(result) 눌렀을 때 필터링되는 함수
+  const FilterResult =()=>{
     placeData.filter(item => {
+      //1차 필터 : 지역,견종
       if(item.region === regionClick && item.dog_type === dogClick){
-        console.log(item);
-        // console.log(typeof item); //obj
+        // console.log(item);
         //2차 필터 : 장소
-        if(item.place_type === placeClick){
+        if(item.place_type !== null){
+          //값이 null이 아닐 때는 1차 필터 내용 전체 출력
           console.log(item);
         }
+        if(item.place_type === placeClick){
+          //값이 있을 때는 2차까지 걸러서 출력
+          // console.log(item);
+        } 
       }
-    })
+    });
   }
 
 //초기화
   const refreshBtn = () => {
     console.log("초기화");
     console.log(setregionClick(null));
+    console.log(setDogClick(null));
     console.log(setplaceClick(null));
   };
 
@@ -175,6 +183,9 @@ const Filter = () => {
                 찾기
               </button>
             </div>
+          </div>
+          <div id="con5">
+            테스트
           </div>
         </div>
       </div>
