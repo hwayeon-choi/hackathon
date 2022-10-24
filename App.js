@@ -1,9 +1,12 @@
 import React from 'react';
-import { View, Text, Button, Alert, Style} from 'react-native';
+import { View, Text, Button} from 'react-native';
 import favoriteModule from './FavoriteModule';
+import LoginStatus from './LoginStatus';
+
 function App() {
   return (
       <View>
+        <LoginStatus />
         <Button
           title="getLikeOX"
           onPress={()=> favoriteModule.getLikeOX(1, 3)}>
