@@ -1,0 +1,28 @@
+.category-set {
+  margin-top: 3px;
+}
+
+.category-child {
+  margin: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  border: 1px solid grey;
+  background-color: #fff;
+  width: 130px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+.category-child:hover {
+  font-weight: bolder;
+  border-color: blue;
+}
+
+.selected {
+  border-style: none;
+  font-weight: 800;
+  background: rgb(64, 142, 210);
+  color: #fff;
+}

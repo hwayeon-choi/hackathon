@@ -1,0 +1,212 @@
+{
+  "region": [
+    {
+      "id": "0",
+      "engName": "All",
+      "korName": "전체",
+      "category": "region"
+    },
+    {
+      "id": "1",
+      "engName": "Gangwon-do",
+      "korName": "강원도",
+      "category": "region"
+    },
+    {
+      "id": "2",
+      "engName": "Gyeonggi-do",
+      "korName": "경기도",
+      "category": "region"
+    },
+    {
+      "id": "3",
+      "engName": "Gyeongsangnam-do",
+      "korName": "경상남도",
+      "category": "region"
+    },
+    {
+      "id": "4",
+      "engName": "Gyeongsangbuk-do",
+      "korName": "경상북도",
+      "category": "region"
+    },
+    {
+      "id": "5",
+      "engName": "Gwangju",
+      "korName": "광주광역시",
+      "category": "region"
+    },
+    {
+      "id": "6",
+      "engName": "Daegu",
+      "korName": "대구광역시",
+      "category": "region"
+    },
+    {
+      "id": "7",
+      "engName": "Daejeon",
+      "korName": "대전광역시",
+      "category": "region"
+    },
+    {
+      "id": "8",
+      "engName": "Busan",
+      "korName": "부산광역시",
+      "category": "region"
+    },
+    {
+      "id": "9",
+      "engName": "Seoul",
+      "korName": "서울특별시",
+      "category": "region"
+    },
+    {
+      "id": "10",
+      "engName": "Sejong-si",
+      "korName": "세종특별자치시",
+      "category": "region"
+    },
+    {
+      "id": "11",
+      "engName": "Ulsan",
+      "korName": "울산광역시",
+      "category": "region"
+    },
+    {
+      "id": "12",
+      "engName": "Incheon",
+      "korName": "인천광역시",
+      "category": "region"
+    },
+    {
+      "id": "13",
+      "engName": "Jeollanam-do",
+      "korName": "전라남도",
+      "category": "region"
+    },
+    {
+      "id": "14",
+      "engName": "Jeollabuk-do",
+      "korName": "전라북도",
+      "category": "region"
+    },
+    {
+      "id": "15",
+      "engName": "Jeju-do",
+      "korName": "제주특별자치도",
+      "category": "region"
+    },
+    {
+      "id": "16",
+      "engName": "Chungcheongnam-do",
+      "korName": "충청남도",
+      "category": "region"
+    },
+    {
+      "id": "17",
+      "engName": "Chungcheongbuk-do",
+      "korName": "충청북도",
+      "category": "region"
+    }
+  ],
+  "place_type": [
+    {
+      "id": "0",
+      "engName": "All",
+      "korName": "전체",
+      "category": "place_type"
+    },
+    {
+      "id": "1",
+      "engName": "restaurant",
+      "korName": "식당",
+      "category": "place_type"
+    },
+    {
+      "id": "2",
+      "engName": "cafe",
+      "korName": "카페",
+      "category": "place_type"
+    },
+    {
+      "id": "3",
+      "engName": "pet_hospital",
+      "korName": "동물병원",
+      "category": "place_type"
+    },
+    {
+      "id": "4",
+      "engName": "accomodation",
+      "korName": "숙박",
+      "category": "place_type"
+    },
+    {
+      "id": "5",
+      "engName": "park",
+      "korName": "공원",
+      "category": "place_type"
+    },
+    {
+      "id": "6",
+      "engName": "pet_ground",
+      "korName": "애견운동장",
+      "category": "place_type"
+    },
+    {
+      "id": "7",
+      "engName": "grooming_shop",
+      "korName": "미용",
+      "category": "place_type"
+    },
+    {
+      "id": "8",
+      "engName": "pet_hotel",
+      "korName": "위탁관리업",
+      "category": "place_type"
+    },
+    {
+      "id": "9",
+      "engName": "activity",
+      "korName": "체험",
+      "category": "place_type"
+    },
+    {
+      "id": "10",
+      "engName": "tour",
+      "korName": "관광지",
+      "category": "place_type"
+    },
+    {
+      "id": "11",
+      "engName": "pet_rest",
+      "korName": "반려동물 편의시설(놀이터)",
+      "category": "place_type"
+    }
+    ],
+    "dog_type": [
+      {
+        "id": "0",
+        "engName": "All",
+        "korName": "전체",
+        "category": "dog_type"
+      },
+    {
+      "id": "1",
+      "engName": "small",
+      "korName": "소형견",
+      "category": "dog_type"
+    },
+    {
+      "id": "2",
+      "engName": "middle",
+      "korName": "중형견",
+      "category": "dog_type"
+    },
+    {
+      "id": "3",
+      "engName": "big",
+      "korName": "대형견",
+      "category": "dog_type"
+    }
+  ]
+}

@@ -65,6 +65,9 @@ function CreateCate() {
   const getValsPlace = Object.values(passingCates.place_type);
   const getValsDog = Object.values(passingCates.dog_type);
 
+  const key = getKeysRegion;
+  const vals = {[key]: getValsRegion};
+
   const onClick=()=>{
     //클릭했을 때 이벤트.. 
     console.log('clicked')
@@ -82,8 +85,8 @@ function CreateCate() {
       {getKeysRegion.map((entrie, index) => {
         console.log(entrie);
         <CreateBtn     
-          className={entrie.seoul}
-          cateName={entrie.seoul}
+          className={entrie}
+          cateName={entrie}
           onClick={onClick} />
       })}
       {/* {getKeysPlace.map((entrie, index) => {
