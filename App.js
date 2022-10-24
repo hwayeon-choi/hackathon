@@ -1,12 +1,28 @@
 import React from 'react';
-import { View, Text} from 'react-native';
-
+import { View, Text, Button, Alert, Style} from 'react-native';
+import favoriteModule from './FavoriteModule';
 function App() {
   return (
-    <View>
-      <Text>프로젝트 생성 시간을 줄이기 위한 빈 프로젝트. 브랜치를 만들어서 쓰시오!!!</Text>
-    </View>
+      <View>
+        <Button
+          title="getLikeOX"
+          onPress={()=> favoriteModule.getLikeOX(1, 3)}>
+        </Button>
+        <Button
+          title="postLike"
+          onPress={()=> favoriteModule.postLike("like", 1, 3)}>
+        </Button>
+        <Button
+          title="getWishlist"
+          onPress={()=>favoriteModule.getWishlist(1, 3)}>
+        </Button>
+        <Button
+          title="getPopular"
+          onPress={()=>favoriteModule.getPopular()}>
+        </Button>
+      </View>
   );
 }
+
 
 export default App;
