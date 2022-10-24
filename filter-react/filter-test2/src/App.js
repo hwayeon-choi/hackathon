@@ -3,16 +3,12 @@ import React from "react";
 // import About from './pages/About';
 // import Home from './pages/Home';
 // import Filter2 from "./component/filtertest2";
-import Filter3 from "./component/filtertest3";
-import Filter4 from "./component/filtertest4";
+// import Filter3 from "./component/filtertest3";
+import Filter from "./component/filtertest3_1";
 
 const App = () => {
   return (
-    <Filter3 />
-    // <div>
-    //   <Route path="/" exact={true} component={Home} />
-    //   <Route path="/about" component={About} />
-    // </div>
+    <Filter />
   );
 };
 
