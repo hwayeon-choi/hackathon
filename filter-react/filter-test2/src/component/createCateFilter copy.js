@@ -8,102 +8,51 @@ const CreateCateFilter = () => {
 
   /* 카테고리별 상태 설정 */
   //지역
-  const [regionClick, setregionClick] = useState(null);
-  const [regionPrevClick, setRegionPrevClick] = useState(null);
-  //견종
-  const [dogClick, setDogClick] = useState(null);
-  const [dogPrevClick, setDogPrevClick] = useState(null);
-  //장소
-  const [placeClick, setplaceClick] = useState(null);
-  const [placePrevClick, setPlacePrevClick] = useState(null);
+  const [currentClick, setCurrentClick] = useState(null);
+  const [prevClick, setPrevClick] = useState(null);
 
 
   /* 이벤트 설정 */
   //지역
   const GetRegion = (e) => {
-    setregionClick(e.target.id);
+    setCurrentClick(e.target.id);
   };
   //견종
   const Getdog = (e) => {
-    setDogClick(e.target.id);
+    setCurrentClick(e.target.id);
   };
   //장소
   const GetPlace = (e) => {
-    setplaceClick(e.target.id);
+    setCurrentClick(e.target.id);
   };
 
   /* 클릭 상태에 따른 버튼 변화 */
   // 지역
   React.useEffect(
     () => {
-      if (regionClick !== null) {
-        let region = document.getElementById(regionClick);
-        // console.log(region.innerHTML);
-        //클릭한 메뉴1번 출력
-        region.style.backgroundColor = "#6BB8D0";
-        region.style.border = "1px solid #6C6C6C";
+      if (currentClick !== null) {
+        let getId = document.getElementById(currentClick);
+        getId.style.backgroundColor = "#6BB8D0";
+        getId.style.border = "1px solid #6C6C6C";
       }
 
-      if (regionPrevClick !== null) {
-        let prev = document.getElementById(regionPrevClick);
-        prev.style.backgroundColor = "#E5E5E5";
-        prev.style.border = "1px solid #6C6C6C";
+      if (prevClick !== null) {
+        let prevId = document.getElementById(prevClick);
+        prevId.style.backgroundColor = "#E5E5E5";
+        prevId.style.border = "1px solid #6C6C6C";
       }
 
-      setRegionPrevClick(regionClick);
+      setPrevClick(currentClick);
     },
-    [regionClick] //클릭값이 업데이트 될 때만 실행
+    [currentClick] //클릭값이 업데이트 될 때만 실행
   );
 
-  //견종
-  React.useEffect(
-    () => {
-      if (dogClick !== null) {
-        let dogType = document.getElementById(dogClick);
-        //클릭한 메뉴3번 출력
-        dogType.style.backgroundColor = "#6BB8D0";
-        dogType.style.border = "1px solid #6C6C6C";
-      }
-
-      if (dogPrevClick !== null) {
-        let prev = document.getElementById(dogPrevClick);
-        prev.style.backgroundColor = "#E5E5E5";
-        prev.style.border = "1px solid #6C6C6C";
-      }
-
-      setDogPrevClick(dogClick);
-    },
-    [dogClick] //클릭값이 업데이트 될 때만 실행
-  );
-
-  //장소
-  React.useEffect(
-    () => {
-      if (placeClick !== null) {
-        let place = document.getElementById(placeClick);
-        //클릭한 메뉴2번 출력
-        place.style.backgroundColor = "#6BB8D0";
-        place.style.border = "1px solid #6C6C6C";
-      }
-
-      if (placePrevClick !== null) {
-        let prev = document.getElementById(placePrevClick);
-        prev.style.backgroundColor = "#E5E5E5";
-        prev.style.border = "1px solid #6C6C6C";
-      }
-
-      setPlacePrevClick(placeClick);
-    },
-    [placeClick] //클릭값이 업데이트 될 때만 실행
-  );
 
   /* 결과 찾기 */
   const result = () => {
     //선택한 상태가 아닐 시 null
     //선택한 상태가 있을 시 클릭한 내용 출력
-    console.log(regionClick);
-    console.log(dogClick); 
-    console.log(placeClick); 
+    console.log(currentClick);
     FilterResult(); //필터링 결과 출력
   }
 
@@ -111,14 +60,14 @@ const CreateCateFilter = () => {
   const FilterResult =()=>{
     placeData.filter(item => {
       //1차 필터 : 지역,견종
-      if(item.region === regionClick && item.dog_type === dogClick){
+      if(item.region === currentClick && item.dog_type === currentClick){
         // console.log(item);
         //2차 필터 : 장소
         if(item.place_type !== null){
           //값이 null이 아닐 때는 1차 필터 내용 전체 출력
           console.log(item);
         }
-        if(item.place_type === placeClick){
+        if(item.place_type === currentClick){
           //값이 있을 때는 2차까지 걸러서 출력
           // console.log(item);
         } 
@@ -129,9 +78,7 @@ const CreateCateFilter = () => {
 /* 초기화 */
   const refreshBtn = () => {
     console.log("초기화");
-    console.log(setregionClick(null));
-    console.log(setDogClick(null));
-    console.log(setplaceClick(null));
+    console.log(setCurrentClick(null));
   };
 
   return (
