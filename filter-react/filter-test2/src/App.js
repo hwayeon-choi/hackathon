@@ -1,6 +1,7 @@
 import React, { useRef, useReducer, useMemo, useCallback } from "react";
 import UserList from "./component/prac/UserList";
 import CreateUser from "./component/prac/CreateUser";
+import { ActionSheetIOS } from "react-native";
 
 const CountActiveUsers =(users)=> {
   console.log('활성 사용자 수를 세는 중...');
@@ -36,11 +37,24 @@ const initialState = {
 
 /* 리듀서 함수 */
 const reducer=(state, active)=> {
-  return state;
+  switch(action.type){
+    case 'CHANGE_INPUT':
+      return {
+        ...state,
+        inputs: {
+          ...state.inputs,
+          [action.name]: action.value
+        }
+      };
+      default: //<-??? 
+        return state;
+  }
 }
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const { users } = state;
+  const { username, email } = state.inputs;
   return (
     <>
     <CreateUser />
