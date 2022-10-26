@@ -1,42 +1,58 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import { View, Text, Button } from 'react-native';
 import favoriteModule from './FavoriteModule';
 
-const LoginStatus = () =>{
-  const [isLogin, setLogin] = useState("로그인 하시겠습니까?");
-  return (
-    <>
-      <Button title="로그인"onPress={() => {
-        setLogin(!isLogin),
-        console.log(isLogin ? "로그인 하시겠습니까?" : "로그인 되었습니다.")}
-      } />
-    </>
-  )
-}
+const loginDefault = { login : 'false' };
+const loginContext = createContext(loginDefault)
 
 function App() {
+  const login = useContext(loginContext);
   return (
+    <loginContext.Provider value={{ login : 'false'}}>
       <View>
-        <LoginStatus/>
-
-        <Button
-          title="getLikeOX"
-          onPress={()=> favoriteModule.getLikeOX(1, 3)}/>
-
-        <Button
-          title="postLike"
-          onPress={()=> favoriteModule.postLike("like", 1, 3)}/>
-
-        <Button
-          title="getWishlist"
-          onPress={()=>favoriteModule.getWishlist(1, 3)}/>
-
-        <Button
-          title="getPopular"
-          onPress={()=>favoriteModule.getPopular()}/>
+        <Text>App.js</Text>
+        <Sub1 />
       </View>
+    </loginContext.Provider>
   );
 }
 
+function Sub1() {
+  const login = useContext(loginContext);
+  return (
+    <loginContext.Provider value={{ login : 'false'}}>
+      <View>
+        <Text>Sub1.js</Text>
+        <Text>{JSON.stringify(login)}</Text>
+        <Sub2 />
+      </View>
+    </loginContext.Provider>
+  );
+}
+
+function Sub2() {
+  const login = useContext(loginContext);
+  return (
+    <loginContext.Provider value={{ login : 'false'}}>
+      <View>
+        <Text>Sub2.js</Text>
+        <Text>{JSON.stringify(login)}</Text>
+        <Sub3 />
+      </View>
+    </loginContext.Provider>
+  );
+}
+
+function Sub3() {
+  const login = useContext(loginContext);
+  return (
+    <loginContext.Provider value={{ login : 'false'}}>
+      <View>
+        <Text>Sub3.js</Text>
+        <Text>{JSON.stringify(login)}</Text>
+      </View>
+    </loginContext.Provider>
+  );
+}
 
 export default App;
