@@ -6,7 +6,6 @@ const loginDefault = { login : 'false' };
 const loginContext = createContext(loginDefault)
 
 function App() {
-  const login = useContext(loginContext);
   return (
     <loginContext.Provider value={{ login : 'false'}}>
       <View>
