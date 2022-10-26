@@ -7,13 +7,12 @@ export default LocationList = () => {
   
   const locationArr = ["제주","강릉","부산","여수","가평","담양","전주"]
 
-  let localList = locationArr.map((data)=>(
-    <Pressable style={styles.locationBox}>
+  let localList = locationArr.map((data,index)=>(
+    <Pressable style={styles.locationBox} key={index}>
       <ImageBackground 
       style={styles.locationThum}
       source={require('../../../asset/img/busan.jpg')}
       imageStyle={{borderRadius : 10}}
-      key = {1}
       />
       <Text style={{fontSize : 12, fontWeight : "500"}}>{data}</Text>
     </Pressable>

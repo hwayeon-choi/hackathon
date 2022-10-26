@@ -11,8 +11,7 @@
     "homepage": "http://www.yegawon.co.kr/",
     "parking": "N",
     "wifi": "N",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 2,
@@ -26,8 +25,7 @@
     "homepage": "https://www.instagram.com/insajonggajib/",
     "parking": "N",
     "wifi": "N",
-    "reservation": "전화예약 / 온라인예약\r",
-    "dog_type": "중형견"
+    "reservation": "전화예약 / 온라인예약\r"
   },
   {
     "place_detail_id": 3,
@@ -41,8 +39,7 @@
     "homepage": "",
     "parking": "N",
     "wifi": "N",
-    "reservation": "\r",
-    "dog_type": "대형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 4,
@@ -56,8 +53,7 @@
     "homepage": "http://instagram.com/changsin4",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 5,
@@ -71,8 +67,7 @@
     "homepage": "",
     "parking": "Y",
     "wifi": "N",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 6,
@@ -86,8 +81,7 @@
     "homepage": "http://instagram.com/cafe_guhalgu",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 7,
@@ -101,8 +95,7 @@
     "homepage": "",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 8,
@@ -116,8 +109,7 @@
     "homepage": "",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 9,
@@ -131,8 +123,7 @@
     "homepage": "http://blog.naver.com/dcbop",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "중형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 10,
@@ -146,8 +137,7 @@
     "homepage": "",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 11,
@@ -161,8 +151,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 12,
@@ -176,8 +165,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 13,
@@ -191,8 +179,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 14,
@@ -206,8 +193,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 15,
@@ -221,8 +207,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 16,
@@ -236,8 +221,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 17,
@@ -251,8 +235,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 18,
@@ -266,8 +249,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 19,
@@ -281,8 +263,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 20,
@@ -296,8 +277,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 21,
@@ -311,8 +291,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 22,
@@ -326,8 +305,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 23,
@@ -341,8 +319,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 24,
@@ -356,8 +333,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 25,
@@ -371,8 +347,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 26,
@@ -386,8 +361,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 27,
@@ -401,8 +375,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "중형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 28,
@@ -416,8 +389,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 29,
@@ -431,8 +403,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 30,
@@ -446,8 +417,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 31,
@@ -461,8 +431,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 32,
@@ -476,8 +445,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 33,
@@ -491,8 +459,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 34,
@@ -506,8 +473,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 35,
@@ -521,8 +487,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 36,
@@ -536,8 +501,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 37,
@@ -551,8 +515,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 38,
@@ -566,8 +529,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 39,
@@ -581,8 +543,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "중형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 40,
@@ -596,8 +557,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 41,
@@ -611,8 +571,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 42,
@@ -626,8 +585,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 43,
@@ -641,8 +599,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 44,
@@ -656,8 +613,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 45,
@@ -671,8 +627,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 46,
@@ -686,8 +641,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 47,
@@ -701,8 +655,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 48,
@@ -716,8 +669,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 49,
@@ -731,8 +683,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 50,
@@ -746,8 +697,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 51,
@@ -761,8 +711,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 52,
@@ -776,8 +725,7 @@
     "homepage": "https://www.osan.go.kr/petpark/",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 53,
@@ -791,8 +739,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "대형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 54,
@@ -806,8 +753,7 @@
     "homepage": "http://runkoko.com",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 55,
@@ -821,8 +767,7 @@
     "homepage": "https://www.anseong.go.kr/tour/contents.do?mId=0103010100",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "대형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 56,
@@ -836,8 +781,7 @@
     "homepage": "https://www.foresttrip.go.kr/indvz/main.do?hmpgId=0103",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 57,
@@ -851,8 +795,7 @@
     "homepage": "http://instagram.com/ermosaspizza",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 58,
@@ -866,8 +809,7 @@
     "homepage": "https://goganee.modoo.at,http://goganee.cityfood.co.kr/",
     "parking": "Y",
     "wifi": "N",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 59,
@@ -881,8 +823,7 @@
     "homepage": "http://www.odr.kr/m8ew49",
     "parking": "N",
     "wifi": "N",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 60,
@@ -896,8 +837,7 @@
     "homepage": "http://instagram.com/namhae_sesonal.byulmi",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 61,
@@ -911,8 +851,7 @@
     "homepage": "https://gukil.modoo.at/",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 62,
@@ -926,8 +865,7 @@
     "homepage": "http://cityfood.co.kr/h3/hangil",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 63,
@@ -941,8 +879,7 @@
     "homepage": "http://www.youngdabang.com/,http://www.instagram.com/youngdabang_no.1,http://www.facebook.com/youngdabang.kr",
     "parking": "N",
     "wifi": "N",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 64,
@@ -956,8 +893,7 @@
     "homepage": "http://theborn.co.kr/",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 65,
@@ -971,8 +907,7 @@
     "homepage": "http://www.youngdabang.com/,http://www.instagram.com/youngdabang_no.1,http://www.facebook.com/youngdabang.kr",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 66,
@@ -986,8 +921,7 @@
     "homepage": "http://www.youngdabang.com/,http://www.instagram.com/youngdabang_no.1,http://www.facebook.com/youngdabang.kr",
     "parking": "N",
     "wifi": "N",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 67,
@@ -1001,8 +935,7 @@
     "homepage": "http://www.youngdabang.com/,http://www.instagram.com/youngdabang_no.1,http://www.facebook.com/youngdabang.kr",
     "parking": "N",
     "wifi": "N",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 68,
@@ -1016,8 +949,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 69,
@@ -1031,8 +963,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 70,
@@ -1046,8 +977,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 71,
@@ -1061,8 +991,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 72,
@@ -1076,8 +1005,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 73,
@@ -1091,8 +1019,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 74,
@@ -1106,8 +1033,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 75,
@@ -1121,8 +1047,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 76,
@@ -1136,8 +1061,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 77,
@@ -1151,8 +1075,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 78,
@@ -1166,8 +1089,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 79,
@@ -1181,8 +1103,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 80,
@@ -1196,8 +1117,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 81,
@@ -1211,8 +1131,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 82,
@@ -1226,8 +1145,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 83,
@@ -1241,8 +1159,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 84,
@@ -1256,8 +1173,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 85,
@@ -1271,8 +1187,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 86,
@@ -1286,8 +1201,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 87,
@@ -1301,8 +1215,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 88,
@@ -1316,8 +1229,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 89,
@@ -1331,8 +1243,7 @@
     "homepage": "http://instagram.com/seomyeon_tabitabi",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 90,
@@ -1346,8 +1257,7 @@
     "homepage": "https://www.instagram.com/smyeontangalbi,https://bit.ly/2ZcaKRj,https://www.facebook.com/smyeontangalbi",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 91,
@@ -1361,8 +1271,7 @@
     "homepage": "http://www.instagram.com/sinchon_duk",
     "parking": "N",
     "wifi": "N",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 92,
@@ -1376,8 +1285,7 @@
     "homepage": "https://yakseon.modoo.at,http://www.instagram.com/choiswellbeingfood_restaurant,http://www.facebook.com/yakseon/",
     "parking": "Y",
     "wifi": "N",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 93,
@@ -1391,8 +1299,7 @@
     "homepage": "http://instagram.com/mybarn",
     "parking": "N",
     "wifi": "N",
-    "reservation": "전화예약 / 온라인예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약 / 온라인예약\r"
   },
   {
     "place_detail_id": 94,
@@ -1406,8 +1313,7 @@
     "homepage": "http://www.instagram.com/cafe_garden_april",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 95,
@@ -1421,8 +1327,7 @@
     "homepage": "http://www.instagram.com/cafelmf",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 96,
@@ -1436,8 +1341,7 @@
     "homepage": "http://www.instagram.com/jspace_cafe",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 97,
@@ -1451,8 +1355,7 @@
     "homepage": "http://www.instagram.com/cafede220volt,http://www.facebook.com/cafede220volt,https://blog.naver.com/de220volt,https://cafede220volt.modoo.at",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 98,
@@ -1466,8 +1369,7 @@
     "homepage": "http://instagram.com/cafe_baekji",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 99,
@@ -1481,8 +1383,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 100,
@@ -1496,8 +1397,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 101,
@@ -1511,8 +1411,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 102,
@@ -1526,8 +1425,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 103,
@@ -1541,8 +1439,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 104,
@@ -1556,8 +1453,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 105,
@@ -1571,8 +1467,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 106,
@@ -1586,8 +1481,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 107,
@@ -1601,8 +1495,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 108,
@@ -1616,8 +1509,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 109,
@@ -1631,8 +1523,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 110,
@@ -1646,8 +1537,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 111,
@@ -1661,8 +1551,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 112,
@@ -1676,8 +1565,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 113,
@@ -1691,8 +1579,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 114,
@@ -1706,8 +1593,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 115,
@@ -1721,8 +1607,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 116,
@@ -1736,8 +1621,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 117,
@@ -1751,8 +1635,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 118,
@@ -1766,8 +1649,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 119,
@@ -1781,8 +1663,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 120,
@@ -1796,8 +1677,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 121,
@@ -1811,8 +1691,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 122,
@@ -1826,8 +1705,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 123,
@@ -1841,8 +1719,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 124,
@@ -1856,8 +1733,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 125,
@@ -1871,8 +1747,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 126,
@@ -1886,8 +1761,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 127,
@@ -1901,8 +1775,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 128,
@@ -1916,8 +1789,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 129,
@@ -1931,8 +1803,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 130,
@@ -1946,8 +1817,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 131,
@@ -1961,8 +1831,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 132,
@@ -1976,8 +1845,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 133,
@@ -1991,8 +1859,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 134,
@@ -2006,8 +1873,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 135,
@@ -2021,8 +1887,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 136,
@@ -2036,8 +1901,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 137,
@@ -2051,8 +1915,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 138,
@@ -2066,8 +1929,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 139,
@@ -2081,8 +1943,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 140,
@@ -2096,8 +1957,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 141,
@@ -2111,8 +1971,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 142,
@@ -2126,8 +1985,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 143,
@@ -2141,8 +1999,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 144,
@@ -2156,8 +2013,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 145,
@@ -2171,8 +2027,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 146,
@@ -2186,8 +2041,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 147,
@@ -2201,8 +2055,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 148,
@@ -2216,8 +2069,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 149,
@@ -2231,8 +2083,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 150,
@@ -2246,8 +2097,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 151,
@@ -2261,8 +2111,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 152,
@@ -2276,8 +2125,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 153,
@@ -2291,8 +2139,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 154,
@@ -2306,8 +2153,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 155,
@@ -2321,8 +2167,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 156,
@@ -2336,8 +2181,7 @@
     "homepage": "",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "레드테이블\r",
-    "dog_type": "소형견"
+    "reservation": "레드테이블\r"
   },
   {
     "place_detail_id": 157,
@@ -2351,8 +2195,7 @@
     "homepage": "https://www.instagram.com/_cafe.may_",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "레드테이블\r",
-    "dog_type": "소형견"
+    "reservation": "레드테이블\r"
   },
   {
     "place_detail_id": 158,
@@ -2366,8 +2209,7 @@
     "homepage": "http://1993dessert.modoo.at",
     "parking": "N",
     "wifi": "N",
-    "reservation": "네이버 / 레드테이블\r",
-    "dog_type": "소형견"
+    "reservation": "네이버 / 레드테이블\r"
   },
   {
     "place_detail_id": 159,
@@ -2381,8 +2223,7 @@
     "homepage": "https://www.instagram.com/cafe914_4",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "레드테이블\r",
-    "dog_type": "소형견"
+    "reservation": "레드테이블\r"
   },
   {
     "place_detail_id": 160,
@@ -2396,8 +2237,7 @@
     "homepage": "https://www.facebook.com/전주카페마노아-2031052383775016/",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "레드테이블\r",
-    "dog_type": "소형견"
+    "reservation": "레드테이블\r"
   },
   {
     "place_detail_id": 161,
@@ -2411,8 +2251,7 @@
     "homepage": "http://pnb본점.com/",
     "parking": "N",
     "wifi": "N",
-    "reservation": "레드테이블\r",
-    "dog_type": "소형견"
+    "reservation": "레드테이블\r"
   },
   {
     "place_detail_id": 162,
@@ -2426,8 +2265,7 @@
     "homepage": "http://makeus.net/33350",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "전화예약 / 레드테이블\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약 / 레드테이블\r"
   },
   {
     "place_detail_id": 163,
@@ -2441,8 +2279,7 @@
     "homepage": "https://smartstore.naver.com/mjinmi",
     "parking": "Y",
     "wifi": "N",
-    "reservation": "레드테이블\r",
-    "dog_type": "소형견"
+    "reservation": "레드테이블\r"
   },
   {
     "place_detail_id": 164,
@@ -2456,8 +2293,7 @@
     "homepage": "http://www.odr.kr/mmmwkb",
     "parking": "Y",
     "wifi": "N",
-    "reservation": "전화예약\r",
-    "dog_type": "소형견"
+    "reservation": "전화예약\r"
   },
   {
     "place_detail_id": 165,
@@ -2471,8 +2307,7 @@
     "homepage": "http://seongmidang.modoo.at/ 휴무 월",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "레드테이블\r",
-    "dog_type": "소형견"
+    "reservation": "레드테이블\r"
   },
   {
     "place_detail_id": 166,
@@ -2486,8 +2321,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 167,
@@ -2501,8 +2335,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 168,
@@ -2516,8 +2349,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 169,
@@ -2531,8 +2363,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 170,
@@ -2546,8 +2377,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 171,
@@ -2561,8 +2391,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 172,
@@ -2576,8 +2405,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 173,
@@ -2591,8 +2419,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 174,
@@ -2606,8 +2433,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 175,
@@ -2621,8 +2447,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 176,
@@ -2636,8 +2461,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 177,
@@ -2651,8 +2475,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 178,
@@ -2666,8 +2489,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 179,
@@ -2681,8 +2503,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 180,
@@ -2696,8 +2517,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 181,
@@ -2711,8 +2531,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 182,
@@ -2726,8 +2545,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 183,
@@ -2741,8 +2559,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 184,
@@ -2756,8 +2573,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 185,
@@ -2771,8 +2587,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 186,
@@ -2786,8 +2601,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 187,
@@ -2801,8 +2615,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 188,
@@ -2816,8 +2629,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 189,
@@ -2831,8 +2643,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 190,
@@ -2846,8 +2657,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 191,
@@ -2861,8 +2671,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 192,
@@ -2876,8 +2685,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 193,
@@ -2891,8 +2699,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 194,
@@ -2906,8 +2713,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 195,
@@ -2921,8 +2727,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 196,
@@ -2936,8 +2741,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 197,
@@ -2951,8 +2755,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 198,
@@ -2966,8 +2769,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 199,
@@ -2981,8 +2783,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 200,
@@ -2996,8 +2797,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 201,
@@ -3011,8 +2811,7 @@
     "homepage": "http://www.instagram.com/mondayoffplease",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 202,
@@ -3026,8 +2825,7 @@
     "homepage": "http://www.instagram.com/haruki_essay",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 203,
@@ -3041,8 +2839,7 @@
     "homepage": "http://instagram.com/sobok_donn",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 204,
@@ -3056,8 +2853,7 @@
     "homepage": "https://instagram.com/iamnotalone_cafe?igshid=1f9zrt3umvrd5",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 205,
@@ -3071,8 +2867,7 @@
     "homepage": "https://www.instagram.com/cafe_bluewhale_",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 206,
@@ -3086,8 +2881,7 @@
     "homepage": "https://www.instagram.com/betterthanwaffle_jisan",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 207,
@@ -3101,8 +2895,7 @@
     "homepage": "http://instagram.com/kafe.warehouse",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 208,
@@ -3116,8 +2909,7 @@
     "homepage": "http://instagram.com/wansocoffee",
     "parking": "Y",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 209,
@@ -3131,8 +2923,7 @@
     "homepage": "http://instagram.com/_limit.__",
     "parking": "N",
     "wifi": "Y",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 210,
@@ -3146,8 +2937,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 211,
@@ -3161,8 +2951,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 212,
@@ -3176,8 +2965,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 213,
@@ -3191,8 +2979,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 214,
@@ -3206,8 +2993,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 215,
@@ -3221,8 +3007,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 216,
@@ -3236,8 +3021,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 217,
@@ -3251,8 +3035,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 218,
@@ -3266,8 +3049,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 219,
@@ -3281,8 +3063,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 220,
@@ -3296,8 +3077,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 221,
@@ -3311,8 +3091,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 222,
@@ -3326,8 +3105,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 223,
@@ -3341,8 +3119,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 224,
@@ -3356,8 +3133,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 225,
@@ -3371,8 +3147,7 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   },
   {
     "place_detail_id": 226,
@@ -3386,7 +3161,6 @@
     "homepage": "",
     "parking": "",
     "wifi": "",
-    "reservation": "\r",
-    "dog_type": "소형견"
+    "reservation": "\r"
   }
 ]

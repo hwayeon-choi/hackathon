@@ -28,12 +28,6 @@ const FindRoute = ({navigation}) => {
         </Pressable>
         {/* 해시태그버튼 */}
         <HashTag/>
-        {/* <Pressable 
-        style={styles.hashTagContainer}
-        onPress = {()=> navigation.navigate('HashTag')}
-        >
-          <Text style={styles.hashTag}>#</Text>
-        </Pressable> */}
       </View>
 
       {/* 카테고리 컨테이너  */}
@@ -41,16 +35,21 @@ const FindRoute = ({navigation}) => {
       horizontal={true} 
       showsHorizontalScrollIndicator = {false} 
       style={styles.categoryContainer}>
-        <CategoryBox text={"식당"}></CategoryBox>
+        <CategoryBox/>
+        {/* <CategoryBox text={"식당"}></CategoryBox>
         <CategoryBox text={"숙소"}></CategoryBox>
         <CategoryBox text={"카페"}></CategoryBox>
         <CategoryBox text={"운동장"}></CategoryBox>
-        <CategoryBox text={"산책 & 공원"}></CategoryBox>
+        <CategoryBox text={"산책 & 공원"}></CategoryBox> */}
       </ScrollView>
       
       {/* 업체리스트 컨테이너  */}
       <ScrollView style = {styles.listContainer}>
-        <CompanyName/>
+        <CompanyName 
+        region_name={"부산광역시"}
+        dog_type={"소형견"}
+        place_type={"카페"} 
+        />
       </ScrollView>
     </SafeAreaView>
     // {/* <FillterPopUP/> */}
