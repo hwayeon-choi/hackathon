@@ -8,6 +8,7 @@ import CompanyName from '../../components/Box/CompanyName'
 import { MagnifyingGlassIcon } from 'react-native-heroicons/outline';
 import Filter from '../../components/Filter'
 import HashTag from "./HashTag"
+import CategoryContainer from '../../components/Box/CategoryContainer'
 
 
 const Stack = createNativeStackNavigator();
@@ -31,26 +32,16 @@ const FindRoute = ({navigation}) => {
       </View>
 
       {/* 카테고리 컨테이너  */}
-      <ScrollView 
-      horizontal={true} 
-      showsHorizontalScrollIndicator = {false} 
-      style={styles.categoryContainer}>
-        <CategoryBox/>
-        {/* <CategoryBox text={"식당"}></CategoryBox>
-        <CategoryBox text={"숙소"}></CategoryBox>
-        <CategoryBox text={"카페"}></CategoryBox>
-        <CategoryBox text={"운동장"}></CategoryBox>
-        <CategoryBox text={"산책 & 공원"}></CategoryBox> */}
-      </ScrollView>
+      <CategoryContainer/>
       
       {/* 업체리스트 컨테이너  */}
-      <ScrollView style = {styles.listContainer}>
+      {/* <ScrollView style = {styles.listContainer}>
         <CompanyName 
-        region_name={"부산광역시"}
+        region_name={"서울특별시"}
         dog_type={"소형견"}
         place_type={"카페"} 
         />
-      </ScrollView>
+      </ScrollView> */}
     </SafeAreaView>
     // {/* <FillterPopUP/> */}
   )

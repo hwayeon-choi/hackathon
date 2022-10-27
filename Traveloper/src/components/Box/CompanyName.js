@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import Listbox from './ListBox'
-
+import CategoryBox from './CategoryBox'
 
 
 const CompanyName = ({place_type, region_name, dog_type}) => {
