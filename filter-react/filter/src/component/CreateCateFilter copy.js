@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import data from "../db/cateData.json"; //카테고리 분류용
 import placeData from "../db/all.json"; //장소데이터 전체용
 //각 json파일의 공통 키(region, dog_type, place_type)의 값 사용
@@ -10,15 +10,12 @@ const CreateCateFilter = () => {
   /* 카테고리별 상태 설정 */
   //지역
   const [regionClick, setregionClick] = useState(null);
-  const [regionPrevClick, setRegionPrevClick] = useState(null);
+  const [click, setClick] = useState(null);
   //견종
   const [dogClick, setDogClick] = useState(null);
-  const [dogPrevClick, setDogPrevClick] = useState(null);
   //장소
   const [placeClick, setplaceClick] = useState(null);
-  const [placePrevClick, setPlacePrevClick] = useState(null);
   
-
   /* 이벤트 설정 */
   //지역
   const GetRegion = (e) => {
@@ -35,6 +32,13 @@ const CreateCateFilter = () => {
 
 
   /* 클릭 상태에 따른 버튼 스타일 변화 */
+  useEffect(()=> {
+    regionClick === null
+      ? setClick(data.region.korName)
+      : setClick(data.region.korName.filter(//진행중..))
+  })
+
+
   // 지역
   React.useEffect( //usecallback으로 변환 가능
     () => {
@@ -59,6 +63,7 @@ const CreateCateFilter = () => {
     },
     [placeClick] //클릭값이 업데이트 될 때만 실행
   );
+
 
   /* 결과 찾기 */
   const result = () => {

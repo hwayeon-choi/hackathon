@@ -1,7 +1,5 @@
 import React from "react";
-// import CreateCateFilter from "./component/createCateFilter";
-import CreateCateFilter from "./component/createCateFilter";
-
+import CreateCateFilter from "./component/CreateCateFilter";
 
 const App = () => {
   return (
