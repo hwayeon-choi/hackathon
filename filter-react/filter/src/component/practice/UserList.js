@@ -34,7 +34,4 @@ function UserList({ users, onRemove, onToggle }) {
   );
 }
 
-export default React.memo(
-  UserList,
-  (prevProps, nextProps) => prevProps.users === nextProps.users
-);
+export default React.memo(UserList);

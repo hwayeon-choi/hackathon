@@ -116,11 +116,11 @@ const CreateCateFilter = () => {
         //2차 필터 : 장소
         if(item.place_type !== null){
           //값이 null이 아닐 때는 1차 필터 내용 전체 출력
-          console.log(item);
+          // console.log(item);
         }
         if(item.place_type === placeClick){
           //값이 있을 때는 2차까지 걸러서 출력
-          // console.log(item);
+          console.log(item);
         } 
       }
     });
