@@ -38,7 +38,7 @@ const getWishlist = (userId, placeId) => {
     .then((data) => console.log(data)); //자바스크립트 객체 형식으로 변환된다.
 }
 
-/* 위시리스트 */
+/* 인기장소 */
 const getPopular = () => {
   fetch(`http://${localhost}:${port}/popular`) 
   .then((res) => res.json())
