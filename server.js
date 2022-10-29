@@ -2,7 +2,6 @@
 // mysql -uroot -p
 import express from 'express';
 import mysql from 'mysql'
-import cors from 'cors';
 
 const app = express()
 const port = 3000
@@ -15,8 +14,6 @@ const connection = mysql.createConnection({
   database: 'favorite',
   multipleStatements: true
 })
-
-app.use(cors())
 
 app.get('/likeOX', (req, res) => {
   let userId = req.query.userId;
@@ -66,7 +63,7 @@ app.get('/wishlist', (req, res) => {
 })
 
 app.get('/popular', (req, res) => {
-  let sql = `SELECT * FROM place ORDER BY favorite DESC LIMIT 10;`
+  let sql = `SELECT placename FROM place ORDER BY favorite DESC LIMIT 10;`
   connection.query(sql, function(err, rows){
     if(err) console.log(err);
     res.send(rows)
