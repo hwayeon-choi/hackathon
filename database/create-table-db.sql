@@ -45,5 +45,13 @@ CREATE TABLE dog_type (
 
 -- 해시태그
 CREATE TABLE hashtag (
+);
 
+-- 테스트
+CREATE TABLE test_tb (
+  id INT NOT NULL AUTO_INCREMENT,
+  cul1 VARCHAR(100) NOT NULL,
+  cul2 VARCHAR(100) NOT NULL,
+  cul3 VARCHAR(100) NOT NULL,
+  PRIMARY KEY(id)
 );
