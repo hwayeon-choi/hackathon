@@ -1,12 +1,12 @@
-const localhost = "10.0.2.2"
+const localhost = "172.30.1.95"
 const port = "3000"
 
 /* 찜 여부 확인 */
-const getLikeOX = (userId, placeId) => {
+/* const getLikeOX = (userId, placeId) => {
   fetch(`http://${localhost}:${port}/likeOX?userId=${userId}&placeId=${placeId}`)
   .then((res) => res.json())
   .then((data) => console.log(data))
-}
+} */
 
 /* 찜하기 & 찜취소 */
 const postLike = (order, userId, placeId) => {
