@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}\\src\\instanceMaker.js"
+      "program": "${workspaceFolder}\\filter-react\\filter-server\\src\\component\\test.js"
     }
   ]
 }

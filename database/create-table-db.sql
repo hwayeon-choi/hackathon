@@ -1,21 +1,6 @@
 CREATE DATABASE place_category;
 
 -- 장소별 카테고리
-CREATE TABLE place_type (
-  id INT NOT NULL AUTO_INCREMENT,
-  place_type_id INT NOT NULL COMMENT '고유 id 설정',
-  restaurant VARCHAR(100) NOT NULL COMMENT '맛집',
-  cafe VARCHAR(100) NOT NULL COMMENT '카페',
-  accommondation VARCHAR(100) NOT NULL COMMENT '숙소',
-  park VARCHAR(100) NOT NULL COMMENT '공원',
-  pet_ground VARCHAR(100) NOT NULL COMMENT '애견운동장',
-  grooming_shop VARCHAR(255) NOT NULL COMMENT '미용',
-  pet_hospital VARCHAR(255) NOT NULL COMMENT '동물병원',
-  photo_spot VARCHAR(255) NOT NULL COMMENT '포토스팟',
-  pet_rest VARCHAR(255) NOT NULL COMMENT '애견휴식',
-  PRIMARY KEY (id)
-);
-
 -- 상세(place_detail)
 CREATE TABLE place_detail (
   place_detail_id INT NOT NULL AUTO_INCREMENT,
@@ -30,18 +15,44 @@ CREATE TABLE place_detail (
   parking VARCHAR(10) NOT NULL COMMENT '주차',
   wifi VARCHAR(10) NOT NULL COMMENT 'wifi',
   reservation VARCHAR(100) NULL COMMENT '예약방법',
+  dog_type VARCHAR(10) NOT NULL COMMENT '견종',
   PRIMARY KEY (place_detail_id)
 );
 
+-- 카테고리명 테이블
+CREATE TABLE cate_data (
+  id INT NOT NULL AUTO_INCREMENT,
+  engName VARCHAR(100) NOT NULL COMMENT '영어명',
+  korName VARCHAR(100) NOT NULL COMMENT '한국어명',
+  category VARCHAR(100) NOT NULL COMMENT '카테고리명',
+  PRIMARY KEY(id)
+);
+
+
+-- CREATE TABLE place_type (
+--   id INT NOT NULL AUTO_INCREMENT,
+--   place_type_id INT NOT NULL COMMENT '고유 id 설정',
+--   restaurant VARCHAR(100) NOT NULL COMMENT '맛집',
+--   cafe VARCHAR(100) NOT NULL COMMENT '카페',
+--   accommondation VARCHAR(100) NOT NULL COMMENT '숙소',
+--   park VARCHAR(100) NOT NULL COMMENT '공원',
+--   pet_ground VARCHAR(100) NOT NULL COMMENT '애견운동장',
+--   grooming_shop VARCHAR(255) NOT NULL COMMENT '미용',
+--   pet_hospital VARCHAR(255) NOT NULL COMMENT '동물병원',
+--   photo_spot VARCHAR(255) NOT NULL COMMENT '포토스팟',
+--   pet_rest VARCHAR(255) NOT NULL COMMENT '애견휴식',
+--   PRIMARY KEY (id)
+-- );
+
 
 -- 견종
-CREATE TABLE dog_type (
-  dog_type_id INT NOT NULL AUTO_INCREMENT,
-  small VARCHAR(100) NOT NULL COMMENT '소형견',
-  middle VARCHAR(100) NOT NULL COMMENT '중형견',
-  big VARCHAR(100) NOT NULL COMMENT '대형견',
-  PRIMARY KEY (dog_type_id)
-);
+-- CREATE TABLE dog_type (
+--   dog_type_id INT NOT NULL AUTO_INCREMENT,
+--   small VARCHAR(100) NOT NULL COMMENT '소형견',
+--   middle VARCHAR(100) NOT NULL COMMENT '중형견',
+--   big VARCHAR(100) NOT NULL COMMENT '대형견',
+--   PRIMARY KEY (dog_type_id)
+-- );
 
 -- 해시태그
 CREATE TABLE hashtag (
