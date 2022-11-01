@@ -14,7 +14,7 @@ function CateFiltering() {
       setCatedatas([]);
       setLoading(true);
 
-      const res = await axios.get("http://localhost:4000/api/place_detail");
+      const res = await axios.get("http://localhost:4000/api/place_detail"); //서버 접속 후 DB연결
       setCatedatas(res.data);
       // console.log(catedatas);
       console.log("fetch Filters");
@@ -51,18 +51,17 @@ function CateFiltering() {
     .filter((item) => dogClick === item.dog_type)
     .map((item) => item.place_type);
   const GetPlace = (e) => {
-    setplaceClick(e.target.id);
+    setplaceClick(e.target.value);
   };
 
   //결과 리스트 - 업체명
   // const [companyClick, setCompanyClick] = useState(null);
   const companyName = catedatas
-    .filter((item) => placeClick === item.place_type)
+    .filter((item) => placeClick === item.place_type && regionClick === item.region && dogClick === item.dog_type)
     .map((item) => item.company_name);
     // const GetCompany = (e) => {
     //   setCompanyClick(e.target.id);
     // };  
-    // ? 왜 안되는걸까? <진행중> 
 
   /* 로딩 */
   if (loading) return <div className="loading">Loading...</div>;
@@ -84,6 +83,7 @@ function CateFiltering() {
         <option value="default" disabled>
           지역을 선택하세요
         </option>
+        // ↓ new Set을 하지 않으면 중복제거 안됨
         {[...new Set(regions)].map((item, idx) => (
           <option value={item} key={idx}>
             {item}
@@ -119,7 +119,7 @@ function CateFiltering() {
       <br />
 
       <h3>업체: </h3>
-      <select id="company-select" defaultValue="default">
+      {/* <select id="company-select" defaultValue="default">
         <option value="default" disabled>
           업체를 선택하세요
         </option>
@@ -128,11 +128,11 @@ function CateFiltering() {
             {item}
           </option>
         ))}
-      </select>
-      {/* <div>
+      </select> */}
+      <div>
         {[...new Set(companyName)].map((item, idx) => (
         <button id={item} key={idx}>{item}</button>))}
-      </div> */}
+      </div>
       <br />
     </div>
   );
