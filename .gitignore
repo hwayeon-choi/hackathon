@@ -1,4 +1,5 @@
 node_modules
+ios/
 Traveloper/ios/Pods/boost/boost/align.hpp
 Traveloper/ios/Pods/boost/boost/aligned_storage.hpp
 Traveloper/ios/Pods/boost/boost/any.hpp
