@@ -1,11 +1,14 @@
 import { View, Text, TextInput, Pressable, StyleSheet, ScrollView } from 'react-native'
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import LocationList from './LocationList'
 import { MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 
 
 
 const Location = () => {
+
+  // const 
+
   return (
     <View>
       <TextInput 
@@ -19,7 +22,6 @@ const Location = () => {
         paddingHorizontal : 16
       }}
       />
-        {/* <MagnifyingGlassIcon color={"#ccc"}/> */}
       
       <ScrollView 
       horizontal={true} 

@@ -5,8 +5,15 @@ import { ChevronDownIcon,ArrowPathRoundedSquareIcon } from 'react-native-heroico
 import Location from "./customButton/Location";
 
 
+
+
 const Filter = (props) => {
   const [modalVisible, setModalVisible] = useState(false);
+
+fetch('http://localhost:4000/api/locationdata')
+.then(response=> response.json())
+.then(data=>console.log(data))
+.catch(err=> console.log(err))
 
   return (
     <View style={[styles.centeredView,{backgroundColor: "rgba(0,0,0,0)"}]}>
@@ -109,10 +116,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
+    backgroundColor : "rgba(2,2,2,0.5)"
   },
   modalView: {
     width : '100%',
-    height : "90%",
+    height : "82%",
     backgroundColor : "#ddd",
     borderTopLeftRadius : 15,
     borderTopRightRadius : 15,

@@ -16,14 +16,7 @@ const FindRoute = ({navigation}) => {
     <SafeAreaView style={styles.root}>
       {/* 검색창 + 해시태그 버튼  */}
       <View style={styles.containerOne}>
-        {/* 필터검색버튼 */}
-        {/* <Pressable 
-        style={styles.input} 
-        onPress={()=> navigation.navigate('Filter')} 
-        >
-        <MagnifyingGlassIcon color={"#ccc"}/>
-      </Pressable> */}
-        {/* 해시태그버튼 */}
+        {/* 필터검색버튼, 해시태그 버튼*/}
         <Filter/>     
         <HashTag/>
       </View>
