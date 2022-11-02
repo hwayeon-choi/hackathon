@@ -54,8 +54,9 @@ const CategoryContainer = () => {
     style={styles.Container}
     >
       {
-        categoryTab.map(data => (
+        categoryTab.map((data,index) => (
           <TouchableOpacity 
+          key={index}
           onPress={()=> setTypeFilter(data.type) }
           style={[styles.categoryTab, type === data.type && styles.categoryAvtive ]}>
             <Text style={[styles.text, type === data.type && styles.textActive]}>{data.type}</Text>
@@ -88,14 +89,14 @@ const styles = StyleSheet.create({
     borderRadius : 10,
     justifyContent : 'center',
     alignItems : 'center',
-    paddingHorizontal : 20,
+    paddingHorizontal : 24,
     backgroundColor : "#ddd"
   },
   categoryAvtive : {
     backgroundColor : "#6BB8D0"
   },
   text : {
-    fontSize : 14,
+    fontSize : 12,
   },
   textActive : {
     color : "#fff",

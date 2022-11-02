@@ -7,7 +7,7 @@ const HashTag = (props) => {
   return (
     <View style={[styles.centeredView,{backgroundColor: "rgba(0,0,0,0)"}]}>
       <Modal
-        animationType="slide"
+        animationType="fade"
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => {
@@ -60,12 +60,14 @@ const HashTag = (props) => {
           </View>
         </View>
       </Modal>
+
       <Pressable
         style={[ styles.buttonOpen]}
         onPress={() => setModalVisible(true)}
       >
         <Text style={styles.hashTag}>#</Text>
       </Pressable>
+      
     </View>
   );
 };
@@ -90,7 +92,7 @@ const styles = StyleSheet.create({
   },
   button: {
     // borderRadius: 20,
-    width:64,
+    width:20,
     padding: 10,
     elevation: 2
   },
@@ -98,10 +100,10 @@ const styles = StyleSheet.create({
     backgroundColor : "#000",
     width : 64,
     height : 50,
-    color : "#FFF",
     borderRadius : 30,
     justifyContent :'center',
-    alignItems : "center"
+    alignItems : "center",
+    left :50
   },
   hashTag: {
     color: "#fff", 

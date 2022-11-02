@@ -1,27 +1,18 @@
-import React, { useState } from "react";
-import { Alert, Modal, StyleSheet, Text, Pressable, View, ScrollView, TextInput} from "react-native";
-import { MagnifyingGlassIcon } from 'react-native-heroicons/outline';
+import { View, Text, StyleSheet, Pressable } from 'react-native'
+import React, {useState} from 'react'
+import { NavigationContainer, useNavigation } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { ChevronDownIcon,ArrowPathRoundedSquareIcon } from 'react-native-heroicons/outline'
-import Location from "./customButton/Location";
 
+import Location from './customButton/Location'
 
-const Filter = (props) => {
-  const [modalVisible, setModalVisible] = useState(false);
+const Stack = createNativeStackNavigator();
 
+const Filter = ({navigation}) => {
+  
   return (
-    <View style={[styles.centeredView,{backgroundColor: "rgba(0,0,0,0)"}]}>
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(!modalVisible);
-        }}
-      >
-        <View 
-        style={styles.centeredView}
-        >
-          <View style={styles.modalView}>
+      <NavigationContainer independent={true} >
+          <View style={styles.root}>
             {/* 아래화살표 */}
             <ChevronDownIcon size={24} color={"#000"}/>
             {/* 여행날짜 선택하기 */}
@@ -57,6 +48,32 @@ const Filter = (props) => {
             </Pressable>
             </View>
 
+            {/* 이동수단*/}
+            <Text style= {{
+              width :"100%",
+              fontSize:16,color : "#000",
+              fontWeight : "500", 
+              marginTop : 16
+              }}>이동수단</Text>
+
+            {/* 자가용 + 대중교통 컨테이너 */}
+            <View style={{
+              flexDirection : 'row',
+              width: "100%",
+              justifyContent:'space-between'
+              }}>
+              
+              {/* 자가용 */}
+              <Pressable style={styles.car}>
+                <Text style={{fontSize:14,color : "#000",fontWeight : "500", marginRight:10}}>자가용</Text>
+              </Pressable>
+
+            {/* 도보 */}
+              <Pressable style={styles.walk}>
+                <Text style={{fontSize:14,color : "#000",fontWeight : "500", marginRight:10}}>도보</Text>
+              </Pressable>
+            </View>
+
             {/* 결과보기 리셋 버튼 컨테이너 */}
             <View style={{
               flexDirection : 'row', 
@@ -75,7 +92,7 @@ const Filter = (props) => {
               {/* 결과보기 버튼 */}
               <Pressable 
               style={styles.fillterSelect}
-              onPress={()=> setModalVisible(!modalVisible)}
+              onPress={()=> navigation.navigate('FindRoute')}
               >
                 <Text style={{
                   fontSize:14,
@@ -87,54 +104,31 @@ const Filter = (props) => {
                 </Text>
               </Pressable>
             </View>
-          </View>
-        </View>
-      </Modal>
 
-      <Pressable
-        style={styles.buttonOpen}
-        onPress={() => setModalVisible(true)}
-      >
-        <MagnifyingGlassIcon color={"#ccc"}/>
-        <Text style={styles.input}>어디로 떠나시나요?</Text>
-      </Pressable>
-    </View>
-  );
-};
+          </View>
+      </NavigationContainer>
+
+    // </Tab.Screen>
+  )
+}
 
 const styles = StyleSheet.create({
-  centeredView: {
-    flex: 1,
-    justifyContent: "flex-end",
-    alignItems: "center",
-  },
-  modalView: {
+  root  : {
+    backgroundColor : "#fff",
     width : '100%',
-    height : "90%",
-    backgroundColor : "#ddd",
-    borderTopLeftRadius : 15,
-    borderTopRightRadius : 15,
-    paddingHorizontal : 20,
-    paddingTop : 20,
-    alignItems : "center"
-  },
-  buttonOpen: {
-    width : 276,
-    backgroundColor : "#F9FbFc",
-    borderRadius : 30,
-    borderColor : "#e0e0e0",
-    borderWidth : 1,
-    padding : 16,
-    flexDirection : "row",
-    height :50,
-    left :50,
-    alignItems : "center"
-  },
-  input: {
-    color: "#ddd", 
-    fontWeight:"500", 
-    fontSize : 14,
-    marginLeft : 10
+    height : "100%",
+    borderRadius : 10,
+    zIndex : 1,
+    top : 32,
+    padding : 20,
+    alignItems : 'center',
+    shadowColor : "#333",
+    shadowOpacity : 0.4,
+    shadowOffset : {
+      width : 10,
+      height : 10,
+    },
+    elevation : 10
   },
   date : {
     backgroundColor : "#EBEBEB",
@@ -172,8 +166,28 @@ const styles = StyleSheet.create({
     height : 60,
     marginBottom : 16,
   },
+  car : {
+    backgroundColor : "#EBEBEB",
+    width : "48%",
+    height : 60,
+    marginTop : 16,
+    borderRadius : 10,
+    justifyContent : 'center',
+    alignItems : 'center',
+    padding : 16
+  },
+  walk : {
+    backgroundColor : "#EBEBEB",
+    width : "48%",
+    height : 60,
+    marginTop : 16,
+    borderRadius : 10,
+    justifyContent : 'center',
+    alignItems : 'center',
+    padding : 16
+  },
   fillterReset : {
-    backgroundColor : "#ccc",
+    backgroundColor : "#EBEBEB",
     width : 60,
     height : 60,
     color : "#FFF",
@@ -192,7 +206,8 @@ const styles = StyleSheet.create({
     justifyContent : 'center',
     alignItems : 'center',
     marginTop : 24,
-  },
-});
 
-export default Filter;
+  }
+})
+
+export default Filter
