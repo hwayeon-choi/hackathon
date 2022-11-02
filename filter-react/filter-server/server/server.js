@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const mysql = require('mysql');
+const db = require('./config/sqlConnect');
 
 // import express from 'express';
 // const app = express();
@@ -10,22 +10,13 @@ const mysql = require('mysql');
 // import bodyParser from 'body-parser';
 // import mysql from 'mysql';
 
-/* sql connect */
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'fullstack305',
-    // port: '3305',
-    database: 'place_category' 
-});
-
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cors());
 app.use(bodyParser.json());
 
 /* db연동 api */
 app.get('/api/place_detail', (req, res) => {
-  let tableName = 'place_detail_3';
+  let tableName = 'place_detail_3'; //가져올 테이블 이름 
   db.query(`SELECT * FROM ${tableName}`,(err, result) => {
     if(err){
       console.log('데이터를 가져올 수 없음');
@@ -34,12 +25,6 @@ app.get('/api/place_detail', (req, res) => {
     }
   });
 });
-
-/* 렐렐렐 */
-// app.post('/api/place_datas', (req, res) => {
-//   // 데이터 받는 곳
-//   const requestCompanyName = req.body.
-// })
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
