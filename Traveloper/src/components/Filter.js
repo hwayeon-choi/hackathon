@@ -23,7 +23,9 @@ const Filter = (props) => {
         >
           <View style={styles.modalView}>
             {/* 아래화살표 */}
+            <Pressable onPress={()=> setModalVisible(!modalVisible)}>
             <ChevronDownIcon size={24} color={"#000"}/>
+            </Pressable>
             {/* 여행날짜 선택하기 */}
             <Pressable style={styles.date}>
               <Text style={{fontSize:14,color : "#8F8F8F"}}>여행 날짜 선택하기</Text>
