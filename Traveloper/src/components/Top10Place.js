@@ -15,7 +15,6 @@ const Top10Place = () => {
   // console.log(randomPlace())
   const top10Place =[] 
 
-  top10Place.push()
   for(let i=0; i<10; i++){
     top10Place[i] = randomPlace()
   }

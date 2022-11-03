@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Alert, Modal, StyleSheet, Text, Pressable, View, ScrollView, TextInput} from "react-native";
+import { Alert, Modal, StyleSheet, Text, Pressable, View, ScrollView, TextInpu, TouchableOpacity} from "react-native";
 import { MagnifyingGlassIcon } from 'react-native-heroicons/outline';
 import { ChevronDownIcon,ArrowPathRoundedSquareIcon } from 'react-native-heroicons/outline'
 import Location from "./customButton/Location";
@@ -10,10 +10,10 @@ import Location from "./customButton/Location";
 const Filter = (props) => {
   const [modalVisible, setModalVisible] = useState(false);
 
-fetch('http://localhost:4000/api/locationdata')
-.then(response=> response.json())
-.then(data=>console.log(data))
-.catch(err=> console.log(err))
+// fetch('http://localhost:4000/api/locationdata')
+// .then(response=> response.json())
+// .then(data=>console.log(data))
+// .catch(err=> console.log(err))
 
   return (
     <View style={[styles.centeredView,{backgroundColor: "rgba(0,0,0,0)"}]}>
@@ -34,9 +34,9 @@ fetch('http://localhost:4000/api/locationdata')
             <ChevronDownIcon size={24} color={"#000"}/>
             </Pressable>
             {/* 여행날짜 선택하기 */}
-            <Pressable style={styles.date}>
+            <TouchableOpacity style={styles.date}>
               <Text style={{fontSize:14,color : "#8F8F8F"}}>여행 날짜 선택하기</Text>
-            </Pressable>
+            </TouchableOpacity>
             {/* 여행지역 선택하기 */}
             <Pressable style={styles.location}>
               <Text style={{fontSize:16,color : "#000",fontWeight : "500"}}>어디로 떠나시나요?</Text>
@@ -51,19 +51,19 @@ fetch('http://localhost:4000/api/locationdata')
               }}>강아지 정보</Text>
             {/* 소형견 */}
             <View style={styles.dogContainer}>
-            <Pressable style={styles.dog}>
+            <TouchableOpacity style={styles.dog}>
               <Text style={{fontSize:14,color : "#000",fontWeight : "500"}}>소형견</Text>
-            </Pressable>
+            </TouchableOpacity>
 
             {/* 중형견 */}
-            <Pressable style={styles.dog}>
+            <TouchableOpacity style={styles.dog}>
               <Text style={{fontSize:14,color : "#000",fontWeight : "500"}}>중형견</Text>
-            </Pressable>
+            </TouchableOpacity>
 
             {/* 대형견 */}
-            <Pressable style={styles.dog}>
+            <TouchableOpacity style={styles.dog}>
               <Text style={{fontSize:14,color : "#000",fontWeight : "500"}}>대형견</Text>
-            </Pressable>
+            </TouchableOpacity>
             </View>
 
             {/* 결과보기 리셋 버튼 컨테이너 */}
@@ -75,14 +75,14 @@ fetch('http://localhost:4000/api/locationdata')
               >
 
               {/*리셋 버튼 */}    
-              <Pressable 
+              <TouchableOpacity 
               style={styles.fillterReset}
               >
                 <ArrowPathRoundedSquareIcon color={"#8F8F8F"}/>
-              </Pressable>
+              </TouchableOpacity>
 
               {/* 결과보기 버튼 */}
-              <Pressable 
+              <TouchableOpacity 
               style={styles.fillterSelect}
               onPress={()=> setModalVisible(!modalVisible)}
               >
@@ -94,7 +94,7 @@ fetch('http://localhost:4000/api/locationdata')
                   }}
                   >결과보기
                 </Text>
-              </Pressable>
+              </TouchableOpacity>
             </View>
           </View>
         </View>

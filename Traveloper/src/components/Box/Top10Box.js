@@ -1,11 +1,14 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity,ImageBackground } from 'react-native'
 import React from 'react'
+import { PlusIcon } from 'react-native-heroicons/outline'
+
+
 
 const Top10Box = ({placename, id}) => {
 
   return (
     // 흰색 컨테이너박스
-    <View style={{
+    <TouchableOpacity style={{
       width : "100%",
       height : 80,
       backgroundColor : "#fff",
@@ -13,34 +16,29 @@ const Top10Box = ({placename, id}) => {
       flexDirection : 'row',
       justifyContent : 'space-between',
       alignItems : 'center',
-      padding : 10,
+      padding : 12,
       marginBottom : 10
     }}>
 
           {/* 순위/업체사진/업체명 */}
           <View style={[{width : 163, flexDirection : "row", alignItems : 'center'}]}>
             <Text style={{marginRight : 16}}>{id}</Text>
-            <View style={{
-              width : 64,
-              height :64,
-              backgroundColor : "black",
-              borderRadius : 10,
-              marginRight :16,
-            }}></View>
+            <ImageBackground
+            source={require('../../../asset/img/restaurant.jpg')}
+            style={{width: 64, height: 64, marginRight : 16}}
+            imageStyle={{borderRadius:10}}
+            />
             <Text>{placename}</Text>
           </View>
 
           {/* 더보기 */}
           <View >
-            <View View style={{
-              width : 24,
-              height :24,
-              backgroundColor : "black",
-              borderRadius : 10,
-            }}></View>
+            <TouchableOpacity>
+              <PlusIcon size={20} color={"#aaa"}/>
+            </TouchableOpacity>
           </View>
 
-        </View>
+        </TouchableOpacity>
   )
 }
 
