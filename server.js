@@ -1,4 +1,4 @@
-﻿// nodemon watch `파일명` 
+﻿// nodemon --watch server.js
 // mysql -uroot -p
 import express from 'express';
 import mysql from 'mysql'
@@ -15,6 +15,7 @@ const connection = mysql.createConnection({
   multipleStatements: true
 })
 
+/* 찜 여부 확인 */
 app.get('/likeOX', (req, res) => {
   let userId = req.query.userId;
   let placeId = req.query.placeId;
@@ -31,6 +32,7 @@ app.get('/likeOX', (req, res) => {
   })
 })
 
+/* 찜하기 */
 app.get('/like', (req, res) => {
   let userId = req.query.userId;
   let placeId = req.query.placeId;
@@ -42,6 +44,7 @@ app.get('/like', (req, res) => {
   });
 })
 
+/* 찜 취소하기 */
 app.get('/dislike', (req, res) => {
   let userId = req.query.userId;
   let placeId = req.query.placeId;
@@ -53,6 +56,7 @@ app.get('/dislike', (req, res) => {
   })
 })
 
+/* 위시리스트 */
 app.get('/wishlist', (req, res) => {
   let userId = req.query.userId;
   let sql = `SELECT placename FROM place WHERE placeid=any(SELECT placeid FROM favorite WHERE userid=${userId});`
@@ -62,6 +66,7 @@ app.get('/wishlist', (req, res) => {
   });
 })
 
+/* TOP10 */
 app.get('/popular', (req, res) => {
   let sql = `SELECT placename FROM place ORDER BY favorite DESC LIMIT 10;`
   connection.query(sql, function(err, rows){
