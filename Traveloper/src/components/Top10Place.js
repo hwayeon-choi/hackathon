@@ -1,42 +1,63 @@
-import { View, Text , StyleSheet} from 'react-native'
+import { View, Text , StyleSheet, TouchableOpacity} from 'react-native'
 import React from 'react'
 import Top10Box from './Box/Top10Box'
 import { ScrollView } from 'react-native-gesture-handler'
 
 const Top10Place = () => {
+
+  const localJSON = require("../DB/data.json")
+  const placeData = localJSON.map((data)=> data.company_name )
+  
+  const randomPlace = ()=>{
+    place = placeData[Math.floor(Math.random() * placeData.length)]
+    return place
+  }
+  // console.log(randomPlace())
+  const top10Place =[] 
+
+  top10Place.push()
+  for(let i=0; i<10; i++){
+    top10Place[i] = randomPlace()
+  }
+  console.log(top10Place)
+
   return (
-    // <ScrollView>
-    <View style={[{width : '100%', height : 480, borderRadius : 10, marginBottom : 32, justifyContent : 'space-between', alignItems : 'center'}]}>
+    <View style={styles.container}>
       {/* 탑플레이스 상단 카테고리/기간 */}
       <View style={styles.Topbar}>
         {/* 카테고리 */}
-        <View style={styles.TopbarCategory}><Text>카테고리 설정</Text></View>
+        <TouchableOpacity style={styles.TopbarCategory}>
+          <Text>카테고리 설정</Text>
+        </TouchableOpacity>
         {/* 기간 */}
-        <View style={styles.TopbarPeriod}><Text>기간</Text></View>
+        <TouchableOpacity style={styles.TopbarPeriod}>
+          <Text>기간</Text>
+        </TouchableOpacity>
       </View>
-      
       {/* 탑플레이스 리스트 */}
-
-      {/* 회색 bg */}
       <ScrollView style={styles.ListBg} nestedScrollEnabled={true}>
-        <Top10Box placename={"업체1"} id={1}/>
-        <Top10Box placename={"업체2"} id={2}/>
-        <Top10Box placename={"업체3"} id={3}/>
-        <Top10Box placename={"업체4"} id={4}/>
-        <Top10Box placename={"업체5"} id={5}/>
-        <Top10Box placename={"업체6"} id={6}/>
-        <Top10Box placename={"업체7"} id={7}/>
-        <Top10Box placename={"업체8"} id={8}/>
-        <Top10Box placename={"업체9"} id={9}/>
-        <Top10Box placename={"업체10"} id={10}/>
-      </ScrollView>
 
+        {top10Place.map((data,index)=> {
+          console.log(data)
+          console.log(index)
+          return (
+            <Top10Box placename={data} id={index + 1} key={index+1}/>
+          )
+        })}
+      </ScrollView>
     </View>
-    // </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
+  container : {
+    width : '100%', 
+    height : 520, 
+    borderRadius : 10, 
+    marginBottom : 32, 
+    justifyContent : 'space-between', 
+    alignItems : 'center'
+  },
   Topbar : {
     width : "100%",
     height : 40,
@@ -66,9 +87,8 @@ const styles = StyleSheet.create({
     backgroundColor : "#d9d9d9",
     borderRadius : 10,
     paddingHorizontal : 10,
-    paddingVertical : 16, 
+    paddingVertical : 8, 
     marginTop : 24
-
   },
 })
 
