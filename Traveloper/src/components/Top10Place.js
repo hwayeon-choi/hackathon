@@ -1,9 +1,27 @@
 import { View, Text , StyleSheet, TouchableOpacity} from 'react-native'
-import React from 'react'
+import React, {useState} from 'react'
 import Top10Box from './Box/Top10Box'
 import { ScrollView } from 'react-native-gesture-handler'
+import { color, set } from 'react-native-reanimated'
 
 const Top10Place = () => {
+
+  const [rank, setRank] = useState("#fff")
+  
+  const rankColor = (index) => {
+    if(index === 0) {
+      setRank("red")
+    }
+    else if (index === 1) {
+      setRank("orange")
+    }
+    else if (index === 2) {
+      setRank("yellow")
+    } else {
+      setRank("#fff")
+    }
+  }
+
 
   const localJSON = require("../DB/data.json")
   const placeData = localJSON.map((data)=> data.company_name )
@@ -18,7 +36,7 @@ const Top10Place = () => {
   for(let i=0; i<10; i++){
     top10Place[i] = randomPlace()
   }
-  console.log(top10Place)
+  // console.log(top10Place)
 
   return (
     <View style={styles.container}>
@@ -38,9 +56,25 @@ const Top10Place = () => {
 
         {top10Place.map((data,index)=> {
           console.log(data)
-          console.log(index)
           return (
-            <Top10Box placename={data} id={index + 1} key={index+1}/>
+            <Top10Box 
+            placename={data} 
+            id={index + 1} 
+            key={index + 1} 
+            backgroundColor={"#fff"}
+            // backgroundColor={(bgColor)=> {
+            //   if(index === 0) {
+            //     bgColor = "red"
+            //   } else if (index === 1) {
+            //     bgColor = "orange"
+            //   } else if (index === 2) {
+            //     bgColor = "yellow"
+            //   } else {
+            //     bgColor = "white"
+            //   }
+            //   return bgColor
+            // }}
+            />
           )
         })}
       </ScrollView>

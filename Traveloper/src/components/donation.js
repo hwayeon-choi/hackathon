@@ -11,7 +11,7 @@ const Donation = () => {
   return (
     <View style={styles.Donation}>
       <View style={styles.DonationTotal}>
-        <Text style={[{fontSize : 16, fontWeight : "700", color : "#6BB8D0", marginRight : 8}]}>132,345</Text>
+        <Text style={[{fontSize : 18, fontWeight : "700", color : "#6BB8D0", marginRight : 8}]}>{Math.floor(Math.random() * 100000)}</Text>
         <Text style={[{fontSize : 16, fontWeight : "700", color : "#686868", marginRight : 8}]}>원</Text>
       </View>
       <View style={styles.DonationMenuContainer}>

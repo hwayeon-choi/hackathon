@@ -4,14 +4,14 @@ import { PlusIcon } from 'react-native-heroicons/outline'
 
 
 
-const Top10Box = ({placename, id}) => {
+const Top10Box = ({placename, id, backgroundColor}) => {
 
   return (
     // 흰색 컨테이너박스
     <TouchableOpacity style={{
       width : "100%",
       height : 80,
-      backgroundColor : "#fff",
+      backgroundColor : backgroundColor ? backgroundColor :  "#fff",
       borderRadius : 10,
       flexDirection : 'row',
       justifyContent : 'space-between',
