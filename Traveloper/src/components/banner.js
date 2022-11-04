@@ -11,7 +11,7 @@ const Banner = ()=> {
   const [number, setNumber] = useState(1)
   const [image, setImage] = useState(dog_surf2)
   const [textColor, setTextcolor] = useState("black")
-  
+  const [message, setMessage] = useState("댕댕이와 1111")
 
   /* 시도 1 */
   const imageContainer = [dog_surf1, walktogether, restaurant2, photospot,dog_surf2]
@@ -36,33 +36,40 @@ const Banner = ()=> {
 
   /* 글자색 포함 이벤트 */
   const onIncrease=()=>{
-    if(number===1){
+    if(number===1){ //5
       setNumber(number+1)
       const getImage = imageContainer[number-1]
       setImage(getImage) 
       console.log(number)
       setTextcolor("white")
+      setMessage("댕댕이와 서핑 즐기기")
 
-    } else if(number===2){
+    } else if(number===2){ //1
       setNumber(number+1)
       const getImage = imageContainer[number-1]
       setImage(getImage) 
       console.log(number)
       setTextcolor("black")
+      setMessage("댕댕이와 산책하기")
 
-    } else if(number===3){
+
+    } else if(number===3){ //2
       setNumber(number+1)
       const getImage = imageContainer[number-1]
       setImage(getImage) 
       console.log(number)
       setTextcolor("white")
+      setMessage("댕댕이와 외식하기")
 
-    } else if(number===4){
+
+    } else if(number===4){ //3
       setNumber(number+1)
       const getImage = imageContainer[number-1]
       setImage(getImage) 
       console.log(number)
       setTextcolor("white")
+      setMessage("댕댕이와 사진찍기")
+
 
     } else if(number===5){
       setNumber(1)
@@ -70,6 +77,8 @@ const Banner = ()=> {
       setImage(getImage) 
       console.log(number)
       setTextcolor("black")
+      setMessage("댕댕이와 서핑 즐기기")
+
     }
   }
 
@@ -98,7 +107,7 @@ const Banner = ()=> {
             남해여행
           </Text>
           <Text style={[styles.topBannerTitle, {color:textColor}]}>
-            댕댕이와 서핑 즐기기
+            {message}
           </Text>
         </View>
 
