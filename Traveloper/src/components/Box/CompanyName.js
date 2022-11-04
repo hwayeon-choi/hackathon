@@ -2,7 +2,7 @@ import React from 'react'
 import Listbox from './ListBox'
 
 
-const CompanyName = ({place_type, region_name, dog_type}) => {
+const CompanyName = ({place_type = {place_type}, region_name, dog_type, navigation}) => {
   
   const localJSON = require('../../DB/data.json')
   const nameData = localJSON.map((data)=> data.company_name)
@@ -28,7 +28,10 @@ const CompanyName = ({place_type, region_name, dog_type}) => {
   nameType(place_type,region_name, dog_type);
 
   let nameList = Arr.map((newArr,index)=>(
-    <Listbox name={newArr} key={index}/>
+    <Listbox 
+      navigation={navigation} 
+      name={newArr}
+      key={index}/>
     ))
   return nameList
 }

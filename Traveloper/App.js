@@ -20,6 +20,7 @@ import Filter from './src/components/Filter';
 import HomeTabNavigator from './src/navigation/HomeTabNavigator';
 import HashTag from './src/screens/Home/HashTag';
 import LoginScreen from './src/screens/LoginScreen';
+import Detail from './src/screens/Home/Detail';
 
 function WishScreen() { return <Text>wish</Text>}
 function MapScreen() { return <Text>map</Text>}
@@ -68,13 +69,13 @@ export default function App() {
         }}
         />
 
-        {/* <Stack.Screen 
-        name="HashTag" 
-        component={HashTag}
+        <Stack.Screen 
+        name="Detail" 
+        component={Detail}
         options={{
           headerShown : false
         }}
-        /> */}
+        />
         
       </Stack.Navigator>
   {/* </HomeTabNavigator> */}

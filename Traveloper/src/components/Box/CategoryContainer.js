@@ -36,7 +36,7 @@ const categoryTab = [
   },
 ]
 
-const CategoryContainer = () => {
+const CategoryContainer = ({navigation}) => {
 
   const [type, setType] = useState('식당')
 
@@ -66,7 +66,7 @@ const CategoryContainer = () => {
     </ScrollView>
     {/* 리트스 컨테이너 */}
     <ScrollView style = {styles.listContainer}>
-      <CompanyName place_type={type}/>
+      <CompanyName navigation={navigation} place_type={type}/>
     </ScrollView>
     </>
   )

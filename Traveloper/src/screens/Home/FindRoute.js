@@ -22,7 +22,7 @@ const FindRoute = ({navigation}) => {
       </View>
 
       {/* 카테고리 컨테이너 : 탭 + 리스트  */}
-      <CategoryContainer/>
+      <CategoryContainer navigation={navigation}/>
       
     </SafeAreaView>
     )

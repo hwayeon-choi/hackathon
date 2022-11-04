@@ -1,11 +1,12 @@
 import { View, Text, StyleSheet, Pressable, ImageBackground, Toucha} from 'react-native'
 import React,{useState} from 'react'
 import { HeartIcon } from 'react-native-heroicons/solid'
+import Detail from '../../screens/Home/Detail'
 
 const localJSON = require('../../DB/data.json')
 
 
-const Listbox = ({width,height,backgroundColor,borderRadius,marginBottom,flexDirection,position,onPress,name,price}) => {
+const Listbox = ({name,price,navigation}) => {
 
   const [wishColor, setWishColor] = useState("#ddd")
 
@@ -20,15 +21,15 @@ const Listbox = ({width,height,backgroundColor,borderRadius,marginBottom,flexDir
   return (
     <Pressable 
     style={{
-      width : width || "100%",
-      height : height || 233,
-      backgroundColor :  backgroundColor ? backgroundColor :"#ddd",
-      borderRadius : borderRadius || 10,
-      marginBottom : marginBottom || 16,
-      flexDirection : flexDirection || "column-reverse",
-      position : position || 'relative',
+      width : "100%",
+      height :233,
+      backgroundColor :"#ddd",
+      borderRadius :10,
+      marginBottom :16,
+      flexDirection :  "column-reverse",
+      position : 'relative',
     }}
-    onPress = {onPress}
+    onPress = {() => navigation.navigate('Detail',{place : name})}
     >
       <ImageBackground
       source={require('../../../asset/img/restaurant2.jpg')}
