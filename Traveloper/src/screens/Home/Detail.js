@@ -61,7 +61,7 @@ const Detail = ({route,navigation}) => {
 
         <View style={{marginTop : 16}}>
           <Text style={styles.detailAdress}>상세 주소 : {address}</Text>
-          <View style={styles.mapView}></View>
+          <View style={styles.mapView}><Text style={{color : "#ddd"}}>지도API</Text></View>
         </View>
       </View>
     </ScrollView>
@@ -127,7 +127,9 @@ const styles = StyleSheet.create({
   mapView : {
     backgroundColor : "#333",
     width : "100%",
-    height : 200
+    height : 200,
+    alignItems: 'center',
+    justifyContent :'center'
   }
 })
 

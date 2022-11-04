@@ -4,24 +4,7 @@ import Top10Box from './Box/Top10Box'
 import { ScrollView } from 'react-native-gesture-handler'
 import { color, set } from 'react-native-reanimated'
 
-const Top10Place = () => {
-
-  const [rank, setRank] = useState("#fff")
-  
-  const rankColor = (index) => {
-    if(index === 0) {
-      setRank("red")
-    }
-    else if (index === 1) {
-      setRank("orange")
-    }
-    else if (index === 2) {
-      setRank("yellow")
-    } else {
-      setRank("#fff")
-    }
-  }
-
+const Top10Place = ({navigation}) => {
 
   const localJSON = require("../DB/data.json")
   const placeData = localJSON.map((data)=> data.company_name )
@@ -58,22 +41,11 @@ const Top10Place = () => {
           console.log(data)
           return (
             <Top10Box 
+            navigation={navigation}
             placename={data} 
             id={index + 1} 
             key={index + 1} 
             backgroundColor={"#fff"}
-            // backgroundColor={(bgColor)=> {
-            //   if(index === 0) {
-            //     bgColor = "red"
-            //   } else if (index === 1) {
-            //     bgColor = "orange"
-            //   } else if (index === 2) {
-            //     bgColor = "yellow"
-            //   } else {
-            //     bgColor = "white"
-            //   }
-            //   return bgColor
-            // }}
             />
           )
         })}
@@ -93,7 +65,7 @@ const styles = StyleSheet.create({
   },
   Topbar : {
     width : "100%",
-    height : 40,
+    height : 48,
     borderRadius : 10,
     flexDirection : 'row',
     justifyContent : 'space-between'
@@ -101,7 +73,7 @@ const styles = StyleSheet.create({
   TopbarCategory : {
     width : "65%",
     height : "100%",
-    backgroundColor : "#d9d9d9",
+    backgroundColor :  "#dfdfdf",
     borderRadius : 10,
     justifyContent : 'center',
     alignItems : 'center'
@@ -109,7 +81,7 @@ const styles = StyleSheet.create({
   TopbarPeriod : {
     width : "30%",
     height : "100%",
-    backgroundColor : "#d9d9d9",
+    backgroundColor :  "#dfdfdf",
     borderRadius : 10,
     justifyContent : 'center',
     alignItems : 'center'
@@ -117,11 +89,11 @@ const styles = StyleSheet.create({
   ListBg : {
     width : "100%",
     height : "100%",
-    backgroundColor : "#d9d9d9",
+    backgroundColor : "#dfdfdf",
     borderRadius : 10,
     paddingHorizontal : 10,
     paddingVertical : 8, 
-    marginTop : 24
+    marginTop : 16
   },
 })
 

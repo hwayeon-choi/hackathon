@@ -21,7 +21,7 @@ const Home = ({navigation})=> {
               <Text style={styles.DonationTitle}>후원 이렇게 했어요</Text>
               <Donation/>
               <Text style={styles.Top10Title}>Top 10 플레이스</Text>
-              <Top10Place></Top10Place>
+              <Top10Place navigation={navigation}></Top10Place>
             </View>
         </View>
       </ScrollView>
