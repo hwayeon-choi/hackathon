@@ -3,29 +3,38 @@ import React, { useState } from 'react'
 
 const Banner = ()=> {
   const [number, setNumber] = useState(1)
+  // const [image, setImage] = useState('../../asset/img/dog_surf2.jpg')
 
-  const imageContainer = [
-    '../../asset/img/dog_surf2.jpg',
-    '../../asset/img/dog_surf1.jpg',
-    '../../asset/img/walktogether.jpg',
-    '../../asset/img/restaurant2.jpg',
-    '../../asset/img/photospot.jpg'
-  ]
-  let image
+  /* const imageContainer = [
+    "require('../../asset/img/walktogether.jpg')",
+    "require('../../asset/img/restaurant2.jpg')",
+    "require('../../asset/img/photospot.jpg)",
+    "require('../../asset/img/dog_surf2.jpg')",
+    "require('../../asset/img/dog_surf1.jpg')",
+  ] */
+  function imageContainer(image){
+    return 1 ? "require('../../asset/img/walktogether.jpg')"
+      : 2 ? "require('../../asset/img/restaurant2.jpg')"
+      : 3 ? "require('../../asset/img/photospot.jpg)"
+      : 4 ? "require('../../asset/img/dog_surf2.jpg')"
+      : "require('../../asset/img/dog_surf1.jpg')"
+  }
+  
   const onIncrease=()=>{
-    if(number<6){ // 1부터 5까지 증가하고 다시 1부터 시작하는 카운터 완성
-      setNumber(number+1)
-      image = imageContainer[number-1]
-      console.log(number) // 숫자 확인 완료
-      console.log(image) // 파일명 확인 완료
-    } else {
-      setNumber(1)
+    if(number<=4){ // 1부터 5까지 증가하고 
+      setNumber(number+1) // 숫자
+      imageContainer(number-1) // 사진
+      // console.log(image)
+    } else { // 다시 1부터 시작하는 카운터
+      setNumber(1) // 숫자
+      imageContainer(number-1) // 사진
+      // console.log(image)
     }
   }
   return(
     <>
       <ImageBackground 
-        source={{image}}
+        source={imageContainer}
         style={styles.topBanner}
       >
         {/* <Bars2Icon size={20} color="#000" /> */}
