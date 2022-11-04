@@ -1,17 +1,23 @@
 import { View, Text, StyleSheet, ImageBackground, Button } from 'react-native'
 import React, { useState } from 'react'
 
+import walktogether from '../../asset/img/walktogether.jpg'
+import restaurant2 from '../../asset/img/restaurant2.jpg'
+import photospot from '../../asset/img/photospot.jpg'
+import dog_surf2 from '../../asset/img/dog_surf2.jpg'
+import dog_surf1 from '../../asset/img/dog_surf1.jpg'
+
 const Banner = ()=> {
   const [number, setNumber] = useState(1)
-  const [image, setImage] = useState('../../asset/img/dog_surf2.jpg')
+  const [image, setImage] = useState(dog_surf2)
 
   /* 시도 1 */
-  const imageContainer = [
-    "'../../asset/img/walktogether.jpg'",
+  const imageContainer = [dog_surf1, walktogether, restaurant2, photospot,dog_surf2,
+    /* "'../../asset/img/walktogether.jpg'",
     "'../../asset/img/restaurant2.jpg'",
     "'../../asset/img/photospot.jpg'",
     "'../../asset/img/dog_surf2.jpg'",
-    "'../../asset/img/dog_surf1.jpg'",
+    "'../../asset/img/dog_surf1.jpg'", */
   ]
 
   /* 시도 2 */
@@ -22,36 +28,43 @@ const Banner = ()=> {
   //     : 4 ? "require('../../asset/img/dog_surf2.jpg')"
   //     : "require('../../asset/img/dog_surf1.jpg')"
   // }
-  
+
+  setTimeout(()=>{
+    onIncrease()
+  }, 3000);
+
   const onIncrease=()=>{
     if(number<=4){ // 1부터 5까지 증가하고 
       setNumber(number+1) // 숫자
-      setImage(imageContainer[number-1]) // 사진
-      console.log(image)
+      const getImage = imageContainer[number-1]
+      setImage(getImage) // 사진
     } else { // 다시 1부터 시작하는 카운터
       setNumber(1) // 숫자
-      setImage(imageContainer[number-1]) // 사진
-      console.log(image)
+      const getImage = imageContainer[number-1]
+      setImage(getImage) // 사진
     }
   }
+  
   return(
     <>
       <ImageBackground 
-        source={require('../../asset/img/dog_surf2.jpg')}
+        source={image}
         style={styles.topBanner}
+        onPress={onIncrease}
       >
-        {/* <Bars2Icon size={20} color="#000" /> */}
-        <View style={styles.BannerCounterContainer}>
-          <Text style={styles.BannerCounterPage}>{number}</Text>
-          <Text style={styles.BannerCounterTotal}>/ 5</Text>
-        </View>
 
         <View style={styles.BannerTextContainer}>
           <Text style={styles.topBannerSubtitle}>남해여행</Text>
           <Text style={styles.topBannerTitle}>댕댕이와 서핑 즐기기</Text>
         </View>
+        <View style={styles.BannerCounterContainer}>
+          {/* <Button title="<" color='gray'/> */}
+          <Text style={styles.BannerCounterPage}>{number}</Text>
+          <Text style={styles.BannerCounterTotal}>/ 5    </Text>
+          {/* <Button title=">" color='gray' onPress={onIncrease}/> */}
+        </View>
       </ImageBackground>
-      <Button title="다음 (임시 버튼)" onPress={onIncrease}/>
+
     </>
   )
 }
