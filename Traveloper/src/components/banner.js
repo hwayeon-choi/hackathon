@@ -2,23 +2,35 @@ import { View, Text, StyleSheet, ImageBackground, Button } from 'react-native'
 import React, { useState } from 'react'
 
 const Banner = ()=> {
-  const [image, setImage] = useState(1)
+  const [number, setNumber] = useState(1)
+
+  const imageContainer = [
+    '../../asset/img/dog_surf2.jpg',
+    '../../asset/img/dog_surf1.jpg',
+    '../../asset/img/walktogether.jpg',
+    '../../asset/img/restaurant2.jpg',
+    '../../asset/img/photospot.jpg'
+  ]
+  let image
   const onIncrease=()=>{
-    if(image<5){ // 1에서 5까지 증가하고 다시 1부터 시작하는 카운터 완성
-      setImage(image+1)
+    if(number<6){ // 1부터 5까지 증가하고 다시 1부터 시작하는 카운터 완성
+      setNumber(number+1)
+      image = imageContainer[number-1]
+      console.log(number) // 숫자 확인 완료
+      console.log(image) // 파일명 확인 완료
     } else {
-      setImage(1)
+      setNumber(1)
     }
   }
   return(
     <>
       <ImageBackground 
-        source={require('../../asset/img/dog_surf2.jpg')}
+        source={{image}}
         style={styles.topBanner}
       >
         {/* <Bars2Icon size={20} color="#000" /> */}
         <View style={styles.BannerCounterContainer}>
-          <Text style={styles.BannerCounterPage}>{image}</Text>
+          <Text style={styles.BannerCounterPage}>{number}</Text>
           <Text style={styles.BannerCounterTotal}>/ 5</Text>
         </View>
 
