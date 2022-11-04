@@ -3,38 +3,41 @@ import React, { useState } from 'react'
 
 const Banner = ()=> {
   const [number, setNumber] = useState(1)
-  // const [image, setImage] = useState('../../asset/img/dog_surf2.jpg')
+  const [image, setImage] = useState('../../asset/img/dog_surf2.jpg')
 
-  /* const imageContainer = [
-    "require('../../asset/img/walktogether.jpg')",
-    "require('../../asset/img/restaurant2.jpg')",
-    "require('../../asset/img/photospot.jpg)",
-    "require('../../asset/img/dog_surf2.jpg')",
-    "require('../../asset/img/dog_surf1.jpg')",
-  ] */
-  function imageContainer(image){
-    return 1 ? "require('../../asset/img/walktogether.jpg')"
-      : 2 ? "require('../../asset/img/restaurant2.jpg')"
-      : 3 ? "require('../../asset/img/photospot.jpg)"
-      : 4 ? "require('../../asset/img/dog_surf2.jpg')"
-      : "require('../../asset/img/dog_surf1.jpg')"
-  }
+  /* 시도 1 */
+  const imageContainer = [
+    "'../../asset/img/walktogether.jpg'",
+    "'../../asset/img/restaurant2.jpg'",
+    "'../../asset/img/photospot.jpg'",
+    "'../../asset/img/dog_surf2.jpg'",
+    "'../../asset/img/dog_surf1.jpg'",
+  ]
+
+  /* 시도 2 */
+  // function imageContainer(image){
+  //   return 1 ? "require('../../asset/img/walktogether.jpg')"
+  //     : 2 ? "require('../../asset/img/restaurant2.jpg')"
+  //     : 3 ? "require('../../asset/img/photospot.jpg)"
+  //     : 4 ? "require('../../asset/img/dog_surf2.jpg')"
+  //     : "require('../../asset/img/dog_surf1.jpg')"
+  // }
   
   const onIncrease=()=>{
     if(number<=4){ // 1부터 5까지 증가하고 
       setNumber(number+1) // 숫자
-      imageContainer(number-1) // 사진
-      // console.log(image)
+      setImage(imageContainer[number-1]) // 사진
+      console.log(image)
     } else { // 다시 1부터 시작하는 카운터
       setNumber(1) // 숫자
-      imageContainer(number-1) // 사진
-      // console.log(image)
+      setImage(imageContainer[number-1]) // 사진
+      console.log(image)
     }
   }
   return(
     <>
       <ImageBackground 
-        source={imageContainer}
+        source={require('../../asset/img/dog_surf2.jpg')}
         style={styles.topBanner}
       >
         {/* <Bars2Icon size={20} color="#000" /> */}
