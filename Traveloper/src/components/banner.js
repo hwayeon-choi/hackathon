@@ -29,9 +29,8 @@ const Banner = ()=> {
   //     : "require('../../asset/img/dog_surf1.jpg')"
   // }
 
-  setTimeout(()=>{
-    onIncrease()
-  }, 3000);
+  /* 타이머 */
+  setTimeout(()=>{onIncrease()}, 2000);
 
   const onIncrease=()=>{
     if(number<=4){ // 1부터 5까지 증가하고 
@@ -73,7 +72,7 @@ const styles = StyleSheet.create({
   topBanner: {
     width: '100%',
     height: 283,
-    justifyContent : 'space-between',
+    justifyContent : 'flex-start',
     alignItems : 'flex-end',
     flexDirection : 'row',
     paddingVertical : 24,
@@ -83,25 +82,28 @@ const styles = StyleSheet.create({
     fontWeight : "700",
     marginRight : 20,
     textAlign : 'right',
-    color : "#000"
+    color : "black"
   },
   topBannerSubtitle : {
     fontSize : 14,
     fontWeight : "700",
-    color : "#000",
+    color : "black",
     marginRight : 20,
     textAlign : 'right'
+  },
+  BannerTextContainer:{
+    
   },
   BannerCounterPage : {
     marginLeft : 20,
     fontSize : 20,
     fontWeight : "700",
-    color : "#333",
+    color : "black",
   },
   BannerCounterTotal : {
     fontSize : 10,
     fontWeight : "700",
-    color : "#333",
+    color : "black",
   },
   BannerCounterContainer : {
     flexDirection : 'row',
