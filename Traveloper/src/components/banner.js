@@ -17,7 +17,7 @@ const Banner = ()=> {
   const imageContainer = [dog_surf1, walktogether, restaurant2, photospot,dog_surf2]
 
   /* 타이머 */
-  setTimeout(()=>{onIncrease()}, 2000);
+  // setTimeout(()=>{onIncrease()}, 2000);
 
   /* 기존 이벤트 */
   // const onIncrease=()=>{
