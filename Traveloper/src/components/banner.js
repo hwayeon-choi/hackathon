@@ -26,7 +26,6 @@ const Banner = ()=> {
       setNumber(number+1)
       const getImage = imageContainer[number-1]
       setImage(getImage) 
-      console.log(number)
       setTextcolor("black")
       setMessage("댕댕이와 산책하기")
       setSubMessage("생애 첫 산책")
@@ -35,7 +34,6 @@ const Banner = ()=> {
       setNumber(number+1)
       const getImage = imageContainer[number-1]
       setImage(getImage) 
-      console.log(number)
       setTextcolor("white")
       setMessage("댕댕이와 외식하기")
       setSubMessage("견슐랭스타")
@@ -45,7 +43,6 @@ const Banner = ()=> {
       setNumber(number+1)
       const getImage = imageContainer[number-1]
       setImage(getImage) 
-      console.log(number)
       setTextcolor("black")
       setMessage("댕댕이와 산책가기")
       setSubMessage("공원탐방기")
@@ -55,7 +52,6 @@ const Banner = ()=> {
       setNumber(number+1)
       const getImage = imageContainer[number-1]
       setImage(getImage) 
-      console.log(number)
       setTextcolor("black")
       setMessage("댕댕이와 놀러가기")
       setSubMessage("남해여행")
@@ -65,7 +61,6 @@ const Banner = ()=> {
       setNumber(1)
       const getImage = imageContainer[number-1]
       setImage(getImage) 
-      console.log(number)
       setTextcolor("black")
       setMessage("댕댕이와 체험 즐기기")
       setSubMessage("익사이팅")

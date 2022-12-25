@@ -1,12 +1,22 @@
 import { View, Text, ScrollView, StyleSheet,Pressable } from 'react-native'
-import React from 'react'
+import React,{useLayoutEffect} from 'react'
 import CustomButton from '../../components/customButton/customButton';
 import Banner from '../../components/banner';
 import Donation from '../../components/donation';
 import Top10Place from '../../components/Top10Place';
+import Router from '../../navigation/Router';
+import FindRoute from './FindRoute';
+import { useNavigation } from '@react-navigation/native';
+import HomeTabNavigator from '../../navigation/HomeTabNavigator';
 
 const Home = ({navigation})=> {
-  
+
+  useLayoutEffect(()=> {
+    navigation.setOptions({
+      headerShown: false,
+    })
+  },[])
+
   return(
       <ScrollView>
         <View style={styles.root}>
